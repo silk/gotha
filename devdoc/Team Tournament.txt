@@ -1,0 +1,42 @@
+Team Tournament model
+*********************
+
+Team class
+**********
+String name
+Player[] teamMembers
+
+TeamParameterSet
+****************
+TeamGeneralParameterSet teamGeneralParameterSet
+TeamPlacementParameterSet teamPlacementParameterSet
+
+TeamGeneralParameterSet
+***********************
+int teamSize // max 10
+
+TeamPlacementParameterSet
+*************************
+final static int TPL_MAX_NUMBER_OF_CRITERIA = 6;
+final static int TPL_CRIT_NUL    = 0;       // Null criterion
+final static int TPL_CRIT_TEAMPOINTS = 1;
+final static int TPL_CRIT_SOST = 11;
+final static int TPL_CRIT_BOARDWINS = 12;
+final static int TPL_CRIT_BOARDWINS_9UB = 109;  // 9 Upper Boards
+final static int TPL_CRIT_BOARDWINS_8UB = 108;
+final static int TPL_CRIT_BOARDWINS_7UB = 107;
+final static int TPL_CRIT_BOARDWINS_6UB = 106;
+final static int TPL_CRIT_BOARDWINS_5UB = 105;
+final static int TPL_CRIT_BOARDWINS_4UB = 104;
+final static int TPL_CRIT_BOARDWINS_3UB = 103;
+final static int TPL_CRIT_BOARDWINS_2UB = 102;
+final static int TPL_CRIT_BOARDWINS_1UB = 101;
+
+final static int TPL_CRIT_MEAN_RATING = 201;
+final static int TPL_CRIT_MEDIAN_RATING = 202;
+
+int[] plaCriteria
+
+Tournament
+**********
++ HashMap<String, Team> hmTeams

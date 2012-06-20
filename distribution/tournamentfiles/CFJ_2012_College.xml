@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Tournament dataVersion="201">
+<Players>
+<Player agaId="" club="92An" country="" egfPin="" ffgLicence="0800231" firstName="Joséphine" name="Barthel" participating="11111111111111111111" rank="7K" rating="1356" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player agaId="" club="18Bo" country="" egfPin="" ffgLicence="1200177" firstName="Floriane" name="Dorca" participating="11111111111111111111" rank="17K" rating="424" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player agaId="" club="38GJ" country="" egfPin="" ffgLicence="1100317" firstName="Egon" name="Dagneaux" participating="11111111111111111111" rank="15K" rating="562" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player agaId="" club="84Av" country="" egfPin="" ffgLicence="1000373" firstName="Angelino" name="Moccelin" participating="11111111111111111111" rank="3K" rating="1829" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player agaId="" club="92An" country="" egfPin="" ffgLicence="1200024" firstName="Ulysse" name="Duplaquet" participating="11111111111111111111" rank="13K" rating="787" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player agaId="" club="97Gu" country="" egfPin="" ffgLicence="1000259" firstName="Moïra" name="Iglesias" participating="11111111111111111111" rank="17K" rating="427" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player agaId="" club="84Av" country="" egfPin="" ffgLicence="1000438" firstName="Aloïs" name="Brachet" participating="11111111111111111111" rank="2K" rating="1936" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player agaId="" club="44Na" country="" egfPin="" ffgLicence="1200262" firstName="Sébastien" name="Nizet" participating="11111111111111111111" rank="14K" rating="748" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player agaId="" club="44NE" country="" egfPin="" ffgLicence="0700145" firstName="Mélissa" name="Héaulmé" participating="11111111111111111111" rank="4K" rating="1680" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player agaId="" club="92An" country="" egfPin="" ffgLicence="1000229" firstName="Ariane" name="Ougier" participating="11111111111111111111" rank="5K" rating="1621" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player agaId="" club="38GJ" country="" egfPin="" ffgLicence="1100233" firstName="Matthias" name="Mangin" participating="11111111111111111111" rank="17K" rating="350" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+</Players>
+<Games>
+<Game blackPlayer="DUPLAQUETULYSSE" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="1" whitePlayer="BRACHETALOÏS"/>
+<Game blackPlayer="MOCCELINANGELINO" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="2" whitePlayer="NIZETSÉBASTIEN"/>
+<Game blackPlayer="DAGNEAUXEGON" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="3" whitePlayer="HÉAULMÉMÉLISSA"/>
+<Game blackPlayer="OUGIERARIANE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="4" whitePlayer="IGLESIASMOÏRA"/>
+<Game blackPlayer="MANGINMATTHIAS" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="5" whitePlayer="BARTHELJOSÉPHINE"/>
+<Game blackPlayer="IGLESIASMOÏRA" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="5" tableNumber="5" whitePlayer="DORCAFLORIANE"/>
+<Game blackPlayer="BARTHELJOSÉPHINE" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="5" tableNumber="1" whitePlayer="BRACHETALOÏS"/>
+<Game blackPlayer="HÉAULMÉMÉLISSA" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="5" tableNumber="2" whitePlayer="MOCCELINANGELINO"/>
+<Game blackPlayer="OUGIERARIANE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="5" tableNumber="3" whitePlayer="DUPLAQUETULYSSE"/>
+<Game blackPlayer="DAGNEAUXEGON" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="5" tableNumber="4" whitePlayer="MANGINMATTHIAS"/>
+<Game blackPlayer="BARTHELJOSÉPHINE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="3" tableNumber="3" whitePlayer="NIZETSÉBASTIEN"/>
+<Game blackPlayer="IGLESIASMOÏRA" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="3" tableNumber="4" whitePlayer="DUPLAQUETULYSSE"/>
+<Game blackPlayer="BRACHETALOÏS" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="3" tableNumber="1" whitePlayer="HÉAULMÉMÉLISSA"/>
+<Game blackPlayer="MANGINMATTHIAS" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="4" tableNumber="5" whitePlayer="IGLESIASMOÏRA"/>
+<Game blackPlayer="MOCCELINANGELINO" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="3" tableNumber="2" whitePlayer="OUGIERARIANE"/>
+<Game blackPlayer="OUGIERARIANE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="4" tableNumber="3" whitePlayer="DORCAFLORIANE"/>
+<Game blackPlayer="NIZETSÉBASTIEN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="4" tableNumber="4" whitePlayer="DUPLAQUETULYSSE"/>
+<Game blackPlayer="DORCAFLORIANE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="3" tableNumber="5" whitePlayer="DAGNEAUXEGON"/>
+<Game blackPlayer="MOCCELINANGELINO" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="4" tableNumber="1" whitePlayer="BRACHETALOÏS"/>
+<Game blackPlayer="HÉAULMÉMÉLISSA" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="4" tableNumber="2" whitePlayer="BARTHELJOSÉPHINE"/>
+<Game blackPlayer="BARTHELJOSÉPHINE" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="2" whitePlayer="MOCCELINANGELINO"/>
+<Game blackPlayer="BRACHETALOÏS" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="1" whitePlayer="OUGIERARIANE"/>
+<Game blackPlayer="DUPLAQUETULYSSE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="4" whitePlayer="DAGNEAUXEGON"/>
+<Game blackPlayer="HÉAULMÉMÉLISSA" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="3" whitePlayer="MANGINMATTHIAS"/>
+<Game blackPlayer="NIZETSÉBASTIEN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="5" whitePlayer="DORCAFLORIANE"/>
+</Games>
+<ByePlayers>
+<ByePlayer player="DORCAFLORIANE" roundNumber="1"/>
+<ByePlayer player="IGLESIASMOÏRA" roundNumber="2"/>
+<ByePlayer player="MANGINMATTHIAS" roundNumber="3"/>
+<ByePlayer player="DAGNEAUXEGON" roundNumber="4"/>
+<ByePlayer player="NIZETSÉBASTIEN" roundNumber="5"/>
+</ByePlayers>
+<TournamentParameterSet>
+<GeneralParameterSet basicTime="60" beginDate="2012-05-05" canByoYomiTime="300" complementaryTimeSystem="CANBYOYOMI" director="" endDate="2012-05-06" fischerTime="10" genMMBar="9D" genMMFloor="30K" genMMS2ValueAbsent="1" genMMS2ValueBye="1" genNBW2ValueAbsent="0" genNBW2ValueBye="1" komi="7.5" location="Cachan" name="Championnat de France des Jeunes, catégorie College" nbMovesCanTime="15" numberOfCategories="1" numberOfRounds="5" shortName="CFJ_2012_College" size="19" stdByoYomiTime="30"/>
+<HandicapParameterSet hdBasedOnMMS="false" hdCeiling="0" hdCorrection="0" hdNoHdRankThreshold="30K"/>
+<PlacementParameterSet>
+<PlacementCriteria>
+<PlacementCriterion name="NBW" number="1"/>
+<PlacementCriterion name="SOSW" number="2"/>
+<PlacementCriterion name="SOSOSW" number="3"/>
+<PlacementCriterion name="NULL" number="4"/>
+<PlacementCriterion name="NULL" number="5"/>
+<PlacementCriterion name="NULL" number="6"/>
+</PlacementCriteria>
+</PlacementParameterSet>
+<PairingParameterSet paiBaAvoidDuplGame="500000000000000" paiBaBalanceWB="1000000" paiBaDeterministic="true" paiBaRandom="0" paiMaAdditionalPlacementCritSystem1="Rating" paiMaAdditionalPlacementCritSystem2="Rating" paiMaAvoidMixingCategories="0" paiMaDUDDLowerMode="MID" paiMaDUDDUpperMode="MID" paiMaDUDDWeight="100000000" paiMaLastRoundForSeedSystem1="2" paiMaMaximizeSeeding="5000000" paiMaMinimizeScoreDifference="100000000000" paiMaSeedSystem1="SPLITANDSLIP" paiSeAvoidSameGeo="0" paiSeDefSecCrit="20000000000000" paiSeMinimizeHandicap="0" paiSeNbWinsThresholdActive="true" paiSePreferMMSDiffRatherThanSameClub="0" paiSePreferMMSDiffRatherThanSameCountry="0" paiSeRankThreshold="30K" paiStandardNX1Factor="0.5"/>
+</TournamentParameterSet>
+<TeamTournamentParameterSet>
+<TeamGeneralParameterSet teamSize="4"/>
+<TeamPlacementParameterSet>
+<PlacementCriteria>
+<PlacementCriterion name="TEAMP" number="1"/>
+<PlacementCriterion name="BDW" number="2"/>
+<PlacementCriterion name="BDW3U" number="3"/>
+<PlacementCriterion name="BDW2U" number="4"/>
+<PlacementCriterion name="BDW1U" number="5"/>
+<PlacementCriterion name="MNR" number="6"/>
+</PlacementCriteria>
+</TeamPlacementParameterSet>
+</TeamTournamentParameterSet>
+</Tournament>

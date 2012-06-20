@@ -1,0 +1,609 @@
+;name=EGC2009
+;date=26/07/2009
+;vill=Groningen
+;comm=EGC 2009
+;prog=OpenGotha 3.17.02
+;size=19
+;time=120+b
+;komi=7.5
+;Num Nom Prénom               Niv Licence Club
+   1 Kim Eunkuk                7D          Seo   14+b0   10+w0    7+b0    5-w0   26+b0   11+w0    3+b0    6+w0    2+b0    4-w0
+   2 Hwang In-seong            7D          FaM   33+b0    8+w0    6+b0    3-w0   14+w0    4+b0    5+b0   15+w0    1-w0   13+w0
+   3 Kim Joon_Sang             7D          Seo   27+w0   11+w0    4+b0    2+b0    5-b0    9+w0    1-w0   13+b0   23+b0    7+b0
+   4 Oh Chi-Min                7D          Ber   24+b0   23+b0    3-w0   17+w0   12+w0    2-w0   25+b0   11+w0   10+b0    1+b0
+   5 Jun Sang-Youn             7D          Seo   52+w0    9+b0   13+b0    1+b0    3+w0    6-b0    2-w0    7-w0   20+w0   17+b0
+   6 Dinerchtein Alexandre     7D          Kaz   19+w0   17+b0    2-w0   24+b0   10+b0    5+w0   26+w0    1-b0    7-w0   16+w0
+   7 Taranu Catalin            7D          Buc   25+w0   50+b0    1-w0   12-b0   53+w0   14+b0    8+w0    5+b0    6+b0    3-w0
+   8 Mero Csaba                6D          Bud   28+w0    2-b0   16+w0   23+w0    9-b0   54+w0    7-b0   21+w0   18+b0   10+w0
+   9 Pop Cristian              7D          Buc   29+b0    5-w0   74+b0   50+w0    8+w0    3-b0   10-b0   51+b0   15+w0   46+b0
+  10 Zeijst Rob_van            7D          Tok   32+w0    1-b0   91+b0   19+w0    6-w0   16+b0    9+w0   14+w0    4-w0    8-b0
+  11 Zhang Yanqi               6D          Han   36+w0    3-b0   51+w0   27+b0   25+w0    1-b0   12+w0    4-b0   16-b0   34+w0
+  12 Debarre Thomas            5D          Str   13-w0   45+b0   18+w0    7+w0    4-b0   36+w0   11-b0   38+b0   17-w0   30+b0
+  13 Chang Yuan_Jung           7D         Taic   12+b0   15+w0    5-w0   26-b0   85+w0   32+w0   27+b0    3-w0   25+w0    2-b0
+  14 Burzo Gheorghe_Cornel     6D          Bam    1-w0   81+b0   29+w0   55+w0    2-b0    7-w0   37+b0   10-b0   35+b0   31+b0
+  15 Noguchi Motoki            6D          Par   26+w0   13-b0   49+w0   25-b0   30+w0   17+b0   46+w0    2-b0    9-b0   36+b0
+  16 Savolainen Javier-Aleksi  4D          Hel   58+w0   52+b0    8-b0   62+b0   18+w0   10-w0   22+w0   19+b0   11+w0    6-b0
+     Shikshin Ilya             7D          Kaz   22+b0    6-w0   84+w0    4-b0   49+b0   15-w0   60+w0   29+b0   12+b0    5-w0
+  18 Teuber Benjamin           6D          Ham   23-w0   61+b0   12-b0   56+b0   16-b0   43+w0   34+w0   27+w0    8-w0   24+b0
+  19 Fenech Antoine            5D          Str    6-b0   34+w0   28+w0   10-b0   76+b0   26-w0   84+b0   16-w0   37+w0   27+b0
+  20 Jabarin Ali               5D          TAv   45-w0   69+b0   35+b0   28-b0   56+w0   31+w0   24+w0   26+b0    5-b0   25+w0
+  21 Simara Jan                5D          Zli   50-w0   74-w0   63+b0   75+w0   24-b0   39+b0   28+w0    8-b0   29+w0   26+b0
+  22 Mitic Nikola              5D          Nis   17-w0   75+b0   24-w0   85-b0   57+b0   40+w0   16-b0   88+b0   53+w0   23+w0
+  23 Janssen Frank             6D          Alm   18+b0    4-w0   37+w0    8-b0   31+w0   25-w0   53+b0   39+b0    3-w0   22-b0
+  24 Mitic Dusan               5D          Nis    4-w0   41+w0   22+b0    6-w0   21+w0   46-b0   20-b0   66+b0   38+b0   18-w0
+  25 Bogackyj Dmytro           6D          Kyi    7-b0   97+w0   32+w0   15+w0   11-b0   23+b0    4-w0   30+w0   13-b0   20-b0
+     Groenen Geert             6D          Dha   15-b0   38+w0  119+b0   13+w0    1-w0   19+b0    6-b0   20-w0   55+b0   21-w0
+  27 Galchenko Mykhajlo        5D          Kyi    3-b0   76+w0   36+b0   11-w0   39+w0   28+b0   13-w0   18-b0   33+b0   19-w0
+  28 Pomstra Willemkoen        5D          Arn    8-b0   31+w0   19-b0   20+w0   87+b0   27-w0   21-b0   44+w0   30-w0   68+b0
+  29 Lin Viktor                5D          Wie    9-w0   35+w0   14-b0   53-b0   42+w0   61+b0   54+w0   17-w0   21-b0   66+b0
+  30 Brouwer Peter             5D          Ams  117+b0   49-b0  123+w0   52+w0   15-b0   41+w0   32+w0   25-b0   28+b0   12-w0
+     Manojlovic Lazar          4D          Kra   40+w0   28-b0   64+w0   84+w0   23-b0   20-b0   92+w0   60+b0   32+b0   14-w0
+  32 Radmacher Bernd           5D          Mee   10-b0   56+w0   25-b0   86+w0   34+w0   13-b0   30-b0   99+b0   31-w0   67+w0
+  33 Jasiek Robert             5D          Ber    2-w0   87-w0   92+b0   39-b0   43-w0   50+w0   42+b0  106+b0   27-w0   59+w0
+     salignon jerome           4D          mar   54+w0   19-b0   95+b0   37+w0   32-b0   90+b0   18-b0   86+w0   51+w0   11-b0
+  35 Serban Mihai_Valentin     4D          Bis   57+w0   29-b0   20-w0  167+w0   37-b0  100+b0   43+b0   54+w0   14-w0   60+b0
+  36 Nemly Igor                5D          Kaz   11-b0  181+w0   27-w0   89+b0   51+w0   12-b0   38-w0   94+b0   49+b0   15-w0
+     Yoshihara Kazuo           6D               128+b0   93+w0   23-b0   34-b0   35+w0   87+w0   14-w0   85+b0   19-b0   58+w0
+  38 Stodte Christian          4D          Ham   95+w0   26-b0  133+w0   49-b0   88+w0   89+b0   36+b0   12-w0   24-w0   56+b0
+  39 Bojanic Milos             5D          Beo  181-b0  168+b0   41+w0   33+w0   27-b0   21-w0   64+b0   23-w0  154+b0   55+w0
+  40 Giedrojc Krzysztof        4D          War   31-b0   44+w0  116+b0   87-w0  135+w0   22-b0   86-w0   98+b0   94+b0   53+w0
+     Verhagen Rudi             5D         Ensc   89+w0   24-b0   39-b0  136+w0   95+b0   30-b0   57+w0   49-b0   96+w0   92+w0
+  42 Knauf Torsten             3D          StA  246+w0  118+b0   52-w0  117+b0   29-b0   56+b0   33-w0   57+w0   86+b0   51+w0
+     Lajunen Pekka             3D          Hel  138+w0  133-b0  126+b0  116+w0   33+b0   18-b0   35-w0  135+w0   90+w0   50+w0
+     Milczewski Peter_von      3D          Mun  134+b0   40-b0  139+w0   93-w0  102+b0   91+w0   52+w0   28-b0   61+b0   49+w0
+  45 Koster Bram               4D          Utr   20+b0   12-w0   85-w0   98+b0   86+b0   84-w0   59+w0   0=      72+b0   0=   
+     Shiu Chang-Li             6D         Taip   0=      0=      0=     175+b0  111+w0   24+w0   15-b0   47+b0   48+b0    9-w0
+  47 Eijkhout Michiel          6D          Lei   0=      0=      0=      0=      0=     108+b0   67+w0   46-w0   71+b0   77+b0
+  48 Uno Shigehiko             5D          Tok   0=      0=      0=      0=      0=     103+b0  134+w0   77+b0   46-w0   78+w0
+  49 Urtela Mika               4D          Hel  118+b0   30+w0   15-b0   38+w0   17-w0   58+b0   51-b0   41+w0   36-w0   44-b0
+  50 Audouard Pierre           5D          Mar   21+b0    7-w0   87+w0    9-b0   54-w0   33-b0   99-w0  104+b0  105+w0   43-b0
+     Jipp Thomas               4D          Ham   60+b0   62+w0   11-b0   97+w0   36-b0   94+b0   49+w0    9-w0   34-b0   42-b0
+  52 Lopatjuk Kostjantyn       5D          Riv    5-b0   16-w0   42+b0   30-b0  100+w0   60-w0   44-b0   70-w0  104+w0  103+b0
+  53 Brunner Vit               4D          Brn   74-b0  143+b0   93+w0   29+w0    7-b0   85+w0   23-w0   58+w0   22-b0   40-b0
+  54 Jacenko Dmytro            5D          Kyi   34-b0   94+w0  181+w0   74+w0   50+b0    8-b0   29-b0   35-b0   68-w0  105+b0
+  55 Berben Tobias             4D          Ham   87-b0   67+w0  134+w0   14-b0   75-w0   63+b0   65+b0   84+w0   26-w0   39-b0
+     Miyazaki Nobushi          5D          Oka   69+b0   32-b0   90+w0   18-w0   20-b0   42-w0  182+w0  133+b0   92+w0   38-w0
+  57 Billouet Simon            4D          Ren   35-b0  135-w0  109+w0   65+b0   22-w0   95+b0   41-b0   42-b0   98+w0   88+w0
+  58 Drost Andreas             4D          Lei   16-b0   63-b0  102+w0  160+w0   62+b0   49-w0   89+w0   53-b0   88+w0   37-b0
+  59 Paga Pierre               3D          Par  140+w0   89-b0   79+w0   64+b0   74-w0   93+b0   45-b0   91+w0   62+w0   33-b0
+     Rehm Robert               5D          Ams   51-w0  123-w0  106+b0   92+w0  181+b0   52+b0   17-b0   31-w0   99+b0   35-w0
+     Siivola Matti             5D          Hel   88+b0   18-w0   89-w0   99+b0  119+b0   29-w0   94-b0  107+w0   44-w0   93+b0
+  62 Gotzfried Andreas         4D          Lux   90+w0   51-b0  135+b0   16-w0   58-w0   99-w0  109+b0  134+b0   59-b0   95+w0
+     Holappa Antti             3D          Ota  129+b0   58+w0   21-w0   88-b0  106+w0   55-w0  108+w0   92-b0  133+b0   96+b0
+  64 Siukola Mikko             4D          Hel   75-w0  101+b0   31-b0   59-w0  154+b0  133+w0   39-w0   90-b0  135+b0   91+w0
+  65 Hall T_Mark               4D          Lon   84-b0   85-b0  113+w0   57-w0   71+b0   97+b0   55-w0   96-w0  134+w0   86+b0
+  66 Eerbeek Alexander         3D          xxx   92-w0  136-w0  192+b0  113+b0  167+b0   80+w0  111+b0   24-w0   84+b0   29-w0
+  67 Gonze Francois            3D          LlN  211+w0   55-b0  142+w0  181-b0  140+w0  114+b0   47-b0   89+w0   85+b0   32-b0
+     Lisy Pavol_jr.            1D          Bra  279+w0  146+w0   73+b0  112+w0  117-b0  102+w0   97+b0  122+b0   54+b0   28-w0
+     Vos Dave_de               4D          Til   56-w0   20-w0  145-b0  131-b0  197+b0   72-b0  194+w0  140+w0   97+w0   85+b0
+  70 Jong Merijn_de            2D          Utr  215+b0   73+b0  101-w0  170+w0  120-b0  185+b0   95+w0   52+b0   78-w0   87+b0
+  71 Kral Maros                2D          Kos  189-w0  241+b0  141+b0  144+b0   65-w0  142+w0   93+w0   80+b0   47-w0  125+b0
+  72 Salom Ludek               2D          Pra  287+b0  138-w0  188+b0  139+b0  116-w0   69+w0  114+w0  177+b0   45-w0   84+b0
+  73 Kuroda Hideo              3D          Tok  137-b0   70-w0   68-w0  280+b0  248+b0  136+w0  122-b0  181+w0  121+b0  124+w0
+  74 Lin Hsiao-Tung            6D         Taip   53+w0   21+b0    9-w0   54-b0   59+b0   0=      0=      0=      0=      0=   
+  75 Kai Naoyuki               6D          Yok   64+b0   22-w0   96+w0   21-b0   55+b0   0=      0=      0=      0=      0=   
+  76 Kaper Erik                4D          Ams   96+w0   27-b0  160+b0   91+b0   19-w0   0=      0=      0=      0=      0=   
+     Wei Hongyu                5D          Che   0=      0=      0=      0=      0=      98+b0  105+w0   48-w0  110+b0   47-w0
+  78 Matushkin Alexander       3D          Izh   0=      0=      0=     159+b0  114-w0  207+w0  141+w0  146+b0   70+b0   48-b0
+  79 Petri Klaus               3D          Dar  101-w0  189+b0   59-b0  104-w0   0=     242+b0  193+w0  187+w0   0=     115+b0
+  80 Cernuda Ignacio           4D          Mad   0=      0=      0=      0=      0=      66-b0  150+w0   71-w0  146+w0  110+b0
+  81 Kaitschick Stefan         5D          Ham  135+b0   14-w0  137+b0   0=      0=      0=      0=      0=      0=      0=   
+  82 Ohlenbusch Arne_Steen     3D          xxx   0=      0=      0=      0=      0=      0=      0=     176+b0  109+w0   90+b0
+  83 Riedeman Dick             3D          Del   0=      0=      0=      0=      0=      0=      0=     183+b0  143+w0  106+w0
+  84 Sannes Pal                4D          Osl   65+w0  119+w0   17-b0   31-b0   93+b0   45+b0   19-w0   55-b0   66-w0   72-w0
+  85 Desveaux Vivien           3D          Lyo  167+b0   65+w0   45+b0   22+w0   13-b0   53-b0   90+w0   37-w0   67-w0   69-w0
+  86 Budahn Michael            3D          Ber  144+w0  117+w0  111+b0   32-b0   45-w0   96+b0   40+b0   34-b0   42-w0   65-w0
+     Kyung Kwangsoo            6D          Seo   55+w0   33+b0   50-b0   40+b0   28-w0   37-b0   88-w0  105-b0  148+w0   70-w0
+  88 Kondo Shiro               4D          Tok   61-w0  112+b0   97-b0   63+w0   38-b0  135+w0   87+b0   22-w0   58-b0   57-b0
+     Simonov Alexey            5D          StP   41-b0   59+w0   61+b0   36-w0  133+w0   38-w0   58-b0   67-b0  103-w0  154+w0
+  90 Terwey Matthias           4D          Mun   62-b0  164+w0   56-b0  120+w0   91+b0   34-w0   85-b0   64+w0   43-b0   82-w0
+  91 Marz Manuela              4D          Lei  100+b0  116+b0   10-w0   76-w0   90-w0   44-b0  148+w0   59-b0  107+b0   64-b0
+     Marz Michael              3D          Lei   66+b0  100+w0   33-w0   60-b0  169+b0  181+w0   31-b0   63+w0   56-b0   41-b0
+  93 Fujita Izumi              5D          Sak  120+w0   37-b0   53-b0   44+b0   84-w0   59-w0   71-b0  182+w0  102+b0   61-w0
+  94 Naddef Jean-Loup          3D          Gre  142+w0   54-b0  138+b0   96+b0   97+b0   51-w0   61+w0   36-w0   40-w0  101-b0
+  95 Aaij Rene                 5D          Gro   38-b0   99+b0   34-w0  148+b0   41-w0   57-w0   70-b0  144+w0  183+b0   62-b0
+     Sodeoka Tadanori          6D          Ais   76-b0  148+w0   75-b0   94-w0  110+b0   86-w0  103+w0   65+b0   41-b0   63-w0
+  97 Seibt David               4D          Ber  133+b0   25-b0   88+w0   51-b0   94-w0   65-w0   68-w0  141+w0   69-b0  153+b0
+  98 Kuperus Sjoerd            2D          Utr  115+b0  144+w0  107+b0   45-w0  148+b0   77-w0  137+b0   40-w0   57-b0  151+w0
+  99 Kraemer Lukas             3D          Bon  170+b0   95-w0  112+b0   61-w0  145+w0   62+b0   50+b0   32-w0   60-w0   0=   
+ 100 Bogackyj Arkadij          5D          Kyi   91-w0   92-b0  182+b0  118+w0   52-b0   35-w0  107-b0  150-b0  155+w0  147+w0
+     Eerbeek Marc              3D          xxx   79+b0   64-w0   70+b0  119-w0  134-b0  150-w0  155+w0  143+b0  166-b0   94+w0
+     Welter Marlon             2D          Got  218+b0  129+w0   58-b0  150+w0   44-w0   68-b0  163+b0  139+b0   93-w0  146+w0
+ 103 Bouwman Gelmer            2D          Lei  184+b0  183+w0  120-b0  185+b0  164+w0   48-w0   96-b0  108+w0   89+b0   52-w0
+     D'Obici Giordano          1D          Rom  163+b0  218+w0  211+b0   79+b0  118-w0  140+w0  125+b0   50-w0   52-b0  137+b0
+     Jensen Finn               2D          Hor  153+b0  185+w0  118-w0  182+w0  136+b0  171+b0   77-b0   87+w0   50-b0   54-w0
+     Ritakallio Samuel         2D          Hel  250+b0  211+w0   60-w0  173+b0   63-b0  139+w0  181+b0   33-w0  122+w0   83-b0
+ 107 Grzeschniok Anton         3D          FaM  126+w0  111-b0   98-w0  110-b0  157+b0  189+b0  100+w0   61-b0   91-w0  265+b0
+     Linev Alexander           3D          StP  168-w0  145-w0  198+b0  115+b0  137+w0   47-w0   63-b0  103-b0  184+b0  138+w0
+     Weiss Malte               2D          Dor  152+w0  178+b0   57-b0  147-w0  190+b0  143+w0   62-w0  137+b0   82-b0  136+b0
+ 110 Fikert Lars               2D               255-b0  251+b0  216+w0  107+w0   96-w0  160+b0  121+w0  111+b0   77-w0   80-w0
+ 111 Rasmussen Jannik          4D          Cop   0=     107+w0   86-w0  145+b0   46-b0  147+b0   66-w0  110-w0  132-b0   0=   
+ 112 Koch Sebastien            3D          Gen  185+b0   88-w0   99-w0   68-b0  152+w0  182-b0  156-w0  242+w0  141+b0  134+b0
+ 113 Conradi Judith            2D          Ham  263+w0  235+w0   65-b0   66-w0  141-b0  157+w0  144-b0  193+b0  182+b0  133+w0
+ 114 Lewerenz Bernd            2D          Kie   0=     186+b0  246+w0  191+w0   78+b0   67-w0   72-b0  154-b0  196+w0  161+b0
+     Rovio Teemu               2D          Tam   98-w0  155+b0  215+b0  108-w0  165+b0   0=     240+w0  156+b0  151+w0   79-w0
+ 116 Fujii Nobuhisa            5D          Osa  123+b0   91-w0   40-w0   43-b0   72+b0   0=      0=      0=      0=      0=   
+ 117 Urabe Yoshimichi          4D          Kam   30-w0   86-b0  147+b0   42-w0   68+w0   0=      0=      0=      0=      0=   
+ 118 Chang Hsiao-yin           5D         Taic   49-w0   42-w0  105+b0  100-b0  104+b0   0=      0=      0=      0=      0=   
+ 119 Imamura Toru              4D          Gre  164+w0   84-b0   26-w0  101+b0   61-w0   0=      0=      0=      0=      0=   
+ 120 Mallon Willem             4D          Ein   93-b0  160-b0  103+w0   90-b0   70+w0   0=      0=      0=      0=      0=   
+ 121 Jevtic Nikola             4D          Kra   0=      0=      0=      0=      0=     134-w0  110-b0  158+b0   73-w0  162+w0
+ 122 Ohlenbusch Soeren         3D          Hei   0=      0=      0=      0=      0=     124+b0   73+w0   68-w0  106-b0  158+b0
+ 123 Gelderen Vincent_van      4D          Rot  116-w0   60+b0   30-b0   0=      0=      0=      0=      0=      0=      0=   
+ 124 Ambagts Zjev              3D          Dha   0=      0=      0=      0=      0=     122-w0  127+b0  153+b0  150+w0   73-b0
+ 125 Ente Lisa                 3D          Han   0=      0=      0=      0=      0=     127+b0  104-w0  184+w0  147+b0   71-w0
+     Sekiguchi Kiyoshi         3D          Yok  107-b0  141+b0   43-w0  189+w0  138+b0   0=      0=      0=      0=      0=   
+ 127 garcia_de_la_banda juan_f 3D          tfe   0=      0=      0=      0=      0=     125-w0  124-w0  174+b0  199+w0  152+b0
+ 128 Cheng Ling_Kai            4D          Bei   37-w0  137-w0   0=      0=      0=      0=      0=      0=      0=      0=   
+ 129 Wallage Martijn           3D          Gro   63-w0  102-b0   0=      0=      0=     219+w0   0=      0=     187+b0   0=   
+ 130 Marko Peter               2D          Bud  278+w0  139-b0  149+w0  142+b0  160+w0   0=      0=      0=      0=      0=   
+ 131 Kuronen Juri              2D          Ota  149+w0  140-b0  381+w2   69+w0   0=      0=      0=      0=      0=      0=   
+ 132 Kashevnik Mikhail         2D          StP   0=      0=      0=      0=      0=      0=     154+w0  200+b0  111+w0   0=   
+ 133 Krstic Dejan              4D          Beo   97-w0   43+w0   38-b0  137+w0   89-b0   64-b0  147+b0   56-w0   63-w0  113-b0
+ 134 Ciuica Andrei             3D          Tim   44-w0  228+w0   55-b0  151+b0  101+w0  121+b0   48-b0   62-w0   65-b0  112-w0
+ 135 Zandveld Peter            4D          Ams   81-w0   57+b0   62-w0  168+b0   40-b0   88-b0  145+w0   43-b0   64-w0   0=   
+ 136 Ainali Ville              2D          Oul  154+w0   66+b0  164+b0   41-b0  105-w0   73-b0  158-w0  205+w0  156+b0  109-w0
+ 137 Connor Thomas             3D          Bru   73+w0  128+b0   81-w0  133-b0  108-b0  183+b0   98-w0  109-w0  194+b0  104-w0
+     Hubert Jerome             3D          Par   43-b0   72+b0   94-w0  184+w0  126-w0  141-b0  162+w0  147-w0  163+b0  108-b0
+ 139 Kettenring Thomas         3D          Mun  148-b0  130+w0   44-b0   72-w0  221+w0  106-b0  152+b0  102-w0  158-w0  201+w0
+ 140 Izaki Yaeko               3D          Kyo   59-b0  131+w0  148-w0  146+b0   67-b0  104-b0  239+w0   69-b0  161-w0  205+w0
+ 141 Bayle Virgile             2D               322+b0  126-w0   71-w0  163+b0  113+w0  138+w0   78-b0   97-b0  112-w0  193+w0
+     Itoh Sadao                3D          Mit   94-b0  216+w0   67-b0  130-w0  222+w0   71-b0  153-w0  169+w0  152-b0  196+b0
+     Takeda Yasushi            3D          Iwa  183+b0   53-w0  167-b0  154-w0  158+b0  109-b0  207+w0  101-w0   83-b0  200+w0
+     renner josef              3D          Zur   86-b0   98-b0  159+w0   71-w0  207-b0  195+w0  113+w0   95-b0  153-w0  190+b0
+ 145 Reindl Martin             2D          361  237+w0  108+b0   69+w0  111-w0   99-b0  149+b0  135-b0  148-w0  165-b0  199+w0
+     Schuurink Ivo             2D          Arn  235+w0   68-b0  220+b0  140-w0  153+w0  252+w0  171+b0   78-w0   80-b0  102-b0
+     Zaloudkova Klara          2D          Pra  220+w0  246+b0  117-w0  109+b0  168+b0  111-w0  133-w0  138+b0  125-w0  100-b0
+ 148 Salo Tuomo                3D          Tam  139+w0   96-b0  140+b0   95-w0   98-w0  184+w0   91-b0  145+b0   87-b0   0=   
+ 149 Krogt Harry_van_der       2D          Lei  131-b0  161+w0  130-b0  155+b0  151+w0  145-w0  184-b0  196-b0  206+w0  187+w0
+     Yarde Wesley              2D          Ein  151+w0  167-w0  162+b0  102-b0  220+w0  101+b0   80-b0  100+w0  124-b0  430?w1
+ 151 Dilger Sergio             2D          Kol  150-b0  193+w0  235+b0  134-w0  149-b0  197+w0  189+w0  171+w0  115-b0   98-b0
+ 152 Knippel Arnaud            2D          Rou  109-b0  236-w0  270+w0  257+w0  112-b0  159+b0  139-w0  186+b0  142+w0  127-w0
+     Statzkowski Matthias_Sean 2D          Ber  105-w0  165-b0  187+b0  322+w0  146-b0  238+w0  142+b0  124-w0  144+b0   97-w0
+ 154 Rüten-Budde Jan           2D          Ham  136-b0  405+w1  255+w0  143+b0   64-w0   0+     132-b0  114+w0   39-w0   89-b0
+ 155 Baaran Jens               1D          Bra  336+b0  115-w0  243+b0  149-w0  199+b0  186+w0  101-b0  191+b0  100-b0  188+w0
+     Turlot Quentin            1K          Gre  196+w0  201+b0  287+w0  183-b0  198+w0  188+b0  112+b0  115-w0  136-w0  186+b0
+ 157 Camernik Luka             1K          Lju  206+w0  210+w0  258+b0  252+b0  107-w0  113-b0  166-b0  283+w0  159+b0  183+w0
+ 158 Es Martin_van             1D          Hee  236-w0  282+b0  244+w0  237+b0  143-w0  191+b0  136+b0  121-w0  139+b0  122-w0
+     Verhagen Ronald           1D          Alm  221+b0  287+w0  144-b0   78-w0  269+b0  152-w0  201+b0  237+w0  157-w0  191+w0
+ 160 Okada Toshio              3D          Nar  173+b0  120+w0   76-w0   58-b0  130-b0  110-w0   0=      0=      0=      0=   
+     Traykov Stanislav         1D          Sof  306+w0  149-b0  238+w0  235+b0  170-w0  194-b0  195+w0  207+b0  140+b0  114-w0
+     Zilberberg Viktor         1D          NNo  210+b0  227+w0  150-w0  198-b0  243+w0  248+w0  138-b0  236+w0  181+b0  121-b0
+ 163 Trippel Lorenz            1D          Zur  104-w0  305+b0  251+w0  141-w0  280+b0  236+b0  102-w0  190+b0  138-w0  184+w0
+ 164 Noguchi Hidenori          5D          Kan  119-b0   90-b0  136-w0  165+w0  103-b0   0=      0=      0=      0=      0=   
+ 165 Tel Michiel               1D          Gro  238+b0  153+w0  183+w0  164-b0  115-w0  193-b0  247+b0  240+w0  145+w0   0=   
+ 166 Oosten Arend_van          2D          Utr  182-b0  248-w0  197-w0  231-b0  209+b0  286+w0  157+w0  188+b0  101+w0   0=   
+     Savo Jesse                3D          Tur   85-w0  150+b0  143+w0   35-b0   66-w0   0=      0=      0=      0=      0=   
+ 168 Egea Antonio              3D          Mad  108+b0   39-w0  173+b0  135-w0  147-w0   0=      0=      0=      0=      0=   
+ 169 Wettum Tijmen_van         1K          Utr  280-b0  290+b0  340+b0  249+w0   92-w0  291+w0  192+w0  142-b0  237+b0  181+w0
+ 170 Matsuo Masaki             3D          Aic   99-w0  182-w0  236+b0   70-b0  161+b0   0=      0=      0=      0=      0=   
+     Tian Ruocen               5D          Che   0=      0=      0=      0=      0=     105-w0  146-w0  151-b0   0=      0=   
+ 172 Vasiljevic Vedran         1D          Rij  194-w0  298+b0  324+b0  216-b0  238-w0  279+w0  187-b0  281+w0  239+b0  182+w0
+ 173 Geerlings Bert            3D          Ape  160-w0  255+b0  168-w0  106-w0  194+b0   0=      0=      0=      0=      0=   
+ 174 SERRES Etienne            2D          StE   0=      0=      0=      0=      0=     202-w0  223+b0  127-w0  230+b0  213+w0
+ 175 Schuetze Rainer           2D          Bon   0=      0=      0=      46-w0  234-b0  212+w0  232+b0   0=      0=      0=   
+ 176 Engels André              3D          Ein   0=      0=      0=      0=      0=      0=      0=      82-w0   0=      0=   
+     Ghost Xi                  3D          xxx   0=      0=      0=      0=      0=      0=      0=      72-w0   0=      0=   
+ 178 Ghost Xa                  3D          xxx   0=     109-w0   0=      0=      0=      0=      0=      0=      0=      0=   
+ 179 Amhof Christina           1D          Cob   0=      0=      0=      0=      0=     223-w0  295+b0  268+b0  226+w0  209+b0
+ 180 Oosterwijk Jan            1D          Hee   0=      0=      0=      0=      0=     283-b0  261+w0  271+w0  217+b0  204+w0
+ 181 Tamura Akira              4D          Bri   39+w0   36-b0   54-b0   67+w0   60-w0   92-b0  106-w0   73-b0  162-w0  169-b0
+ 182 Klabukov Alexey           2D               166+w0  170+b0  100-w0  105-b0  191+w0  112+w0   56-b0   93-b0  113-w0  172-b0
+ 183 Beggerow Joachim          3D          Bra  143-w0  103-b0  165-b0  156+w0  235+b0  137-w0  185+b0   83-w0   95-w0  157-b0
+ 184 Tappe Jochen              2D          Dar  103-w0  239+b0  237+w0  138-b0  216+w0  148-b0  149+w0  125-b0  108-w0  163-b0
+ 185 Li Bo                     3D          StP  112-w0  105-b0  248+b0  103-w0  239+b0   70-w0  183-w0  199-b0  209-w0  253+b0
+ 186 Rovio Suvi                1D          Tam  190+b0  114-w0  249+w0  192-w0  202+b0  155-b0  197+b0  152-w0  195+b0  156-w0
+ 187 Cornuejols Dominique      1K          Gre  281+w0  202+b0  153-w0  270+b0  322+w0  192+b0  172+w0   79-b0  129-w0  149-b0
+     Izaki Masao               2D          Kyo  216-b0  207+b0   72-w0  194-w0  272+b0  156-w0  264+w0  166-w0  286+b0  155-b0
+ 189 Vet Bas                   2D          Dha   71+b0   79-w0  278+w0  126-b0  192+w0  107-w0  151-b0   0=     213-b0   0=   
+ 190 Admiraal Ron              1D               186-w0  195+b0  254+w0  215+b0  109-w0  239-w0  202+b0  163-w0  252+b0  144-w0
+     Nakamura Tuyoshi          2D          Fuj  297+w0  270-w0  193+b0  114-b0  182-b0  158-w0  203+b0  155-w0  242+w0  159-b0
+     Zotzsche Hans             1D          Lei  201+w0  263+b0   66-w0  186+b0  189-b0  187-w0  169-b0  213-b0  261+w0  247+w0
+ 193 Njio Ward                 1D          Dha  329+w0  151-b0  191-w0  333+b0  241+b0  165+w0   79-b0  113-w0  245+w0  141-b0
+ 194 Ewert Rainer              1D          StA  172+b0  215-w0  285+b0  188+b0  173-w0  161+w0   69-b0  239+w0  137-w0   0=   
+ 195 Hestvik Frank             1K          Osl  247+b0  190-w0  208+w0  285+b0  237+w0  144-b0  161-b0  212+w0  186-w0  242+b0
+     Karttunen Reino           1K          Ota  156-b0  217+w0  203-b0  292+w0  245+b0  322+b0  278+w0  149+w0  114-b0  142-w0
+     Ohlenbusch Birgit         1K          Kie  204+w0  325+w0  166+b0  246+b0   69-w0  151-b0  186-w0  286+b0  262-b0  252+w0
+     Sokolowsky Bernd          1D          Erl  222+b0  322+w0  108-w0  162+w0  156-b0  240-w0  242-b0  209-b0  260+b0  245+w0
+     Wandel William            1D          Ams  202+w0  278-b0  222-w0  259+b0  155-w0  284+b0  280+w0  185+w0  127-b0  145-b0
+ 200 Valkonen Jouni            1K          Tur  225-w0  212+b0  245-b0  206+w0  325+b0  243+w0  235+w0  132-w0  238+b0  143-b0
+ 201 Groot Ger_de              1D          Dha  192-b0  156-w0  333+b0  225-w0  291+w0  318+b0  159-w0  203+w0  240+b0  139-b0
+ 202 Kim Chongkug              1D          Seo  199-b0  187-w0  342+b0  245+w0  186-w0  174+b0  190-w0  204-b0  293+b0  244+w0
+ 203 Visscher Pepijn           1K          Utr  214+b0  243-b0  196+w0  250+b0  236-w0  282+w0  191-w0  201-b0  257+b0  239+w0
+ 204 Jong Erik_de              1K          Ber  197-b0  231-w0  293+w0  208-b0  339+b0  327+w0  214+b0  202+w0  235+w0  180-b0
+     Swaaij Gijs_van           1K          Utr  269-b0  214-b0  368+w0  305+w0  249+b0  265+w0  219+b0  136-b0  236+w0  140-b0
+     Vannier Luc               1K          Rou  157-b0  292-w0  266+w0  200-b0  349+w0  285+w0  243+b0  223+b0  149-b0  240+w0
+     Zellerer Harald           1D          Ams  249+b0  188-w0  240+w0  278+b0  144+w0   78-b0  143-b0  161-w0   0=      0=   
+ 208 Seckinger Bernhard        1K          Rec  290+w0  244-b0  195-b0  204+w0  210+w0  235-b0  284+w0  238-w0  247+b0  241+b0
+ 209 Binovec Vladimir          2K          Cbu  289-b0  262+b0  357+b0  297+w0  166-w0  249+b0  241+w0  198+w0  185+b0  179-w0
+     Simunkova Martina         1D          Lib  162-w0  157-b0  221-b0  253+w0  208-b0  323-w0  285+w0  289+b0  283+w0  237+b0
+     Takamiya Hiroshi          3D          Kam   67-b0  106-b0  104-w0  221-w0  264+b0   0=      0=      0=      0=      0=   
+ 212 Mulder Hans               1K          Rot  305-w0  200-w0  302+b0  336+w0  287+b0  175-b0  254+w0  195-b0  281+b0  238+w0
+ 213 Suzuki Masashi            1K          Ich  267-b0  326-w0  323-b0  304+b0  294+w0  250+w0  279+b0  192+w0  189+w0  174-b0
+ 214 Grego Vigor               1K          Rij  203-w0  205+w0  282-w0  330+b0  281-b0  326+b0  204-w0  250+b0  279+w0  236+b0
+ 215 Krames Wolfgang           2D          Wie   70-w0  194+b0  115-w0  190-w0  267+b0   0=      0=      0=      0=      0=   
+     Virtanen Jaakko           2D          Tur  188+w0  142-b0  110-b0  172+w0  184-b0   0=      0=      0=      0=      0=   
+ 217 Harms Jan                 2K          Wsb  406+b0  196-b0  273-w0  337+w0  289+w0  244+w0  322+b0  275+b0  180-w0  235+b0
+ 218 Ao Kimio                  2D          Sak  102-w0  104-b0  267+w0  248-b0  284+w0   0=      0=      0=      0=      0=   
+ 219 Groot_Lipman Hennie       2D          Ens   0=      0=      0=      0=      0=     129-b0  205-w0  232-w0  315+b0  262+w0
+     Ito Seiichi               2D          Kod  147-b0  324+w0  146-w0  241+w0  150-b0   0=      0=      0=      0=      0=   
+ 221 Kunze Nils                1D          Ham  159-w0  225+b0  210+w0  211+b0  139-b0   0=      0=      0=      0=      0=   
+ 222 Heikkinen Juho            1D          Hel  198-w0  258+b0  199+b0  255+w0  142-b0   0=      0=      0=      0=      0=   
+ 223 Bambusch Fabian           1D          Aug   0=      0=      0=      0=      0=     179+b0  174-w0  206-w0  312+b0  315+w0
+ 224 Missiaen Kwinten          3K          Leu  368-b0  383+w0  388+b0  348+b0  297+w0  324+b0  233-w0  345+w0  278+b0  248+w0
+ 225 Danel Thomas              1K          Lil  200+b0  221-w0  292+b0  201+b0  278+w0   0=      0=      0=      0=      0=   
+ 226 Bossee Kristof            1K          Gen   0=      0=      0=      0=      0=     319+w0  323+b0  229+b0  179-b0  271+w0
+ 227 Ghost Xb                  2D          xxx   0=     162-b0   0=      0=      0=      0=      0=      0=      0=      0=   
+     Ghost Xc                  2D          xxx   0=     134-b0   0=      0=      0=      0=      0=      0=      0=      0=   
+     Heuchler Sebastian        1D          Wrz   0=      0=      0=      0=      0=     268-b0  311+w0  226-w0  308+b0   0=   
+     Mex Gerd                  2D          Got   0=      0=      0=      0=      0=      0=      0=      0=     174-w0   0=   
+ 231 Draws Ulf                 2K          Han  273+w0  204+b0  306+b0  166+w0  255+b0   0=      0=      0=      0=      0=   
+ 232 Naeve Ruediger            1D          Bre   0=      0=      0=      0=      0=      0=     175-w0  219+b0   0=      0=   
+ 233 Silles Marco              1K         Bonn   0=      0=      0=     323+w0  311+b0  247-b0  224+b0   0=      0=      0=   
+ 234 Melcer Florian            2K          Lev  313+b0  391+w0  298+w0  287+b0  175+w0   0=      0=      0=      0=      0=   
+ 235 Mochida Takeshi           3D          Sap  146-b0  113-b0  151-w0  161-w0  183-w0  208+w0  200-b0  257+b0  204-b0  217-w0
+ 236 Draws Marek               1D          Han  158+b0  152+b0  170-w0  239-w0  203+b0  163-w0  283+w0  162-b0  205-b0  214-w0
+ 237 Tsujigaki Kenji           2D          Kyo  145-b0  254+w0  184-b0  158-w0  195-b0  288+w0  238+b0  159-b0  169-w0  210-w0
+ 238 Kacprzyk Agnieszka        1D          Beb  165-w0  269+w0  161-b0  291+w0  172+b0  153-b0  237-w0  208+b0  200-w0  212-b0
+ 239 Warkentin Eric            1D          Lil  243+w0  184-w0  297+b0  236+b0  185-w0  190+b0  140-b0  194-b0  172-w0  203-b0
+ 240 Olsen Jan                 1D          Cop  241-w0  286+w0  207-b0  279+w0  263+b0  198+b0  115-b0  165-b0  201-w0  206-b0
+ 241 Chuang Wei_Shun           1D          Kao  240+b0   71-w0  284+w0  220-b0  193-w0  264-b0  209-b0  294+b0  256+w0  208-w0
+ 242 Broekhuijsen Hans         1K          Utr  282-b0  357+w0  325+b0  254+w0  246+b0   79-w0  198+w0  112-b0  191-b0  195-w0
+ 243 Kiyoshi Matsunaga         1D          Tok  239-b0  203+w0  155-w0  283+w0  162-b0  200-b0  206-w0  261-b0  328+w0  294+w0
+ 244 Frech Thomas              1D          Zur  248-w0  208+w0  158-b0  267-b0  273-w0  217-b0  291+b0  328+w0  258+w0  202-b0
+ 245 Au Ming                   1K          Dha  283+b0  252-w0  200+w0  202-b0  196-w0  333+b0  258+w0  280+w0  193-b0  198-b0
+     Motegi Yoshikazu          3D          Fuj   42-b0  147-w0  114-b0  197-w0  242-w0   0=      0=      0=      0=      0=   
+ 247 Pleit Karen               1K          Utr  195-w0  327-b0  334+w0  340+b0  254+b0  233+w0  165-w0  278+b0  208-w0  192-b0
+     Poerschke Chris           1D          Hei  244+b0  166+b0  185-w0  218+w0   73-w0  162-b0   0=      0=      0=     224-b0
+ 249 Knauf Franz_Josef         1D          StA  207-w0  328+b0  186-b0  169-b0  205-w0  209-w0  325+w0  293-w0  327+b0  288+b0
+     Landskron Burkhard        1D          Gop  106-w0  285-b0  327+b0  203-w0  259-w0  213-b0  329+b0  214-w0  323+b0  284+w0
+     Shin Youngja              1D          Seo  325+b0  110-w0  163-b0  264-w0  288-w0  260-b0  326+w0  256-b0  291+w0  283+b0
+ 252 Grimm Kirsten             1D          Fre   0=     245+b0  257+w0  157-w0   0=     146-b0  281-w0  265+b0  190-w0  197-b0
+ 253 Harper Cyril              3K          Gre  309+w0  313+b0  290+w0  210-b0  292+w0  254-b0  259+w0  282+b0  280+b0  185-w0
+ 254 Gocke Johannes            1D          Kol  284+w0  237-b0  190-b0  242-b0  247-w0  253+w0  212-b0   0=     343+w0  301+b0
+     Tsukamoto Kazuo           2D          Tok  110+w0  173-w0  154-b0  222-b0  231-w0   0=      0=      0=      0=      0=   
+ 256 Blom Jaap_K.              1D          Lei  324-w0  267-w0  259-b0  273-b0  295-b0  331+w0  296+b0  251+w0  241-b0  282+w0
+     Fucht Rob_van             1K          Alm  391+w0  336+w0  252-b0  152-b0  270-b0  329+b0  282+w0  235-w0  203-w0  286+w0
+     Wilms Yannick             1K          Lub  385+b0  222-w0  157-w0  289+w0  279-b0  350+b0  245-b0  284+w0  244-b0  281+b0
+ 259 Busken Julian_van_Den     1K          Gen  286-b0  300+w0  256+w0  199-w0  250+b0  278-b0  253-b0  288+w0   0=     296+w0
+ 260 Pace Alessandro           3K          Rom  341+w0  369+b0  288-w0  302+b0  342+w0  251+w0  265-b0  354+b0  198-w0  279+b0
+ 261 Clerc Vincent             4K          Ant  408+b0  301+w0  391+b0  290+w0  298+b0  346+w0  180-b0  243+w0  192-b0  307+w0
+     Kuznetsov Mikhail         3K          StP  374+b0  209-w0  332-w0  359+b0  337+b0  330+w0  298+b0  322+w0  197+w0  219-b0
+ 263 Tamaki Satoshi            2D          Yok  113-b0  192-w0  280-w0  326+b0  240-w0   0=      0=      0=      0=      0=   
+ 264 Mourik Henk               1K          Ams  288-w0  297+w0  305+b0  251+b0  211-w0  241+w0  188-b0   0=      0=      0=   
+     Tallos_Tanarro Andres     1D          Sse   0=      0=      0=      0=      0=     205-b0  260+w0  252-w0  276+b0  107-w0
+ 266 Baudis Petr               3K          Pra  307+w0  296+b0  206-b0  368+b0  327-w0   0=     393+w0  310+w0  302+b0  295+w0
+ 267 Silber Olga               1K          Ham  213+w0  256+b0  218-b0  244+w0  215-w0   0=      0=      0=      0=      0=   
+ 268 Leeuwen Anne_van          1K          Lei   0=      0=      0=      0=      0=     229+w0  293+b0  179-w0  271-b0  316+w0
+ 269 Flugge Klaus              1K          Erd  205+w0  238-b0  281+b0  324+w0  159-w0   0=      0=      0=      0=      0=   
+     Lüthke Hans-Eckart        1K          Swn  387+w0  191+b0  152-b0  187-w0  257+w0   0=      0=      0=      0=      0=   
+     Piasecki Christian        1K          Bra   0=      0=      0=      0=      0=     300+w0  328+b0  180-b0  268+w0  226-b0
+ 272 Camernik Sreco            1K          Lju  330+b0  306+w0  322-b0  282+w0  188-w0   0=      0=      0=      0=      0=   
+     Seres Julia               2K          Bud  231-b0  349+w0  217+b0  256+w0  244+b0   0=      0=      0=      0=      0=   
+ 274 matsuura junko            1K          Mad   0=      0=      0=      0=      0=     293-w0  301-b0  339+w0  332+b0  312+w0
+ 275 Ghost Xl                  1D          xxx   0=      0=      0=      0=      0=      0=      0=     217-w0   0=      0=   
+     Prokopova Anna            2K                0=      0=      0=      0=      0=     338+w0  299+b0  295+b0  265-w0  308+w0
+ 277 Spijker Laurens           1K          DHa   0=      0=      0=      0=     326+w0   0=      0=      0=      0=      0=   
+ 278 Schmiga Steffen           2D          Ham  130-b0  199+w0  189-b0  207-w0  225-b0  259+w0  196-b0  247-w0  224-w0   0=   
+ 279 Meerhof Kasper            1K          Sch   68-b0  348+w0  295+w0  240-b0  258+w0  172-b0  213-w0  323+w0  214-b0  260-w0
+ 280 Castellano Miguel-Angel   1K          Mad  169+w0  329+b0  263+b0   73-w0  163-w0  281+w0  199-b0  245-b0  253-w0   0=   
+ 281 Rijk Heike_de             1K          Gro  187-b0  288+b0  269-w0  342+w0  214+w0  280-b0  252+b0  172-b0  212-w0  258-w0
+     Scholz Thomas             1K          Bra  242+w0  158-w0  214+b0  272-b0  328+w0  203-b0  257-b0  253-w0  289+b0  256-b0
+     Ulrich Sebastian          1K          Dar  245-w0  289+w0  336+b0  243-b0  285+w0  180+w0  236-b0  157-b0  210-b0  251-w0
+ 284 Park Moonjin              1D          Seo  254-b0  340+w0  241-b0  286+w0  218-b0  199-w0  208-b0  258-b0  325+w0  250-b0
+ 285 Imiya Teruo               1K          Yok  291+b0  250+w0  194-w0  195-w0  283-b0  206-b0  210-b0  300+w0  288-b0  339+w0
+     Kuroda Takako             1K          Tok  259+w0  240-b0  330+w0  284-b0  329+w0  166-b0  288+b0  197-w0  188-w0  257-b0
+ 287 Nakamura Hiromasa         2D          Yok   72-w0  159-b0  156-b0  234-w0  212-w0   0=      0=      0=      0=      0=   
+ 288 Koppernock Martin         2K          Ber  264+b0  281-w0  260+b0  369+w0  251+b0  237-b0  286-w0  259-b0  285+w0  249-w0
+     Vernimmen Suzanne         2K          Gro  209+w0  283-b0  294+w0  258-b0  217-b0  334+w0  346+b0  210-w0  282-w0  335+b0
+ 290 Akaike Keiko              1K          Tok  208-b0  169-w0  253-b0  261-b0  304-w0  365+w0  338+w0  330+b0  316-b0  332+w0
+ 291 Richter Uwe               1K          Bra  285-w0  385+w0  328+b0  238-b0  201-b0  169-b0  244-w0  393+w0  251-b0  331+w0
+ 292 Takechi Harumi            1K          Kaw  340-w0  206+b0  225-w0  196-b0  253-b0  332-b0  359-w0  360+w0  372+b0  330+w0
+ 293 Hietava Markus            3K          Oul  362+w0  303+b0  204-b0  334+w0  340+w0  274+b0  268-w0  249+b0  202-w0   0=   
+     Lieventhal Hans           2K          Stu  326-w0  335+b0  289-b0  374+w0  213-b0  382+b0  307+w0  241-w0  322+w0  243-b0
+ 295 Averous Pierre            3K         67Se  461+w2  388+w0  279-b0  357+b0  256+w0  320+b0  179-w0  276-w0  345+b0  266-b0
+ 296 Gaertner Philipp          2K          Wei  327-w0  266-w0  399+b0  331+w0  336+b0  371+w0  256-w0  312-b0  347+b0  259-b0
+     Riegner Michael           1D          Bre  191-b0  264-b0  239-w0  209-b0  224-b0  358+w0   0=      0=      0=      0=   
+     Wirthmann Benjamin        1D          FaM   0=     172-w0  234-b0  311-b0  261-w0  343+b0  262-w0   0=      0=      0=   
+ 299 Schomberg Karen           2K          Mee  331+b0  342-w0  358+b0  329-b0  313-w0  335+w0  276-w0  326+b0  307-b0  377+w0
+     Sonius Joey               2K          Zoe  388+b0  259-b0  348+w0  325-w0  333-w0  271-b0  331+w0  285-b0  376+b0  327+w0
+ 301 Koch Kris                 3K          Erl  323-b0  261-b0  424+w0  399+w0  368+w0  351+b0  274+w0  308-b0  324+b0  254-w0
+     Walraet Matthieu          3K          Par  332+b0  331+w0  212-w0  260-w0  366-b0  386+b0  385+w0  377+b0  266-w0  328+b0
+ 303 Kacprzyk Michal           3K          Beb  369+w0  293-w0  310-b0  341+b0  331-b0  387+w0  330-w0  366+b0  334+w0  323+b0
+     Sorgalla Jonas            4K          Osn  413+w0  362+b0  406+b0  213-w0  290+b0  347+w0  324-b0  316-w0  338+w0  325+b0
+ 305 Kawauchi Hideo            1K          Bam  212+b0  163-w0  264-w0  205-b0  338+w0   0=      0=      0=      0=      0=   
+ 306 Berkelmans Wouter         1D          Amv  161-b0  272-b0  231-w0   0=      0=      0=      0=      0=      0=      0=   
+ 307 Ohlenbusch Marit          3K               266-b0  390+w0   0=     392+w0  389+w0  339+b0  294-b0  359+b0  299+w0  261-b0
+ 308 Van_der_Werf Erik         1K          Ein   0=      0=      0=      0=      0=     311-w0  332+b0  301+w0  229-w0  276-b0
+ 309 Schmidt Ulrike            3K          Pfo  253-b0  399-w0  394+b0  335-w0  390+w0  385-w0  383+b0  357+b0  329+w0  322+b0
+ 310 Mueller Valentin          5K          Col  504+w0  386+b0  303+w0  405+b0  385+b0  312-w0  351+w0  266-b0  326+b0  347+w0
+ 311 Dao Quang-Tran            3K          Ant  411+b0  375+w0  385+b0  298+w0  233-w0  308+b0  229-b0   0=      0=      0=   
+     Mandemaker Jorik          2K          Ein   0=      0=      0=      0=      0=     310+b0  333+w0  296+w0  223-w0  274-b0
+ 313 Kadotani Naoto            2K          Tok  234-w0  253-w0  367+b0  332+w0  299+b0   0=      0=      0=      0=      0=   
+     McGill Martha             4K          Bes  367-b0  410+b0  353-w0  409-w0  418+b0  361+w0  362+b0  385+w0  377+w0  324+b0
+ 315 Kjellstroem David         2K          Lun   0=      0=      0=      0=      0=      0=     400+b0  324+w0  219-w0  223-b0
+ 316 HEAULME Alain             3K          44N   0=      0=      0=      0=      0=     380+b0  366+w0  304+b0  290+w0  268-b0
+     Yun Daeho                 7K          Seo  490+w0  428+b0  372+w0  412+b0  415+b0  405+w0  337+w0  367+w0  370+b0  345+b0
+ 318 Ghost Xm                  1K          xxx   0=      0=      0=      0=      0=     201-w0   0=      0=      0=      0=   
+     Thon Michael              1K          Han   0=      0=      0=      0=      0=     226-b0   0=      0=      0=      0=   
+ 320 Kruizinga Edze            1K          Hee   0=      0=      0=      0=      0=     295-w0   0=      0=      0=      0=   
+ 321 Finke Martin              3K          Utr   0=      0=      0=      0=      0=     370+b0   0=     434+w2   0=      0=   
+ 322 Kawamura Masako           2D          Tok  141-w0  198-b0  272+w0  153-b0  187-b0  196-w0  217-w0  262-b0  294-b0  309-w0
+ 323 Chalmoviansky Pavel       3K          Bra  301+w0  361+b0  213+w0  233-b0  330+w0  210+b0  226-w0  279-b0  250-w0  303-w0
+     Yang Sukhee               1D          Seo  256+b0  220-b0  172-w0  269-b0   0=     224-w0  304+w0  315-b0  301-w0  314-w0
+ 325 Kuroda Yasotushi          1D          Kaw  251-w0  197-b0  242-w0  300+b0  200-w0  328-w0  249-b0  334+b0  284-b0  304-w0
+ 326 Brandsma Wietze           2K          Gro  294+b0  213+b0  329+w0  263-w0  277-b0  214-w0  251-b0  299-w0  310-w0  371+b0
+ 327 Sakashita Satoshi         2K          Tok  296+b0  247+w0  250-w0  328-b0  266+b0  204-b0  345-w0  333+w0  249-w0  300-b0
+ 328 Wit Jelger_de             1K          Alm  342+b0  249-w0  291-w0  327+w0  282-b0  325+b0  271-w0  244-b0  243-b0  302-w0
+ 329 Cho Wongho                1D          Seo  193-b0  280-w0  326-b0  299+w0  286-b0  257-w0  250-w0  332-w0  309-b0  363+b0
+ 330 Racz Thomas               1K          Ber  272-w0  358+w0  286-b0  214-w0  323-b0  262-b0  303+b0  290-w0  369+b0  292-b0
+ 331 Carmona Pedro             2K          Lis  299-w0  302-b0  341+w0  296-b0  303+w0  256-b0  300-b0  363+b0  344+w0  291-b0
+     Ebert Andreas             3K               302-w0  364+w0  262+b0  313-b0  374+b0  292+w0  308-w0  329+b0  274-w0  290-b0
+ 333 Scholz Nikolas            2K          Ham  375+b0  406+w0  201-w0  193-w0  300+b0  245-w0  312-b0  327-b0  360-b0  365+w0
+ 334 Severing Ingo             2K          Dan  357-w0  337+w0  247-b0  293-b0  364+w0  289-b0  335+b0  325-w0  303-b0  360+w0
+ 335 Kano Nobuko               3K          Yok  353+b0  294-w0  349-w0  309+b0  350+w0  299-b0  334-w0  386+b0  359+b0  289-w0
+     Motegi Nobuko             1D          Fuj  155-w0  257-b0  283-w0  212-b0  296-w0   0=      0=      0=      0=      0=   
+ 337 Fulle Marek               3K          Bra  363+w0  334-b0  387+w0  217-b0  262-w0  359-b0  317-b0  396+w0  393+b0  361+b0
+ 338 Paar Kurt                 4K          Fra  360+b0  363+w0  405+w0  385+w0  305-b0  276-b0  290-b0  364+w0  304-b0  359+w0
+ 339 Krohn Danny_Lee           4K          Ham  447+b0  372+w0  413+b0  362+w0  204-w0  307-w0  367+b0  274-b0  358+w0  285-b0
+ 340 Kraft Bernhard            1K          Lip  292+b0  284-b0  169-w0  247-w0  293-b0   0=      0=      0=      0=      0=   
+ 341 Hartmann Christian        3K          Ham  260-b0  356+w0  331-b0  303-w0  386-w0  360-w0  410+b0  407+b0  364+b0  358+w0
+     Hasegawa Kanami           1K          Kaw  328-w0  299+b0  202-w0  281-b0  260-b0   0=      0=      0=      0=      0=   
+ 343 Anderson Christian        4K          Wie  364-b0  427+w0  356+b0  361+w0  357+b0  298-w0  370+w0  346+b0  254-b0   0=   
+ 344 Goetz Manfred             2K          Fre  358-b0  368-w0  355-b0  367-w0  353-b0  407+w0  365+b0   0+     331-b0  390+w0
+ 345 Enghardt Theresa          2K          Lei   0=      0=      0=      0=      0=     366+w0  327+b0  224-b0  295-w0  317-w0
+ 346 Daverkausen Bernd         1K          Kol   0=      0=      0=      0=      0=     261-b0  289-w0  343-w0   0=      0=   
+ 347 Poutiainen Tapio          2K          Hel   0=      0=      0=      0=      0=     304-b0  363+w0  358+w0  296-w0  310-b0
+ 348 Ishii Kurazo              2K          Kan  361+w0  279-b0  300-b0  224-w0   0=      0=      0=      0=      0=      0=   
+ 349 Klaus Tobias              3K          Gop  355+w0  273-b0  335+b0  358+w0  206-b0   0=      0=      0=      0=      0=   
+ 350 Jager Celine              2K          Ams   0=      0=      0=      0=     335-b0  258-w0   0=      0=      0=      0=   
+     Verhoeven Hans            2K          Ams   0=      0=      0=      0=      0=     301-w0  310-b0   0=      0=      0=   
+ 352 Mouhounou Sophie          7K          Ors  459+b0  416+w0  488+b0  415-w0  414+w0  412+b0  405+b0  400+w0  367+w0  370+b0
+ 353 Klemsa Martin             4K          Brn  335-w0  360+w0  314+b0  391+b0  344+w0   0=      0=      0=      0=      0=   
+ 354 Ghost Xj                  2K          xxx   0=      0=      0=      0=      0=      0=      0=     260-w0   0=      0=   
+ 355 Gavrilov Oleg             3K          StP  349-b0  359+w0  344+w0   0=      0=      0=      0=      0=      0=      0=   
+     Kuroda Ken                3K          Tok   0=     341-b0  343-w0  425+w0  409+b0   0=      0=      0=      0=      0=   
+ 357 Bitman Alexander          2K          Mos  334+b0  242-b0  209-w0  295-w0  343-w0  389+w0  358-b0  309-w0  365-b0  396+b0
+ 358 Teuling Andre             2K          Ams  344+w0  330-b0  299-w0  349-b0  363+w0  297-b0  357+w0  347-b0  339-b0  341-b0
+ 359 Bechler Ludger            4K          Gel  379+w0  355-b0  383+b0  262-w0  399+b0  337+w0  292+b0  307-w0  335-w0  338-b0
+ 360 Brummelkamp Erik          4K          Nij  338-w0  353-b0  371-b0  395+w0  373+w0  341+b0  389+w0  292-b0  333+w0  334-b0
+ 361 Hebsacker Steffi          2K          Ham  348-b0  323-w0  369-w0  343-b0  379-b0  314-b0  395+b0  373+w0  386+w0  337-w0
+ 362 Visscher-Mobach Mirjam    3K          Utr  293-b0  304-w0  389-w0  339-b0  396+w0  392+b0  314-w0  394+b0  363-w0  395+w0
+ 363 Mueller Rolf              3K          Hei  337-b0  338-b0  407+w0  406+w0  358-b0  364+w0  347-b0  331-w0  362+b0  329-w0
+ 364 Coultre Marc_le           4K          Gro  343+w0  332-b0  401+w0  387+b0  334-b0  363-b0  408+w0  338-b0  341-w0  389+w0
+ 365 Moorer Donald             4K          Gro  383-b0  392-b0  403+w0  401+w0  388+w0  290-b0  344-w0  389+b0  357+w0  333-b0
+ 366 Ahlroos Hannele           4K          Tam  386+b0  374-w0  390+w0  388+b0  302+w0  345-b0  316-b0  303-w0  387+b0   0=   
+ 367 Jansen Jan_Willem         4K          Ens  314+w0  411+b0  313-w0  344+b0  380+w0   0=     339-w0  317-b0  352-b0   0=   
+ 368 Friscourt Romain          3K          Lil  224+w0  344+b0  205-b0  266-w0  301-b0   0=      0=      0=      0=      0=   
+ 369 Leitner Manuela           2K          Wie  303-b0  260-w0  361+b0  288-b0   0=      0=      0=      0=     330-w0   0=   
+ 370 Niinisalo Helena          2K          Hel   0=      0=      0=      0=      0=     321-w0  343-b0  371+b0  317-w0  352-w0
+ 371 Rousseau Clement          6K          Cou  460+b0  397+w0  360+w0  411+w0  405+b0  296-b0  406+b0  370-w0  385+b0  326-w0
+ 372 Pintilie Costel           5K          Gal  392-w0  339-b0  317-b0  457+w0  434+b0  427+w0  390+w0  406+b0  292-w0  387+w0
+ 373 Averous Christophe        5K          Str  401-b0  426+w0  379-b0  410+w0  360-b0  418+b0  409+w0  361-b0  392+w0  386+b0
+ 374 Hilgenbos Wim-Jan         3K          Ame  262-w0  366+b0  375+b0  294-b0  332-w0   0=      0=      0=      0=      0=   
+ 375 Kai Mihoko                2K          Yok  333-w0  311-b0  374-w0  389-b0  392+w0   0=      0=      0=      0=      0=   
+ 376 Billoire Clement          7K          Ors  433+w0  429+b0  415-b0  446+w0  438+b0  423+w0  398+b0  405+w0  300-w0  385+b0
+ 377 Hjalmarsson Mats          3K          Sto   0=      0=      0=      0=      0=     496+b0  397+w0  302-w0  314-b0  299-b0
+ 378 Lebastard Laura           8K          xxx  470+w0  422-b0  471+w0  433+b0  468+w0  428+b0  412+w0  423+b0  400+b0  383+w0
+ 379 Stuiver Bert              4K          Arn  359-b0  424-b0  373+w0  417+w0  361+w0   0=      0=      0=      0=      0=   
+ 380 Buntsma Els               3K          Arn   0=      0=      0=      0=     367-b0  316-w0   0=      0=      0=      0=   
+ 381 Hendriks Willem           3K          Gro   0=      0=     131-b2   0=      0=      0=      0=      0=      0=      0=   
+ 382 Ghost Xg                  3K          xxx   0=      0=      0=      0=      0=     294-w0   0=      0=      0=      0=   
+ 383 Bailey Steve              4K          Wsy  365+w0  224-b0  359-w0  393-b0  425+w0  390+b0  309-w0  384=b0  402+b0  378-b0
+ 384 Ghost Xk                  4K          xxx   0=      0=      0=      0=      0=      0=      0=     383=w0   0=      0=   
+ 385 Bouman Liselot            1K          Alm  258-w0  291-b0  311-w0  338-b0  310-w0  309+b0  302-b0  314-b0  371-w0  376-w0
+ 386 Wit Gerrit_de             4K          Alm  366-w0  310-w0  398+b0  424+b0  341+b0  302-w0  387+b0  335-w0  361-b0  373-w0
+ 387 Diers Manfred             3K          Old  270-b0  418+w0  337-b0  364-w0  407+w0  303-b0  386-w0  408+b0  366-w0  372-b0
+     Koch Andreas              2K          Erl  300-w0  295-b0  224-w0  366-w0  365-b0  408-w0  396-b0  429+b0  395-b0  407+b0
+ 389 Pullwitt Daniel           5K          Ber  398+w0  417+w0  362+b0  375+w0  307-b0  357-b0  360-b0  365-w0  407+w0  364-b0
+ 390 Bouwman Gerard            4K          Zut  409+w0  307-b0  366-b0  418+w0  309-b0  383-w0  372-b0  414+w0  408+b0  344-b0
+ 391 Adam Nicole               2K          Ber  257-b0  234-b0  261-w0  353-w0  393-w0   0=      0=      0=      0=      0=   
+ 392 Merk Guido                5K          Ham  372+b0  365+w0  411+w0  307-b0  375-b0  362-w0  407-b0  410+w0  373-b0  408+w0
+ 393 Goetschalckx Robby        5K          Leu  407-b0  451+w1  408+w0  383+w0  391+b0  400+w0  266-b0  291-b0  337-w0   0=   
+ 394 Maliczak Christophe       5K          Lyo  404+w0  408+b0  309-w0  407-b0  401-b0  395-w0  421+w0  362-w0  409+b0  416+b0
+ 395 Lisy Pavol_sr.            7K          Bra  420+w0  404+b0  426+w0  360-b0  440+b0  394+b0  361-w0  409+w0  388+w0  362-b0
+ 396 Kristensen Lars           7K          Cop  431+w0  447+b0  468+w0  413+w0  362-b0  415+b0  388+w0  337-b0  406+b0  357-w0
+     Rotermund Heike           5K          Kie  410-w0  371-b0  446+b0  398-w0  431+b0  413+w0  377-b0  421-b0  423+w0  412+w0
+ 398 Blockley Edward           5K          Wor  389-b0  419+w0  386-w0  397+b0  417+b0   0=     376-w0  402-w0  432+b0  410+w0
+ 399 Bink Fons                 4K          Ein  417+b0  309+b0  296-w0  301-b0  359-w0   0=      0=      0=      0=      0=   
+ 400 Roelofs Yvonne            3K          Lei   0=      0=      0=      0=      0=     393-b0  315-w0  352-b0  378-w0   0=   
+ 401 Landgraf Ruediger         5K          Ber  373+w0  413+b0  364-b0  365-b0  394+w0   0=      0=      0=      0=      0=   
+ 402 Bouvet Aymeric            8K               472-b0  478+w0  490+b0  504+w0  416+w0  455+b0  415+w0  398+b0  383-w0  405+b0
+ 403 Gehin Johan               5K          Lil  427-b0  415+w0  365-b0  429+w0  406+w0   0=      0=      0=      0=      0=   
+     Steuber Dirk              5K          Dus  394-b0  395-w0  441+w0  427+b0  411+w0   0=      0=      0=      0=      0=   
+ 405 Gross Jonathan            2K          Wei   0=     154-b1  338-b0  310-w0  371-w0  317-b0  352-w0  376-b0  421+b0  402-w0
+ 406 Tsujigaki Mineko          2K          Kyo  217-w0  333-b0  304-w0  363-b0  403-b0  409+b0  371-w0  372-w0  396-w0   0=   
+ 407 Zon Stan_van              5K          Utr  393+w0  409+b0  363-b0  394+w0  387-b0  344-b0  392+w0  341-w0  389-b0  388-w0
+ 408 Lykke Christian           4K          Cop  261-w0  394-w0  393-b0  414+w0  424+b0  388+b0  364-b0  387-w0  390-w0  392-b0
+ 409 Tegtmeier Sarah           4K          Aac  390-b0  407-w0  410+b0  314+b0  356-w0  406-w0  373-b0  395-b0  394-w0  429+b0
+ 410 Havik Tamara              5K          Dha  397+b0  314-w0  409-w0  373-b0  448+w0  417+b0  341-w0  392-b0  419+w0  398-b0
+ 411 Makinen Max               3K          Hel  311-w0  367-w0  392-b0  371-b0  404-b0   0=      0=      0=      0=      0=   
+ 412 Gugten Robbert_van_der    6K          Ape  428+w0   0=     419+b0  317-w0  456+b0  352-w0  378-b0  455+b0  429+w0  397-b0
+ 413 Berkelmans Wim            4K          Amv  304-b0  401-w0  339-w0  396-b0  444+w0  397-b0  457+b0   0=      0=      0=   
+ 414 Boyen Kris                6K          Leu  429+b0  488+w0  417-w0  408-b0  352-b0  445+w0  431+b0  390-b0  416-w0  432+w0
+     Visser Frans              5K          Amv   0=     403-b0  376+w0  352+b0  317-w0  396-w0  402-b0   0=      0=      0=   
+ 416 Bartnik Roman             6K          Mun   0=     352-b0  440-w0  435+w0  402-b0  453+w0  456+b0  431+w0  414+b0  394-w0
+     Okawa Atsuko              4K          Osa  399-w0  389-b0  414+b0  379-b0  398-w0  410-w0   0=      0=      0=      0=   
+ 418 Furuyama Michiyo          4K          Osa  468-b0  387-b0  427+w0  390-b0  314-w0  373-w0   0=      0=      0=      0=   
+ 419 Rüten-Budde Jana          6K          Ham  438+b0  398-b0  412-w0  440-w0   0=     454+w0  436+w0  420+b0  410-b0  435+w0
+ 420 Podetti Bertrand          8K          Ors  395-b0  452+b0  459+w0  478+w0  446+b0  448+w0  423-b0  419-w0  431+w0  442+b0
+     Salom Pavel               8K          Pra  434+b0  433+w0  504+b0  468+w0  427-b0  432+w0  394-b0  397+w0  405-w0  448+b0
+ 422 Haneckova Radka           7K          Bra  448-b0  378+w0  428-w0  443-b0  435+w0   0=     439+b0  454+w0  449+b0  436+w0
+ 423 Bucci Stefano             5K          Mil   0=      0=      0=      0=      0=     376-b0  420+w0  378-w0  397-b0  434+w0
+ 424 Oshio Keiko               5K          Hyo  488+b0  379+w0  301-b0  386-w0  408-w0   0=      0=      0=      0=      0=   
+ 425 Schramm Jenny             5K          Fre   0=      0=     438+w0  356-b0  383-b0   0=      0=      0=      0=      0=   
+ 426 Larsen Gunn_Kristine_Hols 6K          Gro  437+w0  373-b0  395-b0  441+b0   0=      0=      0=      0=      0=      0=   
+ 427 Verstegen Wim             5K          Bar  403+w0  343-b0  418-b0  404-w0  421+w0  372-b0  429-w0   0=     436-b0  450+b0
+ 428 Buntrock Juergen          6K          Ber  412-b0  317-w0  422+b0  431-w0  436+b0  378-w0  450+w0  432-b0  437-w0  451+b0
+     Mullens Richard           6K          StA  414-w0  376-w0  443+b0  403-b0  452+b0  456+w0  427+b0  388-w0  412-b0  409-w0
+ 430 Burvenich Claude          2K 9190001 76Ro   0-      0-      0-      0-      0-      0-      0-      0-      0-     150?b1
+ 431 Friederichs Rob           7K          Cul  396-b0  471+w0  469+w0  428+b0  397-w0  443+b0  414-w0  416-b0  420-b0  449+w0
+ 432 Costea Valeria            7K          Buc  441-w0  440-b0  464+w0  472+w0  450+b0  421-b0  449+b0  428+w0  398-w0  414-b0
+ 433 Vannieuwenhuyse Joost     7K          Ant  376-b0  421-b0  449+w0  378-w0  470+b0  450-w0  488+w0  435-w0  453+b0  446+b0
+ 434 Friedrich Nina            8K          Ham  421-w0  491+b0  489+b0  521+w0  372-w0  447+b0  448+b0  321-b2  469+w0  423-b0
+     Puyaubreau Nicolas        8K          Ors  451-w0  458+b0  461+w0  416-b0  422-b0  504+w0  475+w0  433+b0  455+w0  419-b0
+ 436 Rioualen Claire           8K          Nan  510+b0  449+w0  447-w0  469+b0  428-w0  488+w0  419-b0  446+b0  427+w0  422-b0
+ 437 Nousiainen Antti          6K          Tam  426-b0  446-w0  444-w0  450-b0  449-b0  472+w0  476+b0  469+w0  428+b0   0=   
+ 438 Hannus Miika              6K          Oul  419-w0  469+b0  425-b0  470+b0  376-w0   0=      0=      0=      0=      0=   
+ 439 Napel Roelof_Ten         10K          xxx  494+b0  516+w0  510+b0  465-w0  471+b0  462+w0  422-w0  477+b0  468+b0  455+w0
+ 440 Ravera Sylvain            7K          Col  469-w0  432+w0  416+b0  419+b0  395-w0   0=      0=      0=      0=      0=   
+ 441 Souchay Jean              7K          Par  432+b0  460+w0  404-b0  426-w0  457+b0   0=      0=      0=      0=      0=   
+ 442 Parton Maurizio           8K          Pes   0=      0=      0=      0=      0=     452+w0  453+b0  456+w0  451+b0  420-w0
+ 443 Grotepass Christoph       8K          Ess  528+b0  504+b0  429-w0  422+w0  488+b0  431-w0   0=      0=      0=      0=   
+     Kono Shummei              8K          Fir  450+w0  490+b0  437+b0  488+w0  413-b0   0=      0=      0=      0=      0=   
+ 445 Dohme Max                 7K          Got   0=      0=      0=      0=     447+w0  414-b0   0=      0=      0=      0=   
+ 446 Fang Ludan                7K          Lon  489+b0  437+b0  397-w0  376-b0  420-w0  457-w0  468+w0  436-w0  454+b0  433-w0
+ 447 Scheffer Enno             6K          Gro  339-w0  396-w0  436+b0  448-b0  445-b0  434-w0  469-b0  470+w0  473+w0  467-b0
+ 448 Nystrom Maria             7K          Ume  422+w0  468-b0  472+b0  447+w0  410-b0  420-b0  434-w0  451-w0  452+b0  421-w0
+ 449 Burkhardt Thilo           8K          Dre  491+w0  436-b0  433-b0  458+w0  437+w0  463+b0  432-w0  450+b0  422-w0  431-b0
+ 450 Timmins Brian             8K          Shr  444-b0  492+w0  451+b0  437+w0  432-w0  433+b0  428-b0  449-w0  472+b0  427-w0
+ 451 Lehto Oskari              8K          Hel  435+b0  393-b1  450-w0  505+b0  472+w0  468+b0  455-w0  448+b0  442-w0  428-w0
+ 452 Severing Eva              9K          Dan  506+b0  420-w0  474+b0  489+w0  429-w0  442-b0  484+w0  479+b0  448-w0  469+b0
+ 453 Tsoukkerman Boris        10K          Ens  500+w0  493+b0  492+b0  459+w0  504+w0  416-b0  442-w0  462+b0  433-w0  468+b0
+ 454 Dulac Olivier            10K          Gre  509+w0  506+w0  491+b0  490+w0  465+b0  419-b0  477+w0  422-b0  446-w0  476+b0
+     Notbohm Philipp           6K          Bie   0=      0=      0=      0=      0=     402-w0  451+b0  412-w0  435-b0  439-b0
+ 456 Golay Monique             6K          Lau   0=      0=      0=      0=     412-w0  429-b0  416-w0  442-b0   0=      0=   
+     Schulz Malte              8K          Old  492+w0  489+w0  460+b0  372-b0  441-w0  446+b0  413-w0   0=      0=      0=   
+     Steffensen Michael        9K          Ode  505+b0  435-w0  473+b0  449-b0  478-w0  506+w0  459-b0  504+b0  477+w0  475+w0
+ 459 Rüten-Budde Doerte        7K          Ham  352-w0   0=     420-b0  453-b0   0=      0=     458+w0   0=     475+b0   0=   
+ 460 Freitas Peter_de          6K          Hee  371-w0  441-b0  457-w0   0=      0=      0=      0=      0=      0=      0=   
+ 461 Feleus Martijn            7K          Rot  295-b2  472-w0  435-b0  480+b0  516+w0   0=      0=      0=      0=      0=   
+ 462 Pan Alessio               8K                0=      0=      0=      0=      0=     439-b0  489+w0  453-w0  471+b0  473+b0
+ 463 Derksen Jan               7K          Zwo   0=      0=      0=      0=      0=     449-w0   0=      0=      0=      0=   
+     Landolt Jeroen            9K          Dhe  493+w0  510+b0  432-b0  471+w0  469+b0   0=      0=      0=      0=      0=   
+ 465 Postulka Angela           8K          Sch   0=      0=      0=     439+b0  454-w0   0=      0=      0=      0=      0=   
+ 466 Guessab Houari           10K          Str   0=      0=      0=      0=      0=     494+b0  474+w0  495+w0  488+b0  470+w0
+ 467 Wierzbicki Sebastien     10K          met   0=      0=      0=      0=      0=     528+w0  503+b0  506+w0  483+b0  447+w0
+ 468 Petri Birgit              7K          Dar  418+w0  448+w0  396-b0  421-b0  378-b0  451-w0  446-b0  489+w0  439-w0  453-w0
+ 469 Carter-Hitchin David      7K          Lon  440+b0  438-w0  431-b0  436-w0  464-w0  470+b0  447+w0  437-b0  434-b0  452-w0
+ 470 Tiemann Christian         8K          Ham  378-b0  497+w0  481+b0  438-w0  433-w0  469-w0  504+b0  447-b0  479+w0  466-b0
+ 471 Ringel Juergen            8K          aug  497+w0  431-b0  378-b0  464-b0  439-w0  509+w0  479-w0  492+b0  462-w0  488+b0
+     Zimmermann Joerg          8K          Mun  402+w0  461+b0  448-w0  432-b0  451-b0  437-b0  492+w0  488+w0  450-w0   0=   
+ 473 Breitenstein Alexander   10K          Ham  495+b0  501+w0  458-w0  506+b0  490+w0  475-b0  496+w0  476+b0  447-b0  462-w0
+ 474 Peeman Elderik           10K          Gro  517+b0  528-b0  452-w0  511+w0  493+w0  479-b0  466-b0  513+w0  504+b0  496+w0
+ 475 Huijgen Alfons            8K          Alp   0=      0=      0=      0=      0=     473+w0  435-b0  491+b0  459-w0  458-b0
+ 476 Decembry Jonathan         8K          Bru   0=      0=      0=      0=      0=     485+b0  437-w0  473-w0  491+b0  454-w0
+     Kraus Carsten             8K          Pfo   0=      0=      0=      0=      0=     492+w0  454-b0  439-w0  458-b0  494+w0
+ 478 Trinks Anne               9K          Ber  521+w0  402-b0  505+w0  420-b0  458+b0   0=      0=      0=      0=      0=   
+ 479 Carbone Stefano           9K          Gen   0=      0=      0=      0=      0=     474+w0  471+b0  452-w0  470-b0  493+b0
+ 480 Kai Keima                10K          Yok  508+w0  507+b0  497+b0  461-w0  489+b0   0=      0=      0=      0=      0=   
+ 481 Ghost Xe                  8K          xxx   0=      0=     470-w0   0=      0=      0=      0=      0=      0=      0=   
+     Holt Gineke_Ten           8K          Del   0=     568-w9   0=      0=      0=      0=      0=      0=      0=      0=   
+     Valisová Karin           10K          Bra   0=      0=      0=      0=      0=     508+w0  509+b0  505+b0  467-w0  491+w0
+ 484 Ganeeva Gulya            10K          Del   0=      0=      0=     529+b0  491+w0  507+w0  452-b0   0=      0=      0=   
+ 485 Bearda Robert             9K          Ams   0=      0=      0=      0=     521+b0  476-w0   0=      0=      0=      0=   
+ 486 HEAULME MELISSA          11K          44N   0=      0=      0=      0=      0=     520+b0  517+w0  507+b0  495+w0  489+b0
+ 487 Rudler Marlene           12K          Gra  532+b0  525+w0  500-w0  519+b0  503=w0  530+w0  499+b0  498+w0  494-b0  508+b0
+ 488 Malhado Rui               5K          Lis  424-w0  414-b0  352-w0  444-b0  443-w0  436-b0  433-b0  472-b0  466-w0  471-w0
+ 489 Rusterholz Ulrich         7K          Zur  446-w0  457-b0  434-w0  452-b0  480-w0  495+w0  462-b0  468-b0  519+b0  486-w0
+ 490 Kees Peter                7K          Amv  317-b0  444-w0  402-w0  454-b0  473-b0   0=      0=      0=      0=      0=   
+ 491 Rapai Andras_Noriyuki     8K          Bud  449-b0  434-w0  454-w0  509+b0  484-b0  516+w0  502+b0  475-w0  476-w0  483-b0
+ 492 Anderson Elisabeth        8K          Wie  457-b0  450-b0  453-w0  495+w0  497+w0  477-b0  472-b0  471-w0  505+b0   0=   
+ 493 Ye Rong                   9K          Par  464-b0  453-w0  495-w0  498+w0  474-b0  505-b0  508+w0  496+b0  506+b0  479-w0
+ 494 Daems Dieter             10K          Leu  439-w0  519+b0  506-b0  500-b0  498+w0  466-w0  528+w0  516+b0  487+w0  477-b0
+ 495 Aurich Rob_van           10K          Hil  473-w0  518+w0  493+b0  492-b0  528+w0  489-b0  513+w0  466-b0  486-b0  515+b0
+ 496 Tschachtli Fabian         8K          Bas   0=      0=      0=      0=      0=     377-w0  473-b0  493-w0  503+b0  474-b0
+ 497 Berkelmans Guus           8K          Amv  471-b0  470-b0  480-w0  507+w0  492-b0   0=      0=      0=      0=      0=   
+ 498 Ridley Patrick           11K          Che  518-b0  536+w0  519+w0  493-b0  494-b0  517+w0  514+w0  487-b0  516+w0  505+w0
+ 499 Lisy Daniel              13K               535+b0  532+w0  525-w0  546+b0  531+w0  511+b0  487-w0  528+b0  513+b0  509+w0
+ 500 Bruneau Jean_Eudes       10K          Par  453-b0  508-b0  487+b0  494+w0  510+w0   0=      0=      0=      0=      0=   
+ 501 Ghost Xd                  9K          xxx   0=     473-b0   0=      0=      0=      0=      0=      0=      0=      0=   
+ 502 Ghost Xh                  9K          xxx   0=      0=      0=      0=      0=      0=     491-w0   0=      0=      0=   
+ 503 Zeitz Anne               10K          Erz   0=     505-w0  511-w0  545+b0  487=b0  514+b0  467-w0  515+w0  496-w0   0=   
+ 504 Lee Jinwoo                6K          Seo  310-b0  443-w0  421-w0  402-b0  453-b0  435-b0  470-w0  458-w0  474-w0   0=   
+ 505 Hofstede Jan_Willem       9K          xxx  458-w0  503+b0  478-b0  451-w0  507-b0  493+w0  516+b0  483-w0  492-w0  498-b0
+ 506 Vernimmen Tom             9K          Gro  452-w0  454-b0  494+w0  473-w0  517+b0  458-b0  507+w0  467-b0  493-w0   0=   
+ 507 Rebach Anke              10K          Ham  516+b0  480-w0  524+w0  497-b0  505+w0  484-b0  506-b0  486-w0  508-w0  518+w0
+ 508 Vernimmen Egon           10K          Gro  480-b0  500+w0  516-b0  517-w0  526+w0  483-b0  493-b0  529+w0  507+b0  487-w0
+ 509 Udo Pita                 10K          Bar  454-b0  524+w0  528+b0  491-w0  511+w0  471-b0  483-w0   0=     512+b0  499-b0
+ 510 Crispien Ilona            8K          Stu  436-w0  464-w0  439-w0  516-b0  500-b0   0=      0=      0=      0=      0=   
+ 511 Hubert Keiko             12K          Par  538+w0  529+w0  503+b0  474-b0  509-b0  499-w0  530+b0  517+b0  515-w0  519+w0
+ 512 Knauf Cordula            12K          StA  525-b0  520+w0  531+b0  518-b0  530-w0  554+w0  522+w0  514+b0  509-w0  516+b0
+ 513 Geugjes Marilena         10K          Wei   0=      0=      0=      0=      0=     518+w0  495-b0  474-b0  499-w0  520+b0
+ 514 Checa Araceli            10K          Mad   0=      0=      0=      0=      0=     503-w0  498-b0  512-w0  523+w0  517+b0
+ 515 Schneider Tanja          11K          Zur   0=      0=      0=      0=      0=     529+w0  518+b0  503-b0  511+b0  495-w0
+ 516 Siivola Sinikka           9K          Hel  507-w0  439-b0  508+w0  510+w0  461-b0  491-b0  505-w0  494-w0  498-b0  512-w0
+ 517 Kullik Bettina           11K          Swn  474-w0  526+b0  518+w0  508+b0  506-w0  498-b0  486-b0  511-w0  529+b0  514-w0
+ 518 Alexander Casey          11K          Por  498+w0  495-b0  517-b0  512+w0  524+w0  513-b0  515-w0  519-w0  530+b0  507-b0
+ 519 Sadowski Florian         11K          Ber  529+b0  494-w0  498-b0  487-w0  520-w0  531+w0  533+b0  518+b0  489-w0  511-b0
+ 520 Rademakers Marcel        13K          Ein  523+w0  512-b0  538+w0  554+b0  519+b0  486-w0  529-b0  522+w0  528+b0  513-w0
+ 521 Noordhof Heiko           10K          Gro  478-b0   0=      0=     434-b0  485-w0   0=      0=      0=      0=      0=   
+ 522 Adcock Jennifer          13K          Abi  526-b0  539+w0  548+b0  531-w0  554+w0  545+w0  512-b0  520-b0  534+w0  528+w0
+ 523 Bevilacqua Luca          13K          Rom  520-b0  548+w0  546-w0  555+b0  529-b0  540+w0  545+w0  530+w0  514-b0  533+b0
+ 524 Marshall Edward          11K          IoM  531+w0  509-b0  507-b0  525+w0  518-b0   0=      0=      0=      0=      0=   
+ 525 Castanza Gordon          12K          Gig  512+w0  487-b0  499+b0  524-b0   0=      0=      0=      0=      0=      0=   
+ 526 Vaigl Karel              12K          Brn  522+w0  517-w0  536+b0  528+w0  508-b0   0=      0=      0=      0=      0=   
+ 527 Sajjadi Mehdi            12K          xxx   0=      0=     574+w2   0=      0=      0=      0=      0=      0=      0=   
+ 528 Nakamura Tusako           9K          xxx  443-w0  474+w0  509-w0  526-b0  495-b0  467-b0  494-b0  499-w0  520-w0  522-b0
+ 529 Elkink Jos               11K          Dub  519-w0  511-b0  554+b0  484-w0  523+w0  515-b0  520+w0  508-b0  517-w0  534-b0
+ 530 Kondo Kimiyo             14K          Tok  555+w0  547+b0  532+w0  536+w0  512+b0  487-b0  511-w0  523-b0  518-w0  535+w0
+ 531 Haanen Paul              12K          Ven  524-b0  535+w0  512-w0  522+b0  499-b0  519-b0   0=      0=      0=      0=   
+ 532 Draaisma Hugo            12K          Ven  487-w0  499-b0  530-b0  539+b0  538+w0   0=      0=      0=      0=      0=   
+ 533 Haavisto Eetu            13K          Por   0=      0=      0=      0=      0=     546+b0  519-w0  545+b0  541+b0  523-w0
+ 534 DOBRANIS DARIUS          14K          Bis   0=      0=      0=      0=      0=     561+w0  546+b0  535+w0  522-b0  529+w0
+ 535 Timmins Kathleen         13K          Shr  499-w0  531-b0  552+w0  538-b0  543-b0  541+w0  554+w0  534-b0  545+w0  530-b0
+ 536 Marshall Celia           12K          IoM  546+w0  498-b0  526-w0  530-b0  545-b0   0=      0=      0=      0=      0=   
+ 537 Schult Tobias            14K           HH  539-w0  538-b0  543-b0  552-b0  567+w0  542-w0  557+b0  562+w0  554+b0  545+b0
+ 538 Pulido Sonia             13K          Mad  511-b0  537+w0  520-b0  535+w0  532-b0   0=      0=      0=      0=      0=   
+ 539 Ao Hisako                14K          Sak  537+b0  522-b0  547+w0  532-w0  546+w0   0=      0=      0=      0=      0=   
+ 540 Dijkstra Alie            13K          xxx   0=      0=      0=      0=      0=     523-b0   0=      0=      0=      0=   
+     Moessner Markus          14K          Fre   0=      0=      0=      0=      0=     535-b0  561+w0  555+b0  533-w0   0=   
+ 542 Poutiainen Pietari       15K          Hel   0=      0=      0=      0=      0=     537+b0  564+b0  554+w0  544-w0  555+b0
+ 543 Fernandez Melanie        16K          Mad  567+b0  561+b0  537+w0  547+b0  535+w0   0=      0=      0=      0=      0=   
+ 544 Richard Sylvain          16K          MIA   0=      0=      0=      0=      0=     574+b0  556+w0  561+b0  542+b0  550+w0
+ 545 Dam Judith_van           13K          Ams   0=      0=     551+b0  503-w0  536+w0  522-b0  523-b0  533-w0  535-b0  537-w0
+ 546 Bauer Magdalena          12K          Erz  536-b0  554-w0  523+b0  499-w0  539-b0  533-w0  534-w0   0=      0=      0=   
+ 547 Hilken Lisa              13K          Stu  554-b0  530-w0  539-b0  543-w0  559+b0   0=      0=      0=      0=      0=   
+ 548 Landolt Marieke          14K          Dhe  553+w0  523-b0  522-w0  551+w0  561-w0   0=      0=      0=      0=      0=   
+ 549 Bradley Alice            15K          Lin  551-b0  559-w0  562+b0   0=      0=     591-w7  555-w0  556+b0  561+w0  554+b0
+ 550 Severing Fenja           18K          Dan  575+b0  576+b0  567+w0  559-w0  563+b0  562+w0  558+b0  564+w0  557+w0  544-b0
+ 551 Thiphavong Jean          15K          Par  549+w0  555+b0  545-w0  548-b0  562+w0   0=      0=      0=      0=      0=   
+ 552 Diez Maria               16K          Mad  562+w0  556+b0  535-b0  537+w0  555+w0   0=      0=      0=      0=      0=   
+ 553 Gritten Cathy            14K          Lou  548-b0   0=      0=      0=      0=      0=      0=      0=      0=      0=   
+ 554 Takeuchi Mieko           13K          Tok  547+w0  546+b0  529-w0  520-w0  522-b0  512-b0  535-b0  542-b0  537-w0  549-w0
+ 555 Kehren Angela            14K          Ham  530-b0  551-w0  559+b0  523-w0  552-b0  557-w0  549+b0  541-w0  564+b0  542-w0
+ 556 Schomberg Niels          17K          Mee  558+b0  552-w0  563+w0  557+b0  560+b0  564-w0  544-b0  549-w0  574+b0  562+b0
+ 557 Bailey Pauline           16K          Wsy  559-b0  567+w0  561-b0  556-w0  558+w0  555+b0  537-w0  568+w0  550-b0  564+b0
+ 558 Kim Wheesoo              18K          Seo  556-w0  580+w0  584+b0  575+b0  557-b0  566+w0  550-w0  565+b0  563+b0  561+w0
+ 559 Zazo Javier              16K          Mad  557+w0  549+b0  555-w0  550+b0  547-w0   0=      0=      0=      0=      0=   
+ 560 Ghost Xf                 15K          xxx   0=      0=      0=      0=     556-w0   0=      0=      0=      0=      0=   
+ 561 Bechler Inga             16K          Gel  569+b0  543-w0  557+w0  582+w0  548+b0  534-b0  541-b0  544-w0  549-b0  558-b0
+ 562 Lisa Magdalena           16K               552-b0  569+w0  549-w0  574+b0  551-b0  550-b0  572+w0  537-b0  568+w0  556-w0
+ 563 Brault Juliette          18K          Bru  576+w0  575+w0  556-b0  569+b0  550-w0  568-b0  570+b0  573+w0  558-w0  572+b0
+ 564 DOBRANIS DENIS           15K          Bis   0=      0=      0=      0=      0=     556+b0  542-w0  550-b0  555-w0  557-w0
+ 565 Niinisalo vilhelmiina    17K          Hel   0=      0=      0=      0=      0=     577-b0  576+w0  558-w0  571+b0  568+w0
+ 566 Merk Peter               17K          Ham   0=      0=      0=      0=      0=     558-b0  577+w0   0=      0=      0=   
+ 567 Nakamura Mieko           16K          Yok  543-w0  557-b0  550-b0  568+w0  537-b0   0=      0=      0=      0=      0=   
+ 568 Knauf Ursula             18K          StA  593-w0  482+b9  581+b0  567-b0  575+w0  563+w0  574+w0  557-b0  562-b0  565-b0
+ 569 Ito Keiko                16K          Kod  561-w0  562-b0  575-w0  563-w0  577+b0   0=      0=      0=      0=      0=   
+ 570 Kim Munsoo               20K          Seo  578-w0  597+w0  579+b0  571+b0  576-b0  585+w0  563-w0  575+w0  584+b0  577+w0
+ 571 Severing Lynn            20K          Dan  599+w0  579+b0  577-b0  570-w0  578+w0  575+b0  592+w0  576+b0  565-w0  574+b0
+ 572 Pohlabeln Martje         18K          Han   0=      0=      0=      0=      0=     579+w0  562-b0  574+w0  577+b0  563-w0
+ 573 Bousema Alexander        17K          Gro   0=      0=      0=      0=      0=      0=      0=     563-b0   0=      0=   
+ 574 Riedeman Marcel          16K          Del   0=      0=     527-b2  562-w0  580+b0  544-w0  568-b0  572-b0  556-w0  571-w0
+ 575 Groot Yuki_de            18K          Dha  550+w0  563-b0  569+b0  558-w0  568-b0  571-w0  580-w0  570-b0  585+b0  576+w0
+ 576 Averous Carole           18K          Str  563-b0  550-w0  590+b0  577-w0  570+w0  580+b0  565-b0  571-w0  578+w0  575-b0
+ 577 Verbrugge Catherine      20K          Gen  591+b0  589+b0  571+w0  576+b0  569-w0  565+w0  566-b0  586+w0  572-w0  570-b0
+ 578 Rapai Erika              20K          Bud  570+b0  584-w0  597+w0  580-b0  571-b0  588+w0  583+b0  579+w0  576-b0  586+b0
+ 579 Averous Gerlinde         20K          xxx  597+b0  571-w0  570-w0  590+w0  585+b0  572-b0  588+b0  578-b0  586+w0  584+w0
+ 580 Ohlenbusch-Schulz Heidrun19K          Old  589+w0  558-b0  582+b0  578+w0  574-w0  576-w0  575+b0   0=      0=      0=   
+ 581 Bergsaker Hakon          20K          Osl  594+b0  590+w0  568-w0   0=     597+b0   0=      0=      0=      0=      0=   
+ 582 Fernandez Maurice        20K          Mad  595+w0  585+b0  580-w0  561-b0  584+w0   0=      0=      0=      0=      0=   
+ 583 Poutiainen Tellervo      20K          Hel   0=      0=      0=      0=      0=     589+b0  578-w0  584-b0  587+w0  592+b0
+ 584 Tamura Kiyo              20K          Coo  587+w0  578+b0  558-w0  585-b0  582-b0  586-w0  589+b0  583+w0  570-w0  579-b0
+ 585 Stihl Christiane         20K          StA  598+b0  582-w0  589+b0  584+w0  579-w0  570-b0  586-b0  592+w0  575-w0   0=   
+ 586 Niinisalo Ulla-Maija     20K          Hel   0=      0=      0=      0=      0=     584+b0  585+w0  577-b0  579-b0  578-w0
+ 587 Geerdes Timm             25K          Ber  584-b0  595+w0  599+b0  593+w0  591+w0  597+w0  590+b0  589+b0  583-b0  600+w4
+ 588 Merk Thomas              20K          Ham   0=      0=      0=      0=      0=     578-b0  579-w0   0=      0=      0=   
+ 589 Lisy Jan                 19K               580-b0  577-w0  585-w0  597+b0  590-b0  583-w0  584-w0  587-w0  592+b0  591-b0
+ 590 Groot-Suzuki Hiroko_de   20K          Dha  596+w0  581-b0  576-w0  579-b0  589+w0  592-b0  587-w0  593-w1  594-w1  598+w1
+ 591 Janssen Joris_Shuko      24K          Alm  577-w0  593+w0  594+b0  595+b0  587-b0  549+b7  597+b0  598-w2  599+w3  589+w0
+ 592 HEAULME TOSHIE           20K          44N   0=      0=      0=      0=      0=     590+w0  571-b0  585-b0  589-w0  583-w0
+ 593 Holmstedt Ulf            25K          Swn  568+b0  591-b0  596+w0  587-b0  598+w1  595-w0  599+w2  590+b1  600+w2  594-w0
+ 594 Timpel Christin          25K               581-w0  598+w0  591-w0  599+b0  596-b0  600+b0  595-w0  597+b0  590+b1  593+b0
+ 595 Schulz Neele             25K          Old  582-b0  587-b0  598+w0  591-w0  599+w0  593+b0  594+b0   0=      0=      0=   
+ 596 Caliebe Frauke           24K          Alt  590-b0  599+w0  593-b0  598+b0  594+w0   0=      0=      0=      0=      0=   
+ 597 Groot Aya_de             20K          Dha  579-w0  570-b0  578-b0  589-w0  581-w0  587-b0  591-w0  594-w0  598-b0  599-b0
+ 598 Kuroda Kazuko            30K          Kaw  585-w0  594-b0  595-b0  596-w0  593-b1  599+b0  600+w0  591+b2  597+w0  590-b1
+ 599 Maika Fujiwara           30K          xxx  571-b0  596-b0  587-w0  594-w0  595-b0  598-w0  593-b2  600+b0  591-b3  597+w0
+ 600 Janssen Eva              29K          Alm   0=      0=      0=      0=      0=     594-w0  598-b0  599-w0  593-b2  587-b4

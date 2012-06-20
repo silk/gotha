@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE Tournament SYSTEM "tournament.dtd">
+<Tournament>
+<Players>
+<Player club="63Ce" country="" firstName="Julien" name="Payrat" participating="11111111111111111111" rank="1K" rating="-9" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="06Pe" country="" firstName="Bruno" name="Holmstrom" participating="11111111111111111111" rank="15K" rating="-1484" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Paul" name="Galan" participating="11111111111111111111" rank="7K" rating="-661" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="31To" country="" firstName="Paul" name="Neyroud" participating="11111111111111111111" rank="3D" rating="215" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="35Re" country="" firstName="Emeric" name="Salmon" participating="11111111111111111111" rank="2K" rating="-144" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="75Al" country="" firstName="Jean-Yves" name="Gourmond" participating="11111111111111111111" rank="3D" rating="208" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="44Na" country="" firstName="Bernard" name="Renou" participating="11111111111111111111" rank="1K" rating="-35" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="63Ce" country="" firstName="Augustin" name="Avenel" participating="11111111111111111111" rank="5K" rating="-402" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Julien" name="Sagit" participating="11111111111111111111" rank="1K" rating="-91" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="76Ro" country="" firstName="Tae-Hwan" name="Juh" participating="11111111111111111111" rank="4D" rating="336" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="44Na" country="" firstName="Tanguy" name="le_Calvé" participating="11111111111111111111" rank="2D" rating="165" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="44Na" country="" firstName="Vincent" name="Godivier" participating="11111111111111111111" rank="1K" rating="-40" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="38Gr" country="" firstName="Dominique" name="Cornuejols" participating="11111111111111111111" rank="1D" rating="75" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="67SE" country="" firstName="Thomas" name="Debarre" participating="11111111111111111111" rank="6D" rating="538" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="75Al" country="" firstName="Fabien" name="Lips" participating="11111111111111111111" rank="2D" rating="175" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="75Al" country="" firstName="Jean" name="Michel" participating="11111111111111111111" rank="5D" rating="409" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="67SE" country="" firstName="Ngoc-Trang" name="Cao" participating="11111111111111111111" rank="1K" rating="-2" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="44Na" country="" firstName="François" name="Mizessyn" participating="11111111111111111111" rank="4D" rating="361" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="69Ly" country="" firstName="Christophe" name="Maliczak" participating="11111111111111111111" rank="4K" rating="-375" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="59Li" country="" firstName="Sebastien" name="Dewidehem" participating="11111111111111111111" rank="1K" rating="-89" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="69Ly" country="" firstName="Florent" name="Rioland" participating="11111111111111111111" rank="2K" rating="-195" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="76Ro" country="" firstName="Arnaud" name="Knippel" participating="11111111111111111111" rank="2D" rating="112" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="31To" country="" firstName="Leonard" name="Jeloaica" participating="11111111111111111111" rank="3K" rating="-266" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="44Na" country="" firstName="Marc" name="Jegou" participating="11111111111111111111" rank="14K" rating="-1315" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="44Na" country="" firstName="Vivien" name="Desveaux" participating="11111111111111111111" rank="3D" rating="260" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="59Li" country="" firstName="Justin" name="Grivon" participating="11111111111111111111" rank="5K" rating="-484" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="67SE" country="" firstName="Frédéric" name="Donzet" participating="11111111111111111111" rank="5D" rating="460" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="59Li" country="" firstName="Guillaume" name="Knurra" participating="11111111111111111111" rank="9K" rating="-843" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="44Na" country="" firstName="Nicolas" name="Grelier" participating="11111111111111111111" rank="3K" rating="-234" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="38Gr" country="" firstName="Toru" name="Imamura-Cornuejols" participating="11111111111111111111" rank="4D" rating="379" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="69Ly" country="" firstName="Louis" name="Meckes" participating="11111111111111111111" rank="1D" rating="57" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="76Ro" country="" firstName="Luc" name="Vannier" participating="11111111111111111111" rank="1K" rating="-33" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="35Re" country="" firstName="Jean-Marie" name="Desjobert" participating="11111111111111111111" rank="5K" rating="-470" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="38Gr" country="" firstName="Moran" name="Guennou" participating="11111111111111111111" rank="4K" rating="-380" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="63Ce" country="" firstName="Etienne" name="Crubellier" participating="11111111111111111111" rank="6K" rating="-570" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="35Re" country="" firstName="Michaël" name="Thao" participating="11111111111111111111" rank="13K" rating="-1277" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="06Pe" country="" firstName="Guillaume" name="Giffard" participating="11111111111111111111" rank="6K" rating="-572" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="06Pe" country="" firstName="Pierre" name="Derrier" participating="11111111111111111111" rank="3K" rating="-233" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="75Al" country="" firstName="Antoine" name="Roché" participating="11111111111111111111" rank="3D" rating="224" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="63Ce" country="" firstName="Ancelin" name="Arnaud" participating="11111111111111111111" rank="1K" rating="-28" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="31To" country="" firstName="Alain" name="Kerbrat" participating="11111111111111111111" rank="4D" rating="382" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="69Ly" country="" firstName="Alexandre" name="Pfeffer" participating="11111111111111111111" rank="4K" rating="-357" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="76Ro" country="" firstName="Michael" name="White" participating="11111111111111111111" rank="1D" rating="9" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="31To" country="" firstName="Florian" name="Nivet" participating="11111111111111111111" rank="3K" rating="-220" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Boris" name="Ly" participating="11111111111111111111" rank="3D" rating="242" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="35Re" country="" firstName="Fabien" name="Masson" participating="11111111111111111111" rank="4K" rating="-380" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="31To" country="" firstName="Eric" name="Saves" participating="11111111111111111111" rank="6K" rating="-521" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="31To" country="" firstName="Pierre-Yves" name="Christmann" participating="11111111111111111111" rank="2K" rating="-167" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Mathieu" name="Daguenet" participating="11111111111111111111" rank="3D" rating="202" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Laurent" name="Gigarel" participating="11111111111111111111" rank="4K" rating="-331" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="67SE" country="" firstName="Antoine" name="Fenech" participating="11111111111111111111" rank="5D" rating="417" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="31To" country="" firstName="Vivien" name="Neyroud" participating="11111111111111111111" rank="3D" rating="260" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="31To" country="" firstName="Laurent" name="Lamôle" participating="11111111111111111111" rank="5K" rating="-435" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="69Ly" country="" firstName="Frédéric" name="Panico" participating="11111111111111111111" rank="7K" rating="-606" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Jean-Michel" name="Barny" participating="11111111111111111111" rank="2K" rating="-140" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="69Ly" country="" firstName="Pierre" name="Bellanger" participating="11111111111111111111" rank="1D" rating="47" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Frédéric" name="Dechamps" participating="11111111111111111111" rank="14K" rating="-1361" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="06Pe" country="" firstName="Thomas" name="Cabaret" participating="11111111111111111111" rank="2K" rating="-116" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="44Na" country="" firstName="Philippe" name="Cance" participating="11111111111111111111" rank="1K" rating="-79" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="59Li" country="" firstName="Jean" name="Rey" participating="11111111111111111111" rank="2K" rating="-166" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Paul" name="Baratou" participating="11111111111111111111" rank="5K" rating="-458" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="38Gr" country="" firstName="Quentin" name="Turlot" participating="11111111111111111111" rank="2D" rating="162" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="69Ly" country="" firstName="Sébastien" name="la_Spina" participating="11111111111111111111" rank="3K" rating="-291" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="63Ce" country="" firstName="Romain" name="Fabre" participating="11111111111111111111" rank="3K" rating="-285" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+</Players>
+<Games>
+<Game blackPlayer="CANCEPHILIPPE" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="1" whitePlayer="DEBARRETHOMAS"/>
+<Game blackPlayer="DONZETFREDERIC" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="2" whitePlayer="GRELIERNICOLAS"/>
+<Game blackPlayer="CRUBELLIERETIENNE" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="3" whitePlayer="FENECHANTOINE"/>
+<Game blackPlayer="CAONGOCTRANG" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="4" whitePlayer="JEGOUMARC"/>
+<Game blackPlayer="DEWIDEHEMSEBASTIEN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="5" whitePlayer="KERBRATALAIN"/>
+<Game blackPlayer="NEYROUDVIVIEN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="6" whitePlayer="REYJEAN"/>
+<Game blackPlayer="GRIVONJUSTIN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="7" whitePlayer="NEYROUDPAUL"/>
+<Game blackPlayer="NIVETFLORIAN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="8" whitePlayer="KNURRAGUILLAUME"/>
+<Game blackPlayer="CHRISTMANNPIERREYVES" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="9" whitePlayer="IMAMURACORNUEJOLSTORU"/>
+<Game blackPlayer="TURLOTQUENTIN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="10" whitePlayer="JELOAICALEONARD"/>
+<Game blackPlayer="SAVESERIC" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="11" whitePlayer="CORNUEJOLSDOMINIQUE"/>
+<Game blackPlayer="GUENNOUMORAN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="12" whitePlayer="LAMOLELAURENT"/>
+<Game blackPlayer="MICHELJEAN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="13" whitePlayer="CABARETTHOMAS"/>
+<Game blackPlayer="DERRIERPIERRE" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="14" whitePlayer="ROCHEANTOINE"/>
+<Game blackPlayer="GOURMONDJEANYVES" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="15" whitePlayer="GIFFARDGUILLAUME"/>
+<Game blackPlayer="HOLMSTROMBRUNO" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="16" whitePlayer="LIPSFABIEN"/>
+<Game blackPlayer="DESVEAUXVIVIEN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="18" whitePlayer="MASSONFABIEN"/>
+<Game blackPlayer="SALMONEMERIC" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="17" whitePlayer="MIZESSYNFRANCOIS"/>
+<Game blackPlayer="RENOUBERNARD" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="20" whitePlayer="THAOMICHAEL"/>
+<Game blackPlayer="DESJOBERTJEANMARIE" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="19" whitePlayer="LECALVETANGUY"/>
+<Game blackPlayer="KNIPPELARNAUD" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="22" whitePlayer="BELLANGERPIERRE"/>
+<Game blackPlayer="GODIVIERVINCENT" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="21" whitePlayer="JUHTAEHWAN"/>
+<Game blackPlayer="VANNIERLUC" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="24" whitePlayer="PANICOFREDERIC"/>
+<Game blackPlayer="PFEFFERALEXANDRE" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="23" whitePlayer="WHITEMICHAEL"/>
+<Game blackPlayer="SAGITJULIEN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="26" whitePlayer="RIOLANDFLORENT"/>
+<Game blackPlayer="MECKESLOUIS" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="25" whitePlayer="DAGUENETMATHIEU"/>
+<Game blackPlayer="DECHAMPSFREDERIC" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="28" whitePlayer="MALICZAKCHRISTOPHE"/>
+<Game blackPlayer="LASPINASEBASTIEN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="27" whitePlayer="BARATOUPAUL"/>
+<Game blackPlayer="BARNYJEANMICHEL" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="30" whitePlayer="ARNAUDANCELIN"/>
+<Game blackPlayer="PAYRATJULIEN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="29" whitePlayer="LYBORIS"/>
+<Game blackPlayer="GALANPAUL" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="32" whitePlayer="AVENELAUGUSTIN"/>
+<Game blackPlayer="FABREROMAIN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="31" whitePlayer="GIGARELLAURENT"/>
+<Game blackPlayer="CORNUEJOLSDOMINIQUE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="11" whitePlayer="BARATOUPAUL"/>
+<Game blackPlayer="DECHAMPSFREDERIC" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="12" whitePlayer="GUENNOUMORAN"/>
+<Game blackPlayer="IMAMURACORNUEJOLSTORU" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="9" whitePlayer="DAGUENETMATHIEU"/>
+<Game blackPlayer="SAGITJULIEN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="10" whitePlayer="TURLOTQUENTIN"/>
+<Game blackPlayer="GOURMONDJEANYVES" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="15" whitePlayer="GIGARELLAURENT"/>
+<Game blackPlayer="LIPSFABIEN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="16" whitePlayer="GALANPAUL"/>
+<Game blackPlayer="MICHELJEAN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="13" whitePlayer="LYBORIS"/>
+<Game blackPlayer="ROCHEANTOINE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="14" whitePlayer="BARNYJEANMICHEL"/>
+<Game blackPlayer="LECALVETANGUY" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="19" whitePlayer="FABREROMAIN"/>
+<Game blackPlayer="AVENELAUGUSTIN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="20" whitePlayer="RENOUBERNARD"/>
+<Game blackPlayer="MIZESSYNFRANCOIS" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="17" whitePlayer="PAYRATJULIEN"/>
+<Game blackPlayer="ARNAUDANCELIN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="18" whitePlayer="DESVEAUXVIVIEN"/>
+<Game blackPlayer="GRIVONJUSTIN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="23" whitePlayer="DESJOBERTJEANMARIE"/>
+<Game blackPlayer="THAOMICHAEL" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="24" whitePlayer="KNURRAGUILLAUME"/>
+<Game blackPlayer="DEWIDEHEMSEBASTIEN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="21" whitePlayer="SALMONEMERIC"/>
+<Game blackPlayer="MASSONFABIEN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="22" whitePlayer="REYJEAN"/>
+<Game blackPlayer="JEGOUMARC" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="28" whitePlayer="PANICOFREDERIC"/>
+<Game blackPlayer="PFEFFERALEXANDRE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="27" whitePlayer="CRUBELLIERETIENNE"/>
+<Game blackPlayer="GRELIERNICOLAS" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="26" whitePlayer="BELLANGERPIERRE"/>
+<Game blackPlayer="GODIVIERVINCENT" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="25" whitePlayer="CANCEPHILIPPE"/>
+<Game blackPlayer="LAMOLELAURENT" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="32" whitePlayer="HOLMSTROMBRUNO"/>
+<Game blackPlayer="GIFFARDGUILLAUME" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="31" whitePlayer="SAVESERIC"/>
+<Game blackPlayer="JELOAICALEONARD" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="30" whitePlayer="DERRIERPIERRE"/>
+<Game blackPlayer="CABARETTHOMAS" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="29" whitePlayer="CHRISTMANNPIERREYVES"/>
+<Game blackPlayer="FENECHANTOINE" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="3" tableNumber="3" whitePlayer="WHITEMICHAEL"/>
+<Game blackPlayer="VANNIERLUC" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="3" tableNumber="4" whitePlayer="CAONGOCTRANG"/>
+<Game blackPlayer="DEBARRETHOMAS" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="3" tableNumber="1" whitePlayer="JUHTAEHWAN"/>
+<Game blackPlayer="KNIPPELARNAUD" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="3" tableNumber="2" whitePlayer="DONZETFREDERIC"/>
+<Game blackPlayer="DONZETFREDERIC" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="2" whitePlayer="RIOLANDFLORENT"/>
+<Game blackPlayer="MECKESLOUIS" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="1" whitePlayer="DEBARRETHOMAS"/>
+<Game blackPlayer="CAONGOCTRANG" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="4" whitePlayer="MALICZAKCHRISTOPHE"/>
+<Game blackPlayer="LASPINASEBASTIEN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="3" whitePlayer="FENECHANTOINE"/>
+<Game blackPlayer="NEYROUDVIVIEN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="6" whitePlayer="KNIPPELARNAUD"/>
+<Game blackPlayer="JUHTAEHWAN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="5" whitePlayer="KERBRATALAIN"/>
+<Game blackPlayer="NIVETFLORIAN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="8" whitePlayer="VANNIERLUC"/>
+<Game blackPlayer="WHITEMICHAEL" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="2" tableNumber="7" whitePlayer="NEYROUDPAUL"/>
+</Games>
+<Teams>
+<Team teamName="GRAUG" teamNumber="10">
+<Board boardNumber="1" player="PAYRATJULIEN"/>
+<Board boardNumber="2" player="ARNAUDANCELIN"/>
+<Board boardNumber="3" player="FABREROMAIN"/>
+<Board boardNumber="4" player="AVENELAUGUSTIN"/>
+</Team>
+<Team teamName="Antibes" teamNumber="13">
+<Board boardNumber="1" player="CABARETTHOMAS"/>
+<Board boardNumber="2" player="DERRIERPIERRE"/>
+<Board boardNumber="3" player="GIFFARDGUILLAUME"/>
+<Board boardNumber="4" player="HOLMSTROMBRUNO"/>
+</Team>
+<Team teamName="Rennes" teamNumber="16">
+<Board boardNumber="1" player="SALMONEMERIC"/>
+<Board boardNumber="2" player="MASSONFABIEN"/>
+<Board boardNumber="3" player="DESJOBERTJEANMARIE"/>
+<Board boardNumber="4" player="THAOMICHAEL"/>
+</Team>
+<Team teamName="Paris Aligre" teamNumber="4">
+<Board boardNumber="1" player="MICHELJEAN"/>
+<Board boardNumber="2" player="ROCHEANTOINE"/>
+<Board boardNumber="3" player="GOURMONDJEANYVES"/>
+<Board boardNumber="4" player="LIPSFABIEN"/>
+</Team>
+<Team teamName="Lille" teamNumber="7">
+<Board boardNumber="1" player="DEWIDEHEMSEBASTIEN"/>
+<Board boardNumber="2" player="REYJEAN"/>
+<Board boardNumber="3" player="GRIVONJUSTIN"/>
+<Board boardNumber="4" player="KNURRAGUILLAUME"/>
+</Team>
+<Team teamName="Antony 1" teamNumber="12">
+<Board boardNumber="1" player="LYBORIS"/>
+<Board boardNumber="2" player="BARNYJEANMICHEL"/>
+<Board boardNumber="3" player="GIGARELLAURENT"/>
+<Board boardNumber="4" player="GALANPAUL"/>
+</Team>
+<Team teamName="Toulouse 1" teamNumber="2">
+<Board boardNumber="1" player="KERBRATALAIN"/>
+<Board boardNumber="2" player="NEYROUDVIVIEN"/>
+<Board boardNumber="3" player="NEYROUDPAUL"/>
+<Board boardNumber="4" player="NIVETFLORIAN"/>
+</Team>
+<Team teamName="Antony 2" teamNumber="11">
+<Board boardNumber="1" player="DAGUENETMATHIEU"/>
+<Board boardNumber="2" player="SAGITJULIEN"/>
+<Board boardNumber="3" player="BARATOUPAUL"/>
+<Board boardNumber="4" player="DECHAMPSFREDERIC"/>
+</Team>
+<Team teamName="Strasbourg" teamNumber="1">
+<Board boardNumber="1" player="DEBARRETHOMAS"/>
+<Board boardNumber="2" player="DONZETFREDERIC"/>
+<Board boardNumber="3" player="FENECHANTOINE"/>
+<Board boardNumber="4" player="CAONGOCTRANG"/>
+</Team>
+<Team teamName="Toulouse 2" teamNumber="15">
+<Board boardNumber="1" player="CHRISTMANNPIERREYVES"/>
+<Board boardNumber="2" player="JELOAICALEONARD"/>
+<Board boardNumber="3" player="SAVESERIC"/>
+<Board boardNumber="4" player="LAMOLELAURENT"/>
+</Team>
+<Team teamName="Rouen" teamNumber="6">
+<Board boardNumber="1" player="JUHTAEHWAN"/>
+<Board boardNumber="2" player="KNIPPELARNAUD"/>
+<Board boardNumber="3" player="WHITEMICHAEL"/>
+<Board boardNumber="4" player="VANNIERLUC"/>
+</Team>
+<Team teamName="Lyon 2" teamNumber="9">
+<Board boardNumber="1" player="GODIVIERVINCENT"/>
+<Board boardNumber="2" player="BELLANGERPIERRE"/>
+<Board boardNumber="3" player="PFEFFERALEXANDRE"/>
+<Board boardNumber="4" player="PANICOFREDERIC"/>
+</Team>
+<Team teamName="Grenoble" teamNumber="3">
+<Board boardNumber="1" player="IMAMURACORNUEJOLSTORU"/>
+<Board boardNumber="2" player="TURLOTQUENTIN"/>
+<Board boardNumber="3" player="CORNUEJOLSDOMINIQUE"/>
+<Board boardNumber="4" player="GUENNOUMORAN"/>
+</Team>
+<Team teamName="Nantes 1" teamNumber="5">
+<Board boardNumber="1" player="MIZESSYNFRANCOIS"/>
+<Board boardNumber="2" player="DESVEAUXVIVIEN"/>
+<Board boardNumber="3" player="LECALVETANGUY"/>
+<Board boardNumber="4" player="RENOUBERNARD"/>
+</Team>
+<Team teamName="Nantes 2" teamNumber="14">
+<Board boardNumber="1" player="CANCEPHILIPPE"/>
+<Board boardNumber="2" player="GRELIERNICOLAS"/>
+<Board boardNumber="3" player="CRUBELLIERETIENNE"/>
+<Board boardNumber="4" player="JEGOUMARC"/>
+</Team>
+<Team teamName="Lyon 1" teamNumber="8">
+<Board boardNumber="1" player="MECKESLOUIS"/>
+<Board boardNumber="2" player="RIOLANDFLORENT"/>
+<Board boardNumber="3" player="LASPINASEBASTIEN"/>
+<Board boardNumber="4" player="MALICZAKCHRISTOPHE"/>
+</Team>
+</Teams>
+<TournamentParameterSet>
+<GeneralParameterSet beginDate="2010-11-20" byoYomi="true" endDate="2010-11-20" genMMBar="4D" genMMFloor="20K" genMMS2ValueAbsent="1" genMMS2ValueBye="1" genNBW2ValueAbsent="0" genNBW2ValueBye="1" komi="7.5" location="Dijon" name="Coupe Maître Lim 2010" numberOfCategories="1" numberOfRounds="5" shortName="lim2010" size="" time=""/>
+<HandicapParameterSet hdBasedOnMMS="true" hdCeiling="0" hdCorrection="1" hdNoHdRankThreshold="1D"/>
+<PlacementParameterSet>
+<PlacementCriteria>
+<PlacementCriterion name="MMS" number="1"/>
+<PlacementCriterion name="SOSM" number="2"/>
+<PlacementCriterion name="SOSOSM" number="3"/>
+<PlacementCriterion name="NULL" number="4"/>
+<PlacementCriterion name="NULL" number="5"/>
+<PlacementCriterion name="NULL" number="6"/>
+</PlacementCriteria>
+</PlacementParameterSet>
+<PairingParameterSet paiBaAvoidDuplGame="500000000000000" paiBaBalanceWB="1000000" paiBaDeterministic="true" paiBaRandom="0" paiMaAdditionalPlacementCritSystem1="Rating" paiMaAdditionalPlacementCritSystem2="NULL" paiMaAvoidMixingCategories="0" paiMaDUDDLowerMode="MID" paiMaDUDDUpperMode="MID" paiMaDUDDWeight="100000000" paiMaLastRoundForSeedSystem1="2" paiMaMaximizeSeeding="5000000" paiMaMinimizeScoreDifference="100000000000" paiMaSeedSystem1="SPLITANDRANDOM" paiSeAvoidSameGeo="100000000000" paiSeDefSecCrit="100000000000" paiSeMinimizeHandicap="0" paiSeNbWinsThresholdActive="false" paiSePreferMMSDiffRatherThanSameClub="3" paiSePreferMMSDiffRatherThanSameCountry="1" paiSeRankThreshold="4D" paiStandardNX1Factor="0.5"/>
+</TournamentParameterSet>
+<TeamTournamentParameterSet>
+<TeamGeneralParameterSet teamSize="4"/>
+<TeamPlacementParameterSet>
+<PlacementCriteria>
+<PlacementCriterion name="TEAMP" number="1"/>
+<PlacementCriterion name="BDW" number="2"/>
+<PlacementCriterion name="BDW3U" number="3"/>
+<PlacementCriterion name="BDW2U" number="4"/>
+<PlacementCriterion name="BDW1U" number="5"/>
+<PlacementCriterion name="SOST" number="6"/>
+</PlacementCriteria>
+</TeamPlacementParameterSet>
+</TeamTournamentParameterSet>
+</Tournament>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Tournament SYSTEM "tournament.dtd">
+<Tournament>
+<Players>
+<Player club="69Ly" country="" firstName="Jean-Christophe" name="HONORÉ" participating="11111111111111111111" rank="1K" rating="-100" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">HONOREJEANCHRISTOPHE</Player>
+<Player club="31To" country="" firstName="Hui" name="FAN" participating="11111111111111111111" rank="8D" rating="700" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">FANHUI</Player>
+<Player club="44Na" country="" firstName="François" name="MIZESSYN" participating="10011111111111111111" rank="4D" rating="300" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">MIZESSYNFRANCOIS</Player>
+<Player club="38Gr" country="" firstName="Dominique" name="CORNUEJOLS" participating="11000111111111111111" rank="1D" rating="0" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">CORNUEJOLSDOMINIQUE</Player>
+<Player club="21Di" country="" firstName="Mathieu" name="LEFEUVE" participating="11011111111111111111" rank="1K" rating="-100" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">LEFEUVEMATHIEU</Player>
+<Player club="66Pe" country="" firstName="Arnaud" name="Beltran" participating="11111111111111111111" rank="29K" rating="-2900" ratingOrigin="INI" registeringStatus="PRE" smmsCorrection="0">BELTRANARNAUD</Player>
+<Player club="21Di" country="" firstName="Laurent" name="COQUELET" participating="10111111111111111111" rank="2D" rating="100" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">COQUELETLAURENT</Player>
+<Player club="38Gr" country="" firstName="Mathieu" name="LACAM" participating="11111111111111111111" rank="3K" rating="-300" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">LACAMMATHIEU</Player>
+<Player club="13Ma" country="" firstName="Jean" name="ALLARD" participating="11111111111111111111" rank="2D" rating="100" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">ALLARDJEAN</Player>
+<Player club="38Gr" country="" firstName="Toru" name="IMAMURA" participating="11111111111111111111" rank="4D" rating="300" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">IMAMURATORU</Player>
+<Player club="63Ce" country="" firstName="Ancelin" name="ARNAUD" participating="11111111111111111111" rank="4K" rating="-400" ratingOrigin="INI" registeringStatus="PRE" smmsCorrection="0">ARNAUDANCELIN</Player>
+<Player club="87Li" country="" firstName="Julien" name="ANGELI" participating="11111111111111111111" rank="4K" rating="-400" ratingOrigin="INI" registeringStatus="PRE" smmsCorrection="0">ANGELIJULIEN</Player>
+<Player club="63Ce" country="" firstName="Julien" name="PAYRAT" participating="11111111111111111111" rank="2K" rating="-200" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">PAYRATJULIEN</Player>
+<Player club="34Mo" country="" firstName="David" name="DELSOL" participating="11111111111111111111" rank="2K" rating="-200" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">DELSOLDAVID</Player>
+<Player club="40Mo" country="" firstName="Noël" name="SAINT-PAUL" participating="10011111111111111111" rank="1K" rating="-100" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">SAINTPAULNOEL</Player>
+<Player club="34Mo" country="" firstName="Denis" name="FELDMANN" participating="11111111111111111111" rank="3D" rating="200" ratingOrigin="INI" registeringStatus="FIN" smmsCorrection="0">FELDMANNDENIS</Player>
+<Player club="42Se" country="" firstName="Jean-Paul" name="GASCHIGNARD" participating="11111111111111111111" rank="3K" rating="-300" ratingOrigin="INI" registeringStatus="PRE" smmsCorrection="0">GASCHIGNARDJEANPAUL</Player>
+</Players>
+<Games>
+<Game blackPlayer="SAINTPAULNOEL" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="4" tableNumber="4" whitePlayer="LEFEUVEMATHIEU"></Game>
+<Game blackPlayer="COQUELETLAURENT" handicap="1" knownColor="true" result="RESULT_BLACKWINS" roundNumber="4" tableNumber="3" whitePlayer="FELDMANNDENIS"></Game>
+<Game blackPlayer="IMAMURATORU" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="4" tableNumber="2" whitePlayer="MIZESSYNFRANCOIS"></Game>
+<Game blackPlayer="ALLARDJEAN" handicap="5" knownColor="true" result="RESULT_BLACKWINS" roundNumber="4" tableNumber="1" whitePlayer="FANHUI"></Game>
+<Game blackPlayer="HONOREJEANCHRISTOPHE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="4" whitePlayer="DELSOLDAVID"></Game>
+<Game blackPlayer="LEFEUVEMATHIEU" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="2" tableNumber="3" whitePlayer="CORNUEJOLSDOMINIQUE"></Game>
+<Game blackPlayer="FELDMANNDENIS" handicap="0" knownColor="true" result="RESULT_BOTHLOSE" roundNumber="2" tableNumber="2" whitePlayer="ALLARDJEAN"></Game>
+<Game blackPlayer="IMAMURATORU" handicap="3" knownColor="true" result="RESULT_BOTHWIN" roundNumber="2" tableNumber="1" whitePlayer="FANHUI"></Game>
+<Game blackPlayer="FELDMANNDENIS" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="5" tableNumber="4" whitePlayer="PAYRATJULIEN"></Game>
+<Game blackPlayer="ALLARDJEAN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="5" tableNumber="3" whitePlayer="MIZESSYNFRANCOIS"></Game>
+<Game blackPlayer="COQUELETLAURENT" handicap="5" knownColor="true" result="RESULT_WHITEWINS" roundNumber="5" tableNumber="2" whitePlayer="FANHUI"></Game>
+<Game blackPlayer="LEFEUVEMATHIEU" handicap="3" knownColor="true" result="RESULT_WHITEWINS" roundNumber="5" tableNumber="1" whitePlayer="IMAMURATORU"></Game>
+<Game blackPlayer="LACAMMATHIEU" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="3" tableNumber="4" whitePlayer="PAYRATJULIEN"></Game>
+<Game blackPlayer="HONOREJEANCHRISTOPHE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="3" tableNumber="3" whitePlayer="COQUELETLAURENT"></Game>
+<Game blackPlayer="ALLARDJEAN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="3" tableNumber="2" whitePlayer="IMAMURATORU"></Game>
+<Game blackPlayer="FELDMANNDENIS" handicap="5" knownColor="true" result="RESULT_BLACKWINS" roundNumber="3" tableNumber="1" whitePlayer="FANHUI"></Game>
+<Game blackPlayer="CORNUEJOLSDOMINIQUE" handicap="0" knownColor="true" result="RESULT_EQUAL" roundNumber="1" tableNumber="4" whitePlayer="HONOREJEANCHRISTOPHE"></Game>
+<Game blackPlayer="COQUELETLAURENT" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="3" whitePlayer="ALLARDJEAN"></Game>
+<Game blackPlayer="IMAMURATORU" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="2" whitePlayer="FELDMANNDENIS"></Game>
+<Game blackPlayer="MIZESSYNFRANCOIS" handicap="3" knownColor="true" result="RESULT_UNKNOWN" roundNumber="1" tableNumber="1" whitePlayer="FANHUI"></Game>
+</Games>
+<TournamentParameterSet>
+<GeneralParameterSet beginDate="2008-11-13" byoYomi="true" endDate="2007-10-25" genMMBar="4D" genMMFloor="20K" genMMS2ValueAbsent="1" genMMS2ValueBye="1" genNBW2ValueAbsent="0" genNBW2ValueBye="1" komi="7.5" location="Nowhere" name="Test tournament" numberOfCategories="1" numberOfRounds="5" shortName="test_Round-robin" size="" time=""/>
+<HandicapParameterSet hdBasedOnMMS="true" hdCeiling="9" hdCorrection="1" hdNoHdRankThreshold="1D"/>
+<PlacementParameterSet>
+<PlacementCriteria>
+<PlacementCriterion name="MMS" number="1"/>
+<PlacementCriterion name="SOSM" number="2"/>
+<PlacementCriterion name="SOSOSM" number="3"/>
+<PlacementCriterion name="NULL" number="4"/>
+<PlacementCriterion name="NULL" number="5"/>
+<PlacementCriterion name="NULL" number="6"/>
+</PlacementCriteria>
+</PlacementParameterSet>
+<PairingParameterSet paiBaAvoidDuplGame="500000000000000" paiBaBalanceWB="1000" paiBaDeterministic="true" paiBaRandom="0" paiMaAdditionalPlacementCritSystem1="Rating" paiMaAdditionalPlacementCritSystem2="NULL" paiMaAvoidMixingCategories="0" paiMaDUDDLowerMode="MID" paiMaDUDDWeight="100000000" paiMaLastRoundForSeedSystem1="1" paiMaMaximizeSeeding="5000000" paiMaMinimizeScoreDifference="100000000000" paiMaSeedSystem1="SPLITANDRANDOM" paiSeAvoidSameGeo="100000000000" paiSeDefSecCrit="100000000000" paiSeMinimizeHandicap="0" paiSeNbWinsThresholdActive="false" paiSePreferMMSDiffRatherThanSameClub="3" paiSePreferMMSDiffRatherThanSameCountry="1" paiSeRankThreshold="4D" paiStandardNX1Factor="0.5"/>
+</TournamentParameterSet>
+</Tournament>

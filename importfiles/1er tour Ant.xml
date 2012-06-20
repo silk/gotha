@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE Tournament SYSTEM "tournament.dtd">
+<Tournament>
+<Players>
+<Player club="92An" country="" firstName="Pierre" name="Flores" participating="11111111111111111111" rank="3K" rating="-297" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Xavier" name="Pone" participating="11111111111111111111" rank="30K" rating="-2950" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Frédéric" name="Dechamps" participating="11111111111111111111" rank="14K" rating="-1370" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Charles" name="White" participating="11111111111111111111" rank="13K" rating="-1210" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Laurent" name="Pottier" participating="11111111111111111111" rank="6K" rating="-536" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Soria" name="Tebib" participating="11111111111111111111" rank="9K" rating="-848" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Paul" name="Galan" participating="11111111111111111111" rank="6K" rating="-579" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Louis" name="Dumont" participating="11111111111111111111" rank="5K" rating="-419" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Soulaimane" name="Takarui" participating="11111111111111111111" rank="17K" rating="-1700" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Ivan" name="Schneider" participating="11111111111111111111" rank="11K" rating="-1055" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Frédéric" name="Maillasson" participating="11111111111111111111" rank="6K" rating="-571" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Nicolas" name="Bourbotte" participating="11111111111111111111" rank="7K" rating="-679" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Nicolas" name="Piussan" participating="11111111111111111111" rank="12K" rating="-1185" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Damien" name="Trinite" participating="11111111111111111111" rank="16K" rating="-1506" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Sylvain" name="Bouteloup" participating="11111111111111111111" rank="13K" rating="-1294" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Joséphine" name="Barthel" participating="11111111111111111111" rank="8K" rating="-776" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="David" name="Nedellec" participating="11111111111111111111" rank="3K" rating="-251" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Paul" name="Baratou" participating="11111111111111111111" rank="4K" rating="-352" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Rémi" name="Beduneau" participating="11111111111111111111" rank="4K" rating="-343" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Guillaume" name="Griffon" participating="11111111111111111111" rank="7K" rating="-668" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Julien" name="Signoles" participating="11111111111111111111" rank="9K" rating="-841" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+<Player club="92An" country="" firstName="Stephane" name="Beaumont" participating="11111111111111111111" rank="15K" rating="-1427" ratingOrigin="FFG" registeringStatus="FIN" smmsCorrection="0"/>
+</Players>
+<Games>
+<Game blackPlayer="SIGNOLESJULIEN" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="1" whitePlayer="NEDELLECDAVID"/>
+<Game blackPlayer="PONEXAVIER" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="11" whitePlayer="PIUSSANNICOLAS"/>
+<Game blackPlayer="TEBIBSORIA" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="2" whitePlayer="FLORESPIERRE"/>
+<Game blackPlayer="SCHNEIDERIVAN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="3" whitePlayer="BEDUNEAUREMI"/>
+<Game blackPlayer="BEAUMONTSTEPHANE" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="9" whitePlayer="TEBIBSORIA"/>
+<Game blackPlayer="PIUSSANNICOLAS" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="4" whitePlayer="BARATOUPAUL"/>
+<Game blackPlayer="TRINITEDAMIEN" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="10" whitePlayer="SCHNEIDERIVAN"/>
+<Game blackPlayer="WHITECHARLES" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="5" whitePlayer="DUMONTLOUIS"/>
+<Game blackPlayer="POTTIERLAURENT" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="6" whitePlayer="BOUTELOUPSYLVAIN"/>
+<Game blackPlayer="DECHAMPSFREDERIC" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="7" whitePlayer="MAILLASSONFREDERIC"/>
+<Game blackPlayer="GALANPAUL" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="8" whitePlayer="BEAUMONTSTEPHANE"/>
+<Game blackPlayer="TRINITEDAMIEN" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="9" whitePlayer="GRIFFONGUILLAUME"/>
+<Game blackPlayer="BOURBOTTENICOLAS" handicap="0" knownColor="true" result="RESULT_WHITEWINS" roundNumber="1" tableNumber="10" whitePlayer="TAKARUISOULAIMANE"/>
+<Game blackPlayer="BARTHELJOSEPHINE" handicap="0" knownColor="true" result="RESULT_BLACKWINS" roundNumber="1" tableNumber="11" whitePlayer="PONEXAVIER"/>
+<Game blackPlayer="NEDELLECDAVID" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="2" whitePlayer="DECHAMPSFREDERIC"/>
+<Game blackPlayer="FLORESPIERRE" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="1" whitePlayer="GALANPAUL"/>
+<Game blackPlayer="BARATOUPAUL" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="4" whitePlayer="BARTHELJOSEPHINE"/>
+<Game blackPlayer="BEDUNEAUREMI" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="3" whitePlayer="GRIFFONGUILLAUME"/>
+<Game blackPlayer="TAKARUISOULAIMANE" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="6" whitePlayer="POTTIERLAURENT"/>
+<Game blackPlayer="DUMONTLOUIS" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="5" whitePlayer="SIGNOLESJULIEN"/>
+<Game blackPlayer="BOUTELOUPSYLVAIN" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="8" whitePlayer="BOURBOTTENICOLAS"/>
+<Game blackPlayer="MAILLASSONFREDERIC" handicap="0" knownColor="true" result="RESULT_UNKNOWN" roundNumber="2" tableNumber="7" whitePlayer="WHITECHARLES"/>
+</Games>
+<TournamentParameterSet>
+<GeneralParameterSet beginDate="2012-01-19" byoYomi="true" endDate="2012-01-19" genMMBar="9D" genMMFloor="30K" genMMS2ValueAbsent="1" genMMS2ValueBye="1" genNBW2ValueAbsent="0" genNBW2ValueBye="1" komi="7.5" location="Location name" name="1er tour Ant" numberOfCategories="1" numberOfRounds="5" shortName="1er tour Ant" size="" time=""/>
+<HandicapParameterSet hdBasedOnMMS="false" hdCeiling="0" hdCorrection="0" hdNoHdRankThreshold="30K"/>
+<PlacementParameterSet>
+<PlacementCriteria>
+<PlacementCriterion name="NBW" number="1"/>
+<PlacementCriterion name="SOSW" number="2"/>
+<PlacementCriterion name="SOSOSW" number="3"/>
+<PlacementCriterion name="NULL" number="4"/>
+<PlacementCriterion name="NULL" number="5"/>
+<PlacementCriterion name="NULL" number="6"/>
+</PlacementCriteria>
+</PlacementParameterSet>
+<PairingParameterSet paiBaAvoidDuplGame="500000000000000" paiBaBalanceWB="1000000" paiBaDeterministic="true" paiBaRandom="0" paiMaAdditionalPlacementCritSystem1="Rating" paiMaAdditionalPlacementCritSystem2="Rating" paiMaAvoidMixingCategories="0" paiMaDUDDLowerMode="MID" paiMaDUDDUpperMode="MID" paiMaDUDDWeight="100000000" paiMaLastRoundForSeedSystem1="2" paiMaMaximizeSeeding="5000000" paiMaMinimizeScoreDifference="100000000000" paiMaSeedSystem1="SPLITANDSLIP" paiSeAvoidSameGeo="0" paiSeDefSecCrit="20000000000000" paiSeMinimizeHandicap="0" paiSeNbWinsThresholdActive="true" paiSePreferMMSDiffRatherThanSameClub="0" paiSePreferMMSDiffRatherThanSameCountry="0" paiSeRankThreshold="30K" paiStandardNX1Factor="0.5"/>
+</TournamentParameterSet>
+<TeamTournamentParameterSet>
+<TeamGeneralParameterSet teamSize="4"/>
+<TeamPlacementParameterSet>
+<PlacementCriteria>
+<PlacementCriterion name="TEAMP" number="1"/>
+<PlacementCriterion name="BDW" number="2"/>
+<PlacementCriterion name="BDW3U" number="3"/>
+<PlacementCriterion name="BDW2U" number="4"/>
+<PlacementCriterion name="BDW1U" number="5"/>
+<PlacementCriterion name="MNR" number="6"/>
+</PlacementCriteria>
+</TeamPlacementParameterSet>
+</TeamTournamentParameterSet>
+</Tournament>

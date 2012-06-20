@@ -1,0 +1,2 @@
+Main-Class: info.vannier.gotha/JFrGothaStart
+Class-Path: lib/jhall.jar

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 2.0//EN"
+                     "http://java.sun.com/products/javahelp/map_2_0.dtd">
+
+<map version="1.0">
+	<mapID target="gotha.icon" url="../resources/gothalogo16.jpg"/>
+	<mapID target="Starting OpenGotha" url="Starting OpenGotha.html"/>
+	<mapID target="Tournament menu" url="Tournament menu.html"/>
+	<mapID target="Create a new tournament" url="Create a new tournament.html"/>
+	<mapID target="Import facilities" url="Import facilities.html"/>
+	<mapID target="Export facilities" url="Export facilities.html"/>
+	<mapID target="Players menu" url="Players menu.html"/>
+	<mapID target="Players Manager frame" url="Players Manager frame.html"/>
+	<mapID target="Players Quick check frame" url="Players Quick check frame.html"/>
+	<mapID target="Update ratings frame" url="Update ratings frame.html"/>
+	<mapID target="Mac-Mahon groups frame" url="Mac-Mahon groups frame.html"/>
+	<mapID target="Teams Manager frame" url="Teams Manager frame.html"/>
+	<mapID target="Games menu" url="Games menu.html"/>
+	<mapID target="Games Pair frame" url="Games Pair frame.html"/>
+	<mapID target="Games Results frame" url="Games Results frame.html"/>
+	<mapID target="Games Round-robin frame" url="Games Round-robin frame.html"/>
+	<mapID target="Teams Pairing frame" url="Teams Pairing frame.html"/>
+	<mapID target="Options menu" url="Options menu.html"/>
+	<mapID target="Tournament Options" url="Tournament Options.html"/>
+	<mapID target="General parameters" url="General parameters.html"/>
+	<mapID target="Handicap parameters" url="Handicap parameters.html"/>
+	<mapID target="Placement parameters" url="Placement parameters.html"/>
+	<mapID target="Pairing parameters" url="Pairing parameters.html"/>
+	<mapID target="Team Placement parameters" url="Team Placement parameters.html"/>
+	<mapID target="Games Options" url="Games Options.html"/>
+	<mapID target="Preferences frame" url="Preferences frame.html"/>
+	<mapID target="Tools menu" url="Tools menu.html"/>
+	<mapID target="Players Manager frame" url="Players Manager frame.html"/>
+	<mapID target="Players Quick check frame" url="Players Quick check frame.html"/>
+	<mapID target="Mac-Mahon groups frame" url="Mac-Mahon groups frame.html"/>
+	<mapID target="Appendices" url="Appendices.html"/>
+	<mapID target="Games encoding" url="Games encoding.html"/>
+	<mapID target="Pairing algorithm" url="Pairing algorithm.html"/>
+	<mapID target="Pairing evaluation function" url="Pairing evaluation function.html"/>
+	<mapID target="Compatibility issues" url="Compatibility issues.html"/>
+	<mapID target="Teams Manager frame" url="Teams Manager frame.html"/>
+	<mapID target="Teams Pairing frame" url="Teams Pairing frame.html"/>
+	<mapID target="Update ratings frame" url="Update ratings frame.html"/>
+	<mapID target="Vbar-separated format" url="vbarseparatedformat.html"/>
+</map>
