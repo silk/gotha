@@ -4,6 +4,7 @@
  * 
  */
 
+
 package info.vannier.gotha;
 
 import java.awt.Image;
