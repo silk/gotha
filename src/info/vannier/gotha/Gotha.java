@@ -41,6 +41,7 @@ public class Gotha {
     // Data version for serialization
     static final long GOTHA_DATA_VERSION = 201L;
     // Should definitely stay below or equal to 32, due to internal limits in costValue() method
+    
     static final int MAX_NUMBER_OF_ROUNDS = 20;
     // Should definitely stay below 16000, due to internal limits in PairingParameterSet parameter values
     // Should definitely stay below 9999, due to printing issues
