@@ -2349,6 +2349,9 @@ public class JFrGotha extends javax.swing.JFrame {
     private void saveTournament(File f) {
         TournamentInterface t = tournament;
         saveTournament(t, f);
+        // V3.28.01
+        this.addRecentTournament(f.getAbsolutePath());
+        //V3.28.01 End
     }
 
     private File getDefaultTournamentFile(){

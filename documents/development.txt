@@ -1,6 +1,12 @@
-OpenGothaV3.27.03
-**************************
-19/06/2012
+OpenGothaV3.28.01
+**************
+17/08/2012
+New         Recent files list was fed by Open actions
+            It is now fed by Save actions as well
+
+OpenGothaV3.28
+**************
+12/08/2012
 New         Strasbourg scores (STS and SOSTS)
 
 OpenGothaV3.27

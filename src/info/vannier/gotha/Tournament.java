@@ -221,8 +221,9 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
 
     /**
      * The key name for a tournament is an identifier This identifier is used -
-     * As the dafult name for save function - As the name in the Registry for
-     * RMI access Practically it is the short name of the tournament
+     * - As the default name for save function 
+     * - As the name in the Registry for RMI access 
+     * Practically it is the short name of the tournament
      *
      * @return
      * @throws java.rmi.RemoteException
@@ -230,7 +231,6 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     @Override
     public String getKeyName() throws RemoteException {
         return this.getTournamentParameterSet().getGeneralParameterSet().getShortName();
-
     }
 
     @Override
