@@ -227,7 +227,6 @@ public class JFrGotha extends javax.swing.JFrame {
         mniOpen = new javax.swing.JMenuItem();
         mnuOpenRecent = new javax.swing.JMenu();
         mniSave = new javax.swing.JMenuItem();
-        mniSaveAs = new javax.swing.JMenuItem();
         mniClose = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JSeparator();
         mnuImport = new javax.swing.JMenu();
@@ -283,7 +282,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlSystem.setLayout(null);
 
         grpPS.add(rdbMacMahon);
-        rdbMacMahon.setFont(new java.awt.Font("Tahoma", 0, 10));
+        rdbMacMahon.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         rdbMacMahon.setSelected(true);
         rdbMacMahon.setText("Mac-Mahon");
         rdbMacMahon.setToolTipText("Players will be paired according to their rank! The winner will be the strongest");
@@ -293,7 +292,7 @@ public class JFrGotha extends javax.swing.JFrame {
         rdbMacMahon.setBounds(20, 30, 170, 13);
 
         grpPS.add(rdbSwiss);
-        rdbSwiss.setFont(new java.awt.Font("Tahoma", 0, 10));
+        rdbSwiss.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         rdbSwiss.setText("Swiss");
         rdbSwiss.setToolTipText("Good system for championships");
         rdbSwiss.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
@@ -302,7 +301,7 @@ public class JFrGotha extends javax.swing.JFrame {
         rdbSwiss.setBounds(20, 60, 170, 13);
 
         grpPS.add(rdbSwissCat);
-        rdbSwissCat.setFont(new java.awt.Font("Tahoma", 0, 10));
+        rdbSwissCat.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         rdbSwissCat.setText("Swiss with categories");
         rdbSwissCat.setToolTipText("Because of possible games with a big rank difference, this system is not usually recommended");
         rdbSwissCat.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
@@ -311,7 +310,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlSystem.add(rdbSwissCat);
         rdbSwissCat.setBounds(20, 90, 170, 13);
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel13.setText("Number of rounds");
         pnlSystem.add(jLabel13);
         jLabel13.setBounds(20, 140, 120, 13);
@@ -421,24 +420,24 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlObjectsToImport.setBorder(javax.swing.BorderFactory.createTitledBorder("Objects to Import"));
         pnlObjectsToImport.setLayout(null);
 
-        chkPlayers.setFont(new java.awt.Font("Tahoma", 0, 10));
+        chkPlayers.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         chkPlayers.setSelected(true);
         chkPlayers.setText("Players");
         pnlObjectsToImport.add(chkPlayers);
         chkPlayers.setBounds(20, 20, 190, 21);
 
-        chkGames.setFont(new java.awt.Font("Tahoma", 0, 10));
+        chkGames.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         chkGames.setSelected(true);
         chkGames.setText("Games");
         pnlObjectsToImport.add(chkGames);
         chkGames.setBounds(20, 60, 190, 21);
 
-        chkTournamentParameters.setFont(new java.awt.Font("Tahoma", 0, 10));
+        chkTournamentParameters.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         chkTournamentParameters.setText("Tournament Parameters");
         pnlObjectsToImport.add(chkTournamentParameters);
         chkTournamentParameters.setBounds(20, 100, 190, 21);
 
-        chkTeams.setFont(new java.awt.Font("Arial", 0, 11));
+        chkTeams.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         chkTeams.setText("Teams and team parameters");
         pnlObjectsToImport.add(chkTeams);
         chkTeams.setBounds(20, 140, 190, 23);
@@ -549,7 +548,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlPS.setLayout(null);
 
         grpPS.add(rdbCurrentPS);
-        rdbCurrentPS.setFont(new java.awt.Font("Tahoma", 0, 10));
+        rdbCurrentPS.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         rdbCurrentPS.setText("use current set");
         rdbCurrentPS.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         rdbCurrentPS.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -562,7 +561,7 @@ public class JFrGotha extends javax.swing.JFrame {
         rdbCurrentPS.setBounds(10, 20, 170, 13);
 
         grpPS.add(rdbTemporaryPS);
-        rdbTemporaryPS.setFont(new java.awt.Font("Tahoma", 0, 10));
+        rdbTemporaryPS.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         rdbTemporaryPS.setText("use temporary set");
         rdbTemporaryPS.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         rdbTemporaryPS.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -584,12 +583,12 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlPS.add(cbxCrit1);
         cbxCrit1.setBounds(60, 70, 120, 20);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel3.setText("Crit 1");
         pnlPS.add(jLabel3);
         jLabel3.setBounds(10, 70, 34, 13);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel4.setText("Crit 2");
         pnlPS.add(jLabel4);
         jLabel4.setBounds(10, 100, 34, 13);
@@ -604,7 +603,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlPS.add(cbxCrit2);
         cbxCrit2.setBounds(60, 100, 120, 20);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel5.setText("Crit 3");
         pnlPS.add(jLabel5);
         jLabel5.setBounds(10, 130, 34, 13);
@@ -619,7 +618,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlPS.add(cbxCrit3);
         cbxCrit3.setBounds(60, 130, 120, 20);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel6.setText("Crit 4");
         pnlPS.add(jLabel6);
         jLabel6.setBounds(10, 160, 34, 13);
@@ -708,7 +707,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlTeamPS.setLayout(null);
 
         grpTeamPS.add(rdbCurrentTeamPS);
-        rdbCurrentTeamPS.setFont(new java.awt.Font("Tahoma", 0, 10));
+        rdbCurrentTeamPS.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         rdbCurrentTeamPS.setText("use current set");
         rdbCurrentTeamPS.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         rdbCurrentTeamPS.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -721,7 +720,7 @@ public class JFrGotha extends javax.swing.JFrame {
         rdbCurrentTeamPS.setBounds(10, 20, 170, 13);
 
         grpTeamPS.add(rdbTemporaryTeamPS);
-        rdbTemporaryTeamPS.setFont(new java.awt.Font("Tahoma", 0, 10));
+        rdbTemporaryTeamPS.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         rdbTemporaryTeamPS.setText("use temporary set");
         rdbTemporaryTeamPS.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         rdbTemporaryTeamPS.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -733,7 +732,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlTeamPS.add(rdbTemporaryTeamPS);
         rdbTemporaryTeamPS.setBounds(10, 40, 170, 13);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel9.setText("Crit 1");
         pnlTeamPS.add(jLabel9);
         jLabel9.setBounds(10, 70, 34, 13);
@@ -748,7 +747,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlTeamPS.add(cbxTeamCrit1);
         cbxTeamCrit1.setBounds(60, 70, 120, 20);
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel14.setText("Crit 2");
         pnlTeamPS.add(jLabel14);
         jLabel14.setBounds(10, 100, 34, 13);
@@ -763,7 +762,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlTeamPS.add(cbxTeamCrit2);
         cbxTeamCrit2.setBounds(60, 100, 120, 20);
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel15.setText("Crit 3");
         pnlTeamPS.add(jLabel15);
         jLabel15.setBounds(10, 130, 34, 13);
@@ -778,7 +777,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlTeamPS.add(cbxTeamCrit3);
         cbxTeamCrit3.setBounds(60, 130, 120, 20);
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel16.setText("Crit 4");
         pnlTeamPS.add(jLabel16);
         jLabel16.setBounds(10, 160, 34, 13);
@@ -793,7 +792,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlTeamPS.add(cbxTeamCrit4);
         cbxTeamCrit4.setBounds(60, 160, 120, 20);
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel17.setText("Crit 5");
         pnlTeamPS.add(jLabel17);
         jLabel17.setBounds(10, 190, 34, 13);
@@ -808,7 +807,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlTeamPS.add(cbxTeamCrit5);
         cbxTeamCrit5.setBounds(60, 190, 120, 20);
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel18.setText("Crit 6");
         pnlTeamPS.add(jLabel18);
         jLabel18.setBounds(10, 220, 34, 13);
@@ -826,7 +825,7 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlIntTeamStandings.add(pnlTeamPS);
         pnlTeamPS.setBounds(0, 70, 190, 260);
 
-        tblTeamStandings.setFont(new java.awt.Font("Arial", 0, 10));
+        tblTeamStandings.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         tblTeamStandings.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
@@ -874,13 +873,13 @@ public class JFrGotha extends javax.swing.JFrame {
         getContentPane().add(tpnGotha);
         tpnGotha.setBounds(0, 0, 970, 640);
 
-        mnuMain.setFont(new java.awt.Font("Arial", 0, 11));
+        mnuMain.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
         mnuTournament.setText("Tournament");
-        mnuTournament.setFont(new java.awt.Font("Arial", 0, 11));
+        mnuTournament.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
         mniNew.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
-        mniNew.setFont(new java.awt.Font("Arial", 0, 11));
+        mniNew.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniNew.setText("New...");
         mniNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -890,7 +889,7 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuTournament.add(mniNew);
 
         mniOpen.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
-        mniOpen.setFont(new java.awt.Font("Arial", 0, 11));
+        mniOpen.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniOpen.setText("Open...");
         mniOpen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -900,11 +899,11 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuTournament.add(mniOpen);
 
         mnuOpenRecent.setText("Open Recent ... ");
-        mnuOpenRecent.setFont(new java.awt.Font("Arial", 0, 11));
+        mnuOpenRecent.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mnuTournament.add(mnuOpenRecent);
 
         mniSave.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
-        mniSave.setFont(new java.awt.Font("Arial", 0, 11));
+        mniSave.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniSave.setText("Save");
         mniSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -913,16 +912,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuTournament.add(mniSave);
 
-        mniSaveAs.setFont(new java.awt.Font("Arial", 0, 11));
-        mniSaveAs.setText("Save as ...");
-        mniSaveAs.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniSaveAsActionPerformed(evt);
-            }
-        });
-        mnuTournament.add(mniSaveAs);
-
-        mniClose.setFont(new java.awt.Font("Arial", 0, 11));
+        mniClose.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniClose.setText("Close");
         mniClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -933,9 +923,9 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuTournament.add(jSeparator1);
 
         mnuImport.setText("Import ...");
-        mnuImport.setFont(new java.awt.Font("Arial", 0, 11));
+        mnuImport.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
-        mniImportH9.setFont(new java.awt.Font("Arial", 0, 11));
+        mniImportH9.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniImportH9.setText("Import Players and Games from h9 file");
         mniImportH9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -944,7 +934,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuImport.add(mniImportH9);
 
-        mniImportTou.setFont(new java.awt.Font("Arial", 0, 11));
+        mniImportTou.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniImportTou.setText("Import Players and Games from Tou file");
         mniImportTou.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -953,7 +943,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuImport.add(mniImportTou);
 
-        mniImportWallist.setFont(new java.awt.Font("Arial", 0, 11));
+        mniImportWallist.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniImportWallist.setText("Import Players and Games from Wallist file");
         mniImportWallist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -962,7 +952,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuImport.add(mniImportWallist);
 
-        mniImportVBS.setFont(new java.awt.Font("Arial", 0, 11));
+        mniImportVBS.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniImportVBS.setText("Import Players From vBar-separated File");
         mniImportVBS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -971,7 +961,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuImport.add(mniImportVBS);
 
-        mniImportXML.setFont(new java.awt.Font("Arial", 0, 11));
+        mniImportXML.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniImportXML.setText("Import Tournament from XML File");
         mniImportXML.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -983,9 +973,9 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuTournament.add(mnuImport);
 
         mnuExport.setText("Export");
-        mnuExport.setFont(new java.awt.Font("Arial", 0, 11));
+        mnuExport.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
-        mniExportH9.setFont(new java.awt.Font("Arial", 0, 11));
+        mniExportH9.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniExportH9.setText("Results for EGF rating-list");
         mniExportH9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -994,7 +984,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuExport.add(mniExportH9);
 
-        mniExportTou.setFont(new java.awt.Font("Arial", 0, 11));
+        mniExportTou.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniExportTou.setText("Results for FFG rating-list");
         mniExportTou.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1003,7 +993,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuExport.add(mniExportTou);
 
-        mniExportAGA.setFont(new java.awt.Font("Arial", 0, 11));
+        mniExportAGA.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniExportAGA.setText("Results for AGA rating-list");
         mniExportAGA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1012,7 +1002,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuExport.add(mniExportAGA);
 
-        mniExportHTML.setFont(new java.awt.Font("Arial", 0, 11));
+        mniExportHTML.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniExportHTML.setText("Ready-To-Publish Results in HTML format");
         mniExportHTML.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1021,7 +1011,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuExport.add(mniExportHTML);
 
-        mniExportTeamHTML.setFont(new java.awt.Font("Arial", 0, 11));
+        mniExportTeamHTML.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniExportTeamHTML.setText("Ready-To-Publish Team results in HTML format");
         mniExportTeamHTML.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1030,7 +1020,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuExport.add(mniExportTeamHTML);
 
-        mniExportPlayersCSV.setFont(new java.awt.Font("Arial", 0, 11));
+        mniExportPlayersCSV.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniExportPlayersCSV.setText("Players in CSV format");
         mniExportPlayersCSV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1042,18 +1032,18 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuTournament.add(mnuExport);
         mnuTournament.add(jSeparator2);
 
-        mniPageSetup.setFont(new java.awt.Font("Arial", 0, 11));
+        mniPageSetup.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniPageSetup.setText("Page setup...");
         mniPageSetup.setEnabled(false);
         mnuTournament.add(mniPageSetup);
 
-        mniPrint.setFont(new java.awt.Font("Arial", 0, 11));
+        mniPrint.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniPrint.setText("Print...");
         mniPrint.setEnabled(false);
         mnuTournament.add(mniPrint);
         mnuTournament.add(jSeparator3);
 
-        mniExit.setFont(new java.awt.Font("Arial", 0, 11));
+        mniExit.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniExit.setText("Exit");
         mniExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1063,7 +1053,7 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuTournament.add(mniExit);
         mnuTournament.add(jSeparator4);
 
-        mniBuildTestTournament.setFont(new java.awt.Font("Arial", 0, 11));
+        mniBuildTestTournament.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniBuildTestTournament.setText("Build test tournament");
         mniBuildTestTournament.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1075,10 +1065,10 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuMain.add(mnuTournament);
 
         mnuPlayers.setText("Players");
-        mnuPlayers.setFont(new java.awt.Font("Arial", 0, 11));
+        mnuPlayers.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
         mniPlayersManager.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
-        mniPlayersManager.setFont(new java.awt.Font("Arial", 0, 11));
+        mniPlayersManager.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniPlayersManager.setText("Players Manager");
         mniPlayersManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1088,7 +1078,7 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuPlayers.add(mniPlayersManager);
 
         mniPlayersQuickCheck.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
-        mniPlayersQuickCheck.setFont(new java.awt.Font("Arial", 0, 11));
+        mniPlayersQuickCheck.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniPlayersQuickCheck.setText("Players Quick check");
         mniPlayersQuickCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1097,7 +1087,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuPlayers.add(mniPlayersQuickCheck);
 
-        mniUpdateRatings.setFont(new java.awt.Font("Arial", 0, 11));
+        mniUpdateRatings.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniUpdateRatings.setText("Update ratings");
         mniUpdateRatings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1106,7 +1096,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuPlayers.add(mniUpdateRatings);
 
-        mniMMGroups.setFont(new java.awt.Font("Arial", 0, 11));
+        mniMMGroups.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniMMGroups.setText("Mac-Mahon groups");
         mniMMGroups.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1116,7 +1106,7 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuPlayers.add(mniMMGroups);
         mnuPlayers.add(jSeparator5);
 
-        mniTeamsManager.setFont(new java.awt.Font("Arial", 0, 11));
+        mniTeamsManager.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniTeamsManager.setText("Teams Manager");
         mniTeamsManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1128,10 +1118,10 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuMain.add(mnuPlayers);
 
         mnuGames.setText("Games");
-        mnuGames.setFont(new java.awt.Font("Arial", 0, 11));
+        mnuGames.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
         mniPair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
-        mniPair.setFont(new java.awt.Font("Arial", 0, 11));
+        mniPair.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniPair.setText("Pair");
         mniPair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1141,7 +1131,7 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuGames.add(mniPair);
 
         mniResults.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
-        mniResults.setFont(new java.awt.Font("Arial", 0, 11));
+        mniResults.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniResults.setText("Results");
         mniResults.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1150,7 +1140,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuGames.add(mniResults);
 
-        mniRR.setFont(new java.awt.Font("Arial", 0, 11));
+        mniRR.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniRR.setText("Round-robin");
         mniRR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1160,7 +1150,7 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuGames.add(mniRR);
         mnuGames.add(jSeparator6);
 
-        mniTeamsPairing.setFont(new java.awt.Font("Arial", 0, 11));
+        mniTeamsPairing.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniTeamsPairing.setText("Teams Pairing");
         mniTeamsPairing.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1172,9 +1162,9 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuMain.add(mnuGames);
 
         mnuOptions.setText("Options");
-        mnuOptions.setFont(new java.awt.Font("Arial", 0, 11));
+        mnuOptions.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
-        mniTournamentOptions.setFont(new java.awt.Font("Arial", 0, 11));
+        mniTournamentOptions.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniTournamentOptions.setText("Tournament Options");
         mniTournamentOptions.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1183,7 +1173,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuOptions.add(mniTournamentOptions);
 
-        mniGamesOptions.setFont(new java.awt.Font("Arial", 0, 11));
+        mniGamesOptions.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniGamesOptions.setText("Games Options");
         mniGamesOptions.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1193,7 +1183,7 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuOptions.add(mniGamesOptions);
         mnuOptions.add(jSeparator7);
 
-        mniPreferences.setFont(new java.awt.Font("Arial", 0, 11));
+        mniPreferences.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniPreferences.setText("Preferences");
         mniPreferences.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1205,7 +1195,7 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuMain.add(mnuOptions);
 
         mnuTools.setText("Tools");
-        mnuTools.setFont(new java.awt.Font("Arial", 0, 11));
+        mnuTools.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
         mniRMI.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniRMI.setText("RMI Manager");
@@ -1238,10 +1228,10 @@ public class JFrGotha extends javax.swing.JFrame {
         mnuMain.add(mnuTools);
 
         mnuHelp.setText("Help");
-        mnuHelp.setFont(new java.awt.Font("Arial", 0, 11));
+        mnuHelp.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
         mniOpenGothaHelp.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
-        mniOpenGothaHelp.setFont(new java.awt.Font("Arial", 0, 11));
+        mniOpenGothaHelp.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniOpenGothaHelp.setText("OpenGotha help");
         mniOpenGothaHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1250,7 +1240,7 @@ public class JFrGotha extends javax.swing.JFrame {
         });
         mnuHelp.add(mniOpenGothaHelp);
 
-        mniHelpAbout.setFont(new java.awt.Font("Arial", 0, 11));
+        mniHelpAbout.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniHelpAbout.setText("About OpenGotha");
         mniHelpAbout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1701,7 +1691,7 @@ public class JFrGotha extends javax.swing.JFrame {
                 break;
             case Gotha.RUNNING_MODE_CLI:
                 this.mniSave.setVisible(false);
-                this.mniSaveAs.setVisible(false);
+                this.mniSave.setVisible(false);
                 this.mniNew.setVisible(false);
                 this.mniOpen.setVisible(false);
                 this.mnuOpenRecent.setVisible(false);
@@ -2297,19 +2287,6 @@ public class JFrGotha extends javax.swing.JFrame {
         }
     }
 
-    private void mniSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniSaveActionPerformed
-        if (tournament == null) {
-            JOptionPane.showMessageDialog(this, "No currently open tournament", "Message", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        try {
-            String fileName = tournament.getKeyName();
-            saveTournament(new File(Gotha.tournamentDirectory, fileName));
-        } catch (IOException ex) {
-            Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_mniSaveActionPerformed
-
     /**
      *  if necessary, saves the current tournament
      *  @return false if operation has been cancelled  
@@ -2430,7 +2407,7 @@ public class JFrGotha extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_mniPlayersManagerActionPerformed
 
-    private void mniSaveAsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniSaveAsActionPerformed
+    private void mniSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniSaveActionPerformed
         if (tournament == null) {
             JOptionPane.showMessageDialog(this, "No currently open tournament", "Message", JOptionPane.ERROR_MESSAGE);
             return;
@@ -2463,7 +2440,7 @@ public class JFrGotha extends javax.swing.JFrame {
         }
         Gotha.tournamentDirectory = fileChoice.getCurrentDirectory();
         saveTournament(f);
-    }//GEN-LAST:event_mniSaveAsActionPerformed
+    }//GEN-LAST:event_mniSaveActionPerformed
 
 private void mniRRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniRRActionPerformed
         if (tournament == null) {
@@ -3288,7 +3265,6 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JMenuItem mniRR;
     private javax.swing.JMenuItem mniResults;
     private javax.swing.JMenuItem mniSave;
-    private javax.swing.JMenuItem mniSaveAs;
     private javax.swing.JMenuItem mniTeamsManager;
     private javax.swing.JMenuItem mniTeamsPairing;
     private javax.swing.JMenuItem mniTournamentOptions;
