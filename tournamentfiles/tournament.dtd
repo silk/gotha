@@ -41,6 +41,7 @@
 <!ATTLIST Team teamNumber CDATA #REQUIRED>
 <!ATTLIST Team teamName CDATA #REQUIRED>
 <!ELEMENT Board (#PCDATA)>
+<!ATTLIST Board roundNumber CDATA #REQUIRED>
 <!ATTLIST Board boardNumber CDATA #REQUIRED>
 <!ATTLIST Board player CDATA #REQUIRED>
 

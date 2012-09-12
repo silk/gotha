@@ -33,7 +33,7 @@ public class Match implements java.io.Serializable{
         Match match = new Match();
         match.teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
         match.roundNumber = roundNumber;
-        Player player0 = team1.getTeamMember(0);
+        Player player0 = team1.getTeamMember(roundNumber, 0);
         if (tournament.getGame(roundNumber, player0).getWhitePlayer().hasSameKeyString(player0)){
             match.whiteTeam = team1;
             match.blackTeam = team2;
@@ -43,8 +43,8 @@ public class Match implements java.io.Serializable{
             match.blackTeam = team1;
         }
         for(int ib = 0; ib < Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM; ib++){
-            Player wtp = match.whiteTeam.getTeamMember(ib);
-            Player btp = match.blackTeam.getTeamMember(ib);
+            Player wtp = match.whiteTeam.getTeamMember(roundNumber, ib);
+            Player btp = match.blackTeam.getTeamMember(roundNumber, ib);
             if(wtp == null) continue;
             if(btp == null) continue;
             Game g = tournament.getGame(roundNumber, wtp);

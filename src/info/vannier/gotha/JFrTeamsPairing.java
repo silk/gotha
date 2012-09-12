@@ -353,10 +353,10 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
 
         try {
             String strUncompleteTeam = "";
-            if (!tournament.isTeamComplete(t1)) {
+            if (!tournament.isTeamComplete(t1, processedRoundNumber)) {
                 strUncompleteTeam = t1.getTeamName();
             }
-            if (!tournament.isTeamComplete(t0)) {
+            if (!tournament.isTeamComplete(t0, processedRoundNumber)) {
                 strUncompleteTeam = t0.getTeamName();
             }
             if (!strUncompleteTeam.equals("")) {
@@ -427,7 +427,7 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
             for (Match m : alMatchesToRemove) {
                 Team wt = m.getWhiteTeam();
                 for (int ib = 0; ib < teamSize; ib++) {
-                    Player wp = wt.getTeamMember((ib));
+                    Player wp = wt.getTeamMember(processedRoundNumber, (ib));
                     if (wp == null) {
                         continue;
                     }
@@ -564,7 +564,7 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
         for (ComparableMatch cm : alCM) {
             ScoredTeam wst = cm.wst;
             for (int ib = 0; ib < teamSize; ib++) {
-                Player p = wst.getTeamMember(ib);
+                Player p = wst.getTeamMember(processedRoundNumber, ib);
                 if (p == null) {
                     continue;
                 }
@@ -583,8 +583,8 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
             ScoredTeam wst = cm.wst;
             ScoredTeam bst = cm.bst;
             for (int ib = 0; ib < teamSize; ib++) {
-                Player wp = wst.getTeamMember(ib);
-                Player bp = bst.getTeamMember(ib);
+                Player wp = wst.getTeamMember(processedRoundNumber, ib);
+                Player bp = bst.getTeamMember(processedRoundNumber, ib);
                 if (wp == null) {
                     continue;
                 }
@@ -629,8 +629,8 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
         Team bt = match.getBlackTeam();
 
         for (int ib = 0; ib < teamSize; ib++) {
-            Player wp = wt.getTeamMember(ib);
-            Player bp = bt.getTeamMember(ib);
+            Player wp = wt.getTeamMember(processedRoundNumber, ib);
+            Player bp = bt.getTeamMember(processedRoundNumber, ib);
             if (wp == null) {
                 continue;
             }
@@ -664,7 +664,7 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
         // Ask for a new number
         Team wt = match.getWhiteTeam();
         Team bt = match.getBlackTeam();
-        Player player0 = wt.getTeamMember(0);
+        Player player0 = wt.getTeamMember(processedRoundNumber, 0);
         Game game = null;
         try {
             game = tournament.getGame(processedRoundNumber, player0);
@@ -698,7 +698,7 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
 
         for (int ib = 0; ib < teamSize; ib++) {
             wt = match.getWhiteTeam();
-            Player player = wt.getTeamMember(ib);
+            Player player = wt.getTeamMember(processedRoundNumber, ib);
             int oldTN = -1;
             int newTN = newB0TN + ib;
             Game g1 = null;

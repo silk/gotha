@@ -47,7 +47,7 @@ public class ComparableMatch{
         for(Match m : alMatches){
             Team wt = m.getWhiteTeam();
             Team bt = m.getBlackTeam();
-            Player player0 = wt.getTeamMember(0);
+            Player player0 = wt.getTeamMember(Gotha.DEFAULT_ROUND_NUMBER, 0);
             Game g = null;
             try {
                 g = tournament.getGame(roundNumber, player0);

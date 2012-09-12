@@ -82,23 +82,23 @@ public interface TournamentInterface extends Remote{
     public boolean removeTeam(Team t)  throws RemoteException;
     public void removeAllTeams()  throws RemoteException;
     public Team getTeamByName(String name) throws RemoteException;
-    public Team getTeamOfPlayer(Player player) throws RemoteException;
-    public void setTeamMember(Team team, int boardMember, Player player) throws RemoteException;
+    public Team getTeamOfPlayer(Player player, int roundNumber) throws RemoteException;
+    public void setTeamMember(Team team, int roundNumber, int boardMember, Player player) throws RemoteException;
     public void modifyTeamName(Team team, String newName) throws RemoteException;
-    public void unteamTeamMember(Team team, int boardNumber) throws RemoteException;
-    public void unteamTeamMembers(Team team) throws RemoteException;
-    public void unteamAllTeams() throws RemoteException;
-    public void reorderTeamMembersByRating(Team team) throws RemoteException;
-    public void reorderTeamMembersByRating() throws RemoteException;
+    public void unteamTeamMember(Team team, int roundNumber, int boardNumber) throws RemoteException;
+    public void unteamTeamMembers(Team team, int roundNumber) throws RemoteException;
+    public void unteamAllTeams(int roundNumber) throws RemoteException;
+    public void reorderTeamMembersByRating(Team team, int roundNumber) throws RemoteException;
+    public void reorderTeamMembersByRating(int roundNumber) throws RemoteException;
     public void renumberTeamsByTotalRating() throws RemoteException;
-    public boolean isTeamComplete(Team team) throws RemoteException;
+    public boolean isTeamComplete(Team team, int roundNumber) throws RemoteException;
     public ArrayList<Game> incoherentTeamGames() throws RemoteException;
     public Team opponentTeam(Team team, int roundNumber) throws RemoteException;
     public int nbWX2Team(Team team, Team opponentTeam, int roundNumber) throws RemoteException;
 
     public int numberOfTeams() throws RemoteException;
     public ArrayList<Team> teamsList() throws RemoteException;
-    public HashMap<String, Player> teamablePlayersHashMap() throws RemoteException;
+    public HashMap<String, Player> teamablePlayersHashMap(int roundNumber) throws RemoteException;
 
     public ArrayList<Match> matchesList(int roundNumber) throws RemoteException;
     public ArrayList<Match> matchesListUpTo(int roundNumber) throws RemoteException;

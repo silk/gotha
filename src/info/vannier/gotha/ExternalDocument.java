@@ -919,6 +919,8 @@ public class ExternalDocument {
                     continue;
                 }
                 NamedNodeMap nnmBoard = nBoard.getAttributes();
+                String strRoundNumber = extractNodeValue(nnmBoard, "roundNumber", "0");
+                int roundNumber = new Integer(strRoundNumber).intValue() - 1;
                 String strBoardNumber = extractNodeValue(nnmBoard, "boardNumber", "1");
                 int boardNumber = new Integer(strBoardNumber).intValue() - 1;
                 String strPlayer = extractNodeValue(nnmBoard, "player", "unnamed player");
@@ -935,7 +937,15 @@ public class ExternalDocument {
                     Logger.getLogger(ExternalDocument.class.getName()).log(Level.SEVERE, null, ex);
                     continue;
                 }
-                t.setTeamMember(p, boardNumber);
+                if (roundNumber < 0){ // Before V3.28.04, roundNumber was not documented. So, set TeamMember for all rounds
+                    for (int r = 0; r < Gotha.MAX_NUMBER_OF_ROUNDS; r++){
+                        t.setTeamMember(p, r, boardNumber);
+                    }
+                    
+                }
+                else{
+                    t.setTeamMember(p, roundNumber, boardNumber);
+                }
             }
             alTeams.add(t);
         }
@@ -2399,17 +2409,21 @@ public class ExternalDocument {
             Element emTeam = document.createElement("Team");
             emTeam.setAttribute("teamNumber", strTeamNumber);
             emTeam.setAttribute("teamName", strTeamName);
-            for (int ibn = 0; ibn < Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM; ibn++) {
-                Player p = t.getTeamMember(ibn);
-                if (p == null) {
-                    continue;
+            for ( int ir = 0; ir < Gotha.MAX_NUMBER_OF_ROUNDS; ir++){
+                String strRoundNumber = Integer.valueOf(ir + 1).toString();
+                for (int ibn = 0; ibn < Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM; ibn++) {
+                    Player p = t.getTeamMember(ir, ibn);
+                    if (p == null) {
+                        continue;
+                    }
+                    String strBoardNumber = Integer.valueOf(ibn + 1).toString();
+                    String strPlayer = p.getKeyString();
+                    Element emBoard = document.createElement("Board");
+                    emBoard.setAttribute("roundNumber", strRoundNumber);
+                    emBoard.setAttribute("boardNumber", strBoardNumber);
+                    emBoard.setAttribute("player", strPlayer);
+                    emTeam.appendChild(emBoard);
                 }
-                String strBoardNumber = Integer.valueOf(ibn + 1).toString();
-                String strPlayer = p.getKeyString();
-                Element emBoard = document.createElement("Board");
-                emBoard.setAttribute("boardNumber", strBoardNumber);
-                emBoard.setAttribute("player", strPlayer);
-                emTeam.appendChild(emBoard);
             }
             emTeams.appendChild(emTeam);
         }

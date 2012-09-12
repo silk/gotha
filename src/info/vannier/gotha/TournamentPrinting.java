@@ -688,7 +688,7 @@ public class TournamentPrinting implements Printable {
             x = usableX + usableWidth * (TL_BOARD_BEG + TL_BOARD_LEN) / TL_NBCAR;
             drawRightAlignedString(g, strBoard, x, y);
 
-            Player player = team.getTeamMember(boardNumber);
+            Player player = team.getTeamMember(Gotha.DEFAULT_ROUND_NUMBER, boardNumber);
             if (player == null) {
                 continue;
             }

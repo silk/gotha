@@ -399,10 +399,12 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
 
         // Clean out teams
         for (Team team : teamsList()) {
-            for (int ip = 0; ip < Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM; ip++) {
-                Player p = team.getTeamMember(ip);
-                if (player.hasSameKeyString(p)) {
-                    this.setTeamMember(team, ip, null);
+            for (int ir = 0; ir < Gotha.MAX_NUMBER_OF_ROUNDS; ir++){
+                for (int ip = 0; ip < Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM; ip++) {
+                    Player p = team.getTeamMember(ir, ip);
+                    if (player.hasSameKeyString(p)) {
+                        this.setTeamMember(team, ir, ip, null);
+                    }
                 }
             }
         }
@@ -1585,10 +1587,10 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     }
 
     @Override
-    public Team getTeamOfPlayer(Player player) throws RemoteException {
+    public Team getTeamOfPlayer(Player player, int roundNumber) throws RemoteException {
         for (Team team : this.teamsList()) {
             for (int ib = 0; ib < Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM; ib++) {
-                Player p = team.getTeamMember(ib);
+                Player p = team.getTeamMember(roundNumber, ib);
                 if (p == null) {
                     continue;
                 }
@@ -1602,9 +1604,9 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     }
 
     @Override
-    public void setTeamMember(Team team, int boardMember, Player player) throws RemoteException {
+    public void setTeamMember(Team team, int roundNumber, int boardMember, Player player) throws RemoteException {
         Team teamToModify = hmTeams.get(team.getTeamName());
-        teamToModify.setTeamMember(player, boardMember);
+        teamToModify.setTeamMember(player, roundNumber, boardMember);
         this.setChangeSinceLastSave(true);
     }
 
@@ -1621,32 +1623,32 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     }
 
     @Override
-    public void unteamTeamMember(Team team, int boardNumber) throws RemoteException {
+    public void unteamTeamMember(Team team, int roundNumber, int boardNumber) throws RemoteException {
         Team teamToModify = hmTeams.get(team.getTeamName());
-        teamToModify.setTeamMember(null, boardNumber);
+        teamToModify.setTeamMember(null, roundNumber, boardNumber);
     }
 
     @Override
-    public void unteamTeamMembers(Team team) throws RemoteException {
+    public void unteamTeamMembers(Team team, int roundNumber) throws RemoteException {
         int teamSize = this.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
         for (int bn = 0; bn < teamSize; bn++) {
-            unteamTeamMember(team, bn);
+            this.unteamTeamMember(team, roundNumber, bn);
         }
     }
 
     @Override
-    public void unteamAllTeams() throws RemoteException {
+    public void unteamAllTeams(int roundNumber) throws RemoteException {
         for (Team team : hmTeams.values()) {
-            unteamTeamMembers(team);
+            unteamTeamMembers(team, roundNumber);
         }
     }
 
     @Override
-    public void reorderTeamMembersByRating(Team team) throws RemoteException {
+    public void reorderTeamMembersByRating(Team team, int roundNumber) throws RemoteException {
         ArrayList<Player> alPlayers = new ArrayList<Player>();
         int teamSize = this.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
         for (int iTM = 0; iTM < teamSize; iTM++) {
-            Player p = team.getTeamMember(iTM);
+            Player p = team.getTeamMember(roundNumber, iTM);
             if (p != null) {
                 alPlayers.add(p);
             }
@@ -1654,17 +1656,17 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
         PlayerComparator playerComparator = new PlayerComparator(PlayerComparator.RATING_ORDER);
         Collections.sort(alPlayers, playerComparator);
         for (int bn = 0; bn < alPlayers.size(); bn++) {
-            this.setTeamMember(team, bn, alPlayers.get(bn));
+            this.setTeamMember(team, roundNumber, bn, alPlayers.get(bn));
         }
         for (int bn = alPlayers.size(); bn < teamSize; bn++) {
-            this.setTeamMember(team, bn, null);
+            this.setTeamMember(team, roundNumber, bn, null);
         }
     }
 
     @Override
-    public void reorderTeamMembersByRating() throws RemoteException {
+    public void reorderTeamMembersByRating(int roundNumber) throws RemoteException {
         for (Team team : hmTeams.values()) {
-            reorderTeamMembersByRating(team);
+            this.reorderTeamMembersByRating(team, roundNumber);
         }
     }
 
@@ -1682,11 +1684,11 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     }
 
     @Override
-    public boolean isTeamComplete(Team team) throws RemoteException {
+    public boolean isTeamComplete(Team team, int roundNumber) throws RemoteException {
         Team t = hmTeams.get(team.getTeamName());
         int teamSize = this.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
         for (int ib = 0; ib < teamSize; ib++) {
-            if (t.getTeamMember(ib) == null) {
+            if (t.getTeamMember(roundNumber, ib) == null) {
                 return false;
             }
         }
@@ -1697,47 +1699,13 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     @Override
     public ArrayList<Game> incoherentTeamGames() throws RemoteException {
         ArrayList<Game> alIncohGames = new ArrayList<Game>();
-        ArrayList<Team> alTeams = teamsList();
-
-        int teamSize = getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
-
-        for (int r = 0; r < Gotha.MAX_NUMBER_OF_ROUNDS; r++) {
-            for (Team t : alTeams) {
-                Player p0 = t.getTeamMember(0);
-                Game g0 = getGame(r, p0);
-                Player opp0 = opponent(g0, p0);
-                Team tOpp0 = getTeamOfPlayer(opp0);
-                boolean bIncoh = false;
-                for (int b = 1; b < teamSize; b++) {
-                    Player p = t.getTeamMember(b);
-                    Game g = getGame(r, p);
-                    Player opp = opponent(g, p);
-                    Team tOpp = getTeamOfPlayer(opp);
-                    if (tOpp != tOpp0) {
-                        bIncoh = true;
-                        break;
-                    }
-                }
-                if (bIncoh) {
-                    for (int b = 0; b < teamSize; b++) {
-                        Player p = t.getTeamMember(b);
-                        Game g = getGame(r, p);
-                        if (g == null) {
-                            continue;
-                        }
-                        if (!alIncohGames.contains(g)) {
-                            alIncohGames.add(g);
-                        }
-                    }
-                }
-            }
-        }
+        
         return alIncohGames;
     }
 
     @Override
     public Team opponentTeam(Team team, int roundNumber) throws RemoteException {
-        Player player0 = team.getTeamMember(0);
+        Player player0 = team.getTeamMember(roundNumber, 0);
         Player opp0 = null;
         // Find opp0;
         ArrayList<Game> alG = this.gamesPlayedBy(player0);
@@ -1749,7 +1717,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
         }
         // What team for opp0 ?
         for (Team tOpp : hmTeams.values()) {
-            if (tOpp.getTeamMember(0).hasSameKeyString(opp0)) {
+            if (tOpp.getTeamMember(roundNumber, 0).hasSameKeyString(opp0)) {
                 return tOpp;
             }
         }
@@ -1760,11 +1728,11 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     public int nbWX2Team(Team team, Team opponentTeam, int roundNumber) throws RemoteException {
         int nbWX2 = 0;
         for (int ib = 0; ib < Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM; ib++) {
-            Player p1 = team.getTeamMember(ib);
+            Player p1 = team.getTeamMember(roundNumber, ib);
             if (p1 == null) {
                 break;
             }
-            Player p2 = opponentTeam.getTeamMember(ib);
+            Player p2 = opponentTeam.getTeamMember(roundNumber, ib);
             if (p2 == null) {
                 break;
             }
@@ -1801,7 +1769,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     }
 
     @Override
-    public HashMap<String, Player> teamablePlayersHashMap() throws RemoteException {
+    public HashMap<String, Player> teamablePlayersHashMap(int roundNumber) throws RemoteException {
         HashMap<String, Player> hmTeamablePlayers = new HashMap<String, Player>(hmPlayers);
 //        for (Player p : hmPlayers.values()) {
 //            if (p.getRegisteringStatus().compareTo("FIN") != 0){
@@ -1811,7 +1779,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
         int teamSize = getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
         for (Team t : teamsList()) {
             for (int iTM = 0; iTM < teamSize; iTM++) {
-                Player p = t.getTeamMember(iTM);
+                Player p = t.getTeamMember(roundNumber, iTM);
                 if (p != null) {
                     hmTeamablePlayers.remove(p.getKeyString());
                 }
@@ -1827,14 +1795,14 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
 
         ArrayList<Team> alTeams = teamsList();
         for (Team team : alTeams) {
-            Player player0 = team.getTeamMember(0);
+            Player player0 = team.getTeamMember(roundNumber, 0);
             ArrayList<Game> alG = gamesPlayedBy(player0);
             for (Game game : alG) {
                 if (game.getRoundNumber() != roundNumber) {
                     continue;
                 }
                 Player opponent0 = opponent(game, player0);
-                Team oppTeam = getTeamOfPlayer(opponent0);
+                Team oppTeam = this.getTeamOfPlayer(opponent0, roundNumber);
                 if (oppTeam == null) {
                     continue;
                 }
@@ -1855,14 +1823,13 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
 
         ArrayList<Team> alTeams = teamsList();
         for (Team team : alTeams) {
-            Player player0 = team.getTeamMember(0);
-            ArrayList<Game> alG = gamesPlayedBy(player0);
-            for (Game game : alG) {
-                if (game.getRoundNumber() > roundNumber) {
-                    continue;
-                }
+            // V3.28.04
+            ArrayList<Game> alG = new ArrayList<Game>();
+            for (int r = 0; r <= roundNumber; r++){
+                Player player0 = team.getTeamMember(r, 0);
+                Game game = this.getGame(r, player0);
                 Player opponent0 = opponent(game, player0);
-                Team oppTeam = getTeamOfPlayer(opponent0);
+                Team oppTeam = this.getTeamOfPlayer(opponent0, r);
                 if (oppTeam == null) {
                     continue;
                 }
@@ -1874,6 +1841,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
                 }
             }
         }
+        
         return alMatches;
     }
 
@@ -1892,8 +1860,8 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
         Game g0 = this.getGame(roundNumber, tableNumber);
         Player wp0 = g0.getWhitePlayer();
         Player bp0 = g0.getBlackPlayer();
-        Team wt = this.getTeamOfPlayer(wp0);
-        Team bt = this.getTeamOfPlayer(bp0);
+        Team wt = this.getTeamOfPlayer(wp0, roundNumber);
+        Team bt = this.getTeamOfPlayer(bp0, roundNumber);
         match = Match.buildMatch(roundNumber, wt, bt, this);
 
         return match;
@@ -1903,8 +1871,8 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     public void pairTeams(Team team0, Team team1, int roundNumber) throws RemoteException {
         int teamSize = getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
         // Color ?
-        Player pt0 = team0.getTeamMember(0);
-        Player pt1 = team1.getTeamMember(0);
+        Player pt0 = team0.getTeamMember(roundNumber, 0);
+        Player pt1 = team1.getTeamMember(roundNumber, 0);
         int wbBalance0 = 0;
         int wbBalance1 = 0;
 
@@ -1952,8 +1920,8 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
 
         // The other boards;
         for (int ib = 1; ib < teamSize; ib++) {
-            Player p0 = team0.getTeamMember(ib);
-            Player p1 = team1.getTeamMember(ib);
+            Player p0 = team0.getTeamMember(roundNumber, ib);
+            Player p1 = team1.getTeamMember(roundNumber, ib);
             Game g = new Game(roundNumber, -1, null, null, true, 0, Game.RESULT_UNKNOWN);
             if (pt0IsWhite == (ib % 2 == 0)) {
                 g.setWhitePlayer(p0);

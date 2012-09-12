@@ -19,15 +19,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.ListSelectionModel;
-import javax.swing.SwingConstants;
-import javax.swing.TransferHandler;
-import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumnModel;
 
 /**
  *
@@ -57,12 +50,16 @@ public class JFrTeamsManager extends javax.swing.JFrame {
 
     /**  current Tournament */
     private TournamentInterface tournament;
+    
+    private int processedRoundNumber = 0;
+
 
     /** Creates new form JFrTeamsManager */
     public JFrTeamsManager(TournamentInterface tournament) throws RemoteException{
         LogElements.incrementElement("players.tm", "");
         this.tournament = tournament;
-
+        processedRoundNumber = tournament.presumablyCurrentRoundNumber();
+ 
         initComponents();
         customInitComponents();
         setupRefreshTimer();
@@ -149,7 +146,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
                 // Is this player teamable ?
                 HashMap<String, Player> hmTeamablePlayers = new HashMap<String, Player>();
                 try {
-                     hmTeamablePlayers = tournament.teamablePlayersHashMap();
+                     hmTeamablePlayers = tournament.teamablePlayersHashMap(processedRoundNumber);
                 } catch (RemoteException ex) {
                     Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -173,7 +170,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
                 }
                 int boardNumber = indexDest % teamSize;
                 try {
-                    tournament.setTeamMember(team, boardNumber, player);
+                    tournament.setTeamMember(team, processedRoundNumber, boardNumber, player);
                 } catch (RemoteException ex) {
                     Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -272,10 +269,12 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         while (teamsModel.getRowCount() > 0) {
             teamsModel.removeRow(0);
         }
+        
+        this.spnRoundNumber.setValue(this.processedRoundNumber + 1);
 
         HashMap<String, Player> hmTeamablePlayers = new HashMap<String, Player>();
         try {
-            hmTeamablePlayers = tournament.teamablePlayersHashMap();
+            hmTeamablePlayers = tournament.teamablePlayersHashMap(processedRoundNumber);
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -341,7 +340,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
                 }
                 
                 row[TM_BOARD_NUMBER_COL] = "" + (iTM + 1);
-                Player p = t.getTeamMember(iTM);
+                Player p = t.getTeamMember(processedRoundNumber, iTM);
                 if (p == null){
                     row[TM_PL_NAME_COL] = "";
                     row[TM_PL_RATING_COL] = "";
@@ -402,6 +401,8 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txfTeamSize = new javax.swing.JTextField();
         btnPrint = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        spnRoundNumber = new javax.swing.JSpinner();
 
         mniRemoveOneTeam.setText("jMenuItem1");
         mniRemoveOneTeam.addActionListener(new java.awt.event.ActionListener() {
@@ -571,7 +572,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         txfNbTeamablePlayers.setBounds(10, 20, 30, 20);
 
         getContentPane().add(pnlPlayers);
-        pnlPlayers.setBounds(20, 40, 260, 420);
+        pnlPlayers.setBounds(20, 90, 260, 370);
 
         pnlTeams.setBorder(javax.swing.BorderFactory.createTitledBorder("Teams"));
         pnlTeams.setLayout(null);
@@ -664,6 +665,18 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         });
         getContentPane().add(btnPrint);
         btnPrint.setBounds(340, 440, 420, 30);
+
+        jLabel9.setText("Round");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(30, 50, 80, 14);
+
+        spnRoundNumber.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                spnRoundNumberStateChanged(evt);
+            }
+        });
+        getContentPane().add(spnRoundNumber);
+        spnRoundNumber.setBounds(120, 40, 40, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -780,7 +793,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         pupTeams.setVisible(false);
         Team team = this.selectedTeam();
         try {
-            this.tournament.unteamTeamMembers(team);
+            this.tournament.unteamTeamMembers(team, processedRoundNumber);
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -790,7 +803,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
     private void mniUnteamAllTeamsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniUnteamAllTeamsActionPerformed
         pupTeams.setVisible(false);
         try {
-            tournament.unteamAllTeams();
+            tournament.unteamAllTeams(processedRoundNumber);
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -838,7 +851,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         pupTeams.setVisible(false);
         Team team = this.selectedTeam();
         try {
-            tournament.reorderTeamMembersByRating(team);
+            tournament.reorderTeamMembersByRating(team, processedRoundNumber);
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -852,7 +865,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         int bn = this.selectedBoard();
 
         try {
-            this.tournament.unteamTeamMember(team, bn);
+            this.tournament.unteamTeamMember(team, processedRoundNumber, bn);
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -862,7 +875,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
     private void mniReorderPlayersOfAllTeamsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniReorderPlayersOfAllTeamsActionPerformed
         pupTeams.setVisible(false);
         try {
-            tournament.reorderTeamMembersByRating();
+            tournament.reorderTeamMembersByRating(processedRoundNumber);
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -996,6 +1009,30 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         tpr.makePrinting(TournamentPrinting.TYPE_TEAMSLIST, this.teamsSortType, true);
 }//GEN-LAST:event_btnPrintActionPerformed
 
+    private void spnRoundNumberStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spnRoundNumberStateChanged
+        int demandedRN = (Integer) (spnRoundNumber.getValue()) - 1;
+        this.demandedDisplayedRoundNumberHasChanged(demandedRN);
+    }//GEN-LAST:event_spnRoundNumberStateChanged
+
+    private void demandedDisplayedRoundNumberHasChanged(int demandedRN) {
+        int numberOfRounds = 0;
+        try {
+            numberOfRounds = tournament.getTournamentParameterSet().getGeneralParameterSet().getNumberOfRounds();
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (demandedRN < 0 || demandedRN >= numberOfRounds) {
+            spnRoundNumber.setValue(processedRoundNumber + 1);
+            return;
+        }
+        if (demandedRN == processedRoundNumber) {
+            return;
+        }
+
+        processedRoundNumber = demandedRN;
+        updateAllViews();
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCreateNewTeam;
     private javax.swing.JButton btnHelp;
@@ -1004,6 +1041,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
@@ -1025,6 +1063,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
     private javax.swing.JPopupMenu pupTeams;
     private javax.swing.JScrollPane scpTeamablePlayers;
     private javax.swing.JScrollPane scpTeams;
+    private javax.swing.JSpinner spnRoundNumber;
     private javax.swing.JTable tblTeamablePlayers;
     private javax.swing.JTable tblTeams;
     private javax.swing.JTextField txfNbTeamablePlayers;

@@ -506,7 +506,9 @@ public class JFrBuildTestTournament extends javax.swing.JFrame{
             Team team = new Team(iTeam, "Equipe" + (iTeam + 1), teamSize);
             for (int iBoard = 0; iBoard < teamSize; iBoard++){
                 Player p = alPlayers.get(iTeam * teamSize + iBoard);
-                team.setTeamMember(p, iBoard);
+                for (int ir = 0; ir < Gotha.MAX_NUMBER_OF_ROUNDS; ir++){
+                    team.setTeamMember(p, ir, iBoard);
+                }
             }
             try {
                 tournament.addTeam(team);

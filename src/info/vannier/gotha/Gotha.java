@@ -34,10 +34,16 @@ import javax.swing.JProgressBar;
  */
 public class Gotha {
 
+    // Temporary variable
+    // Debug purpose
+    // RO BE REMOVED
+    static final int DEFAULT_ROUND_NUMBER = 0; 
+    //
+    
     static Locale locale = Locale.getDefault();
     static final long GOTHA_VERSION = 328L;
-    static final long GOTHA_MINOR_VERSION = 3L;
-    static final java.util.Date GOTHA_RELEASE_DATE = (new GregorianCalendar(2012, Calendar.SEPTEMBER, 3)).getTime();
+    static final long GOTHA_MINOR_VERSION = 4L;
+    static final java.util.Date GOTHA_RELEASE_DATE = (new GregorianCalendar(2012, Calendar.SEPTEMBER, 8)).getTime();
     // Data version for serialization
     static final long GOTHA_DATA_VERSION = 201L;
     // Should definitely stay below or equal to 32, due to internal limits in costValue() method
