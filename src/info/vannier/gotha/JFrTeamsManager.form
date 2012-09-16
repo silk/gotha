@@ -31,6 +31,11 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniUnteamOneMemberActionPerformed"/>
           </Events>
         </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="mniUnteamOneMemberAllRounds">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniUnteamOneMemberAllRoundsActionPerformed"/>
+          </Events>
+        </MenuItem>
         <MenuItem class="javax.swing.JMenuItem" name="mniUnteamOneTeam">
           <Properties>
             <Property name="text" type="java.lang.String" value="Unteam one team"/>
@@ -39,12 +44,28 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniUnteamOneTeamActionPerformed"/>
           </Events>
         </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="mniUnteamOneTeamAllRounds">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Unteam one team for all rounds"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniUnteamOneTeamAllRoundsActionPerformed"/>
+          </Events>
+        </MenuItem>
         <MenuItem class="javax.swing.JMenuItem" name="mniUnteamAllTeams">
           <Properties>
             <Property name="text" type="java.lang.String" value="Unteam all teams"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniUnteamAllTeamsActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="mniUnteamAllTeamsAllRounds">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Unteam all teams for all rounds"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniUnteamAllTeamsAllRoundsActionPerformed"/>
           </Events>
         </MenuItem>
         <Component class="javax.swing.JPopupMenu$Separator" name="jSeparator1">
@@ -67,12 +88,28 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniReorderMembersOfOneTeamActionPerformed"/>
           </Events>
         </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="mniReorderMembersOfOneTeamAllRouns">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Reorder players of one team by rating for all rounds"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniReorderMembersOfOneTeamAllRounsActionPerformed"/>
+          </Events>
+        </MenuItem>
         <MenuItem class="javax.swing.JMenuItem" name="mniReorderPlayersOfAllTeams">
           <Properties>
             <Property name="text" type="java.lang.String" value="Reorder players of all teams by rating"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniReorderPlayersOfAllTeamsActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="mniReorderPlayersOfAllTeamsAllRounds">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Reorder players of all teams by rating for all rounds"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniReorderPlayersOfAllTeamsAllRoundsActionPerformed"/>
           </Events>
         </MenuItem>
         <Component class="javax.swing.JPopupMenu$Separator" name="jSeparator3">
@@ -186,7 +223,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="10" y="50" width="240" height="360"/>
+              <AbsoluteConstraints x="10" y="50" width="240" height="280"/>
             </Constraint>
           </Constraints>
 

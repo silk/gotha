@@ -2062,8 +2062,6 @@ public class ExternalDocument {
 
         Writer output = null;
         try {
-//            FileOutputStream fos = new FileOutputStream(f);
-//            output = new BufferedWriter(new OutputStreamWriter(fos, DEFAULT_CHARSET));
             output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(f), DEFAULT_CHARSET));
 
         } catch (IOException ex) {
@@ -2162,6 +2160,107 @@ public class ExternalDocument {
         } catch (IOException ex) {
             Logger.getLogger(ExternalDocument.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+    }
+    public static void generateTeamsListHTMLFile(TournamentInterface tournament, File f) throws RemoteException, IOException{
+        TeamTournamentParameterSet ttps;
+        TournamentParameterSet tps;
+        try{
+            ttps = tournament.getTeamTournamentParameterSet();
+            tps = tournament.getTournamentParameterSet();
+        } catch (RemoteException ex) {
+            Logger.getLogger(ExternalDocument.class.getName()).log(Level.SEVERE, null, ex);
+            return;
+        }
+        GeneralParameterSet gps = tps.getGeneralParameterSet();
+        TeamPlacementParameterSet tpps = ttps.getTeamPlacementParameterSet();
+
+ 
+        Writer output = null;
+        try {
+            output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(f), DEFAULT_CHARSET));
+
+        } catch (IOException ex) {
+            Logger.getLogger(ExternalDocument.class.getName()).log(Level.SEVERE, null, ex);
+            return;
+        }
+
+        // Headers
+        try {
+            output.write("<html>");
+            output.write("<head>");
+            output.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=" + DEFAULT_CHARSET + "\">");
+            output.write("<title>" + gps.getName() + "</title>");
+            output.write("<link href=\"current.css\" rel=\"stylesheet\" type=\"text/css\">");
+            output.write("</head>");
+
+            output.write("<body>");
+            output.write("<h1 align=\"center\">" + gps.getName() + "</h1>");
+            output.write("<h1 align=\"center\">" + "Teams list" + "</h1>");
+            output.write("<table align=\"center\" class=\"simple\">");
+            output.write("\n<th class=\"right\">Nr&nbsp;</th>");
+            output.write("\n<th class=\"left\">Team name</th>");
+            output.write("\n<th class=\"right\">Bd&nbsp;</th>");
+            output.write("\n<th class=\"left\">Player</th>");
+            output.write("\n<th class=\"center\">Co</th>");
+            output.write("\n<th class=\"center\">Club</th>");
+            output.write("\n<th class=\"right\">Rating</th>");
+            output.write("\n<th class=\"center\">Rounds</th>");
+
+            output.write("\n</tr>");
+        } catch (IOException ex) {
+            Logger.getLogger(ExternalDocument.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        // Contents
+        TeamMemberStrings[] arTMS = null;
+        try {
+            arTMS = TeamMemberStrings.buildTeamMemberStrings(tournament);
+        } catch (RemoteException ex) {
+            Logger.getLogger(ExternalDocument.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            for (int iTMS = 0; iTMS < arTMS.length; iTMS++) {
+                TeamMemberStrings tMS = arTMS[iTMS];
+                if (tMS == null) break;
+                output.write("\n<tr>");
+                String strPar = "pair";
+                if (iTMS % 2 == 0) {
+                    strPar = "impair";
+                }
+                output.write("<td class=" + strPar + " align=\"right\">" + tMS.strTeamNumber + "&nbsp;</td>");
+                output.write("<td class=" + strPar + " align=\"left\">" + tMS.strTeamName + "</td>");
+                output.write("<td class=" + strPar + " align=\"right\">" + tMS.strBoardNumber + "&nbsp;</td>");
+                output.write("<td class=" + strPar + " align=\"left\">" + tMS.strPlayerName + "</td>");
+                output.write("<td class=" + strPar + " align=\"center\">" + tMS.strCountry + "</td>");
+                output.write("<td class=" + strPar + " align=\"center\">" + tMS.strClub + "</td>");
+                output.write("<td class=" + strPar + " align=\"right\">" + tMS.strRating + "&nbsp;</td>");
+                output.write("<td class=" + strPar + " align=\"center\">" + tMS.strMembership + "</td>");
+                output.write("</tr>");
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ExternalDocument.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            output.write("\n</table>");
+        } catch (IOException ex) {
+            Logger.getLogger(ExternalDocument.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+
+            output.write("<h4 align=center>" + Gotha.getGothaVersionnedName() + "<br>" + new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new Date()) + "</h4>");
+        } catch (IOException ex) {
+            Logger.getLogger(ExternalDocument.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            output.write("\n</body></html>");
+        } catch (IOException ex) {
+            Logger.getLogger(ExternalDocument.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            output.close();
 
     }
 

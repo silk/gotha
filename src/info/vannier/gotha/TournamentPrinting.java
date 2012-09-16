@@ -62,15 +62,17 @@ public class TournamentPrinting implements Printable {
     static final int TL_BOARD_BEG = TL_TEAMNAME_BEG + TL_TEAMNAME_LEN + 1;
     static final int TL_BOARD_LEN = 2;
     static final int TL_NF_BEG = TL_BOARD_BEG + TL_BOARD_LEN + 1;
-    static final int TL_NF_LEN = 25;
-    static final int TL_RATING_BEG = TL_NF_BEG + TL_NF_LEN + 1;
-    static final int TL_RATING_LEN = 4;
-    static final int TL_COUNTRY_BEG = TL_RATING_BEG + TL_RATING_LEN + 1;
+    static final int TL_NF_LEN = 20;
+    static final int TL_COUNTRY_BEG = TL_NF_BEG + TL_NF_LEN + 1;
     static final int TL_COUNTRY_LEN = 2;
     static final int TL_CLUB_BEG = TL_COUNTRY_BEG + TL_COUNTRY_LEN + 1;
     static final int TL_CLUB_LEN = 4;
-    static final int TL_PADDING = 2;
-    static final int TL_NBCAR = TL_CLUB_BEG + TL_CLUB_LEN + TL_PADDING; //  67
+    static final int TL_RATING_BEG = TL_CLUB_BEG + TL_CLUB_LEN + 1;
+    static final int TL_RATING_LEN = 4;
+    static final int TL_MEMBER_BEG = TL_RATING_BEG + TL_RATING_LEN + 1;
+    static final int TL_MEMBER_LEN = Gotha.MAX_NUMBER_OF_ROUNDS;
+    static final int TL_PADDING = 0;
+    static final int TL_NBCAR = TL_MEMBER_BEG + TL_MEMBER_LEN + TL_PADDING; //  
     // GL = Games List
     static final int GL_TN_BEG = 0; // Table Number
     static final int GL_TN_LEN = 4;
@@ -150,6 +152,8 @@ public class TournamentPrinting implements Printable {
     ArrayList<Player> alPlayersToPrint;
     // For TeamsList
     ArrayList<Team> alTeamsToPrint;
+    TeamMemberStrings[] arTMS;
+    
     // For Standings
     private ArrayList<ScoredPlayer> alOrderedScoredPlayers;
     private String[][] halfGamesStrings;
@@ -231,12 +235,13 @@ public class TournamentPrinting implements Printable {
             case TournamentPrinting.TYPE_TEAMSLIST:
                 int teamsSortType = printSubType;
                 try {
-                    alTeamsToPrint = new ArrayList<Team>(tournament.teamsList());
+//                    alTeamsToPrint = new ArrayList<Team>(tournament.teamsList());
+                    arTMS = TeamMemberStrings.buildTeamMemberStrings(tournament);
                 } catch (RemoteException ex) {
                     Logger.getLogger(TournamentPrinting.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                TeamComparator teamComparator = new TeamComparator(teamsSortType);
-                Collections.sort(alTeamsToPrint, teamComparator);
+//                TeamComparator teamComparator = new TeamComparator(teamsSortType);
+//                Collections.sort(alTeamsToPrint, teamComparator);
                 break;
             case TournamentPrinting.TYPE_STANDINGS:
                 int numberOfRoundsPrinted = roundNumber + 1;
@@ -332,31 +337,26 @@ public class TournamentPrinting implements Printable {
                     nbCarRef = NPL_NBCAR;
                     fontSize = usableWidth / nbCarRef * 100 / WH_RATIO * LINEFILLING_RATIO / 100;
                     lineHeight = fontSize * LHFS_RATIO / 100;
-//                    try {
                     {    
                     int numberOfBodyLines = this.alPlayersToPrint.size();//tournament.gamesList(roundNumber).size();
                         numberOfBodyLinesInAPage = (usableHeight / lineHeight) - 5;
                         numberOfPages = (numberOfBodyLines + numberOfBodyLinesInAPage - 1) / numberOfBodyLinesInAPage;
-//                    } catch (RemoteException ex) {
-//                        Logger.getLogger(TournamentPrinting.class.getName()).log(Level.SEVERE, null, ex);
-//                    }
                     }
                     break;
                 case TYPE_TEAMSLIST:
                     nbCarRef = TL_NBCAR;
                     fontSize = usableWidth / nbCarRef * 100 / WH_RATIO * LINEFILLING_RATIO / 100;
                     lineHeight = fontSize * LHFS_RATIO / 100;
-                    try {
-                        int teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
-                        int numberOfBodyLines = tournament.numberOfTeams() * teamSize;
-
+                    {
+                        int numberOfBodyLines = 0;
+                        for(int i = 0; i < arTMS.length; i++){
+                            numberOfBodyLines = i + 1; 
+                            if (arTMS[i] == null) break;
+                        }
                         numberOfBodyLinesInAPage = (usableHeight / lineHeight) - 5;
-                        numberOfBodyLinesInAPage = (numberOfBodyLinesInAPage / teamSize) * teamSize;
                         numberOfPages = (numberOfBodyLines + numberOfBodyLinesInAPage - 1) / numberOfBodyLinesInAPage;
-                    } catch (RemoteException ex) {
-                        Logger.getLogger(TournamentPrinting.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    break;
+                    }   
+                     break;
                 case TYPE_GAMESLIST:
                     nbCarRef = GL_NBCAR;
                     fontSize = usableWidth / nbCarRef * 100 / WH_RATIO * LINEFILLING_RATIO / 100;
@@ -653,71 +653,56 @@ public class TournamentPrinting implements Printable {
 
         // Body lines
         int ln = 0;
-        int teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
         for (ln = 0; ln < numberOfBodyLinesInAPage; ln++) {
             int abstractLineNumber = ln + pi * numberOfBodyLinesInAPage;
-            int teamNumber = abstractLineNumber / teamSize;
-            if (teamNumber >= alTeamsToPrint.size()) {
-                break;
-            }
-            Team team = alTeamsToPrint.get(teamNumber);
             y = usableY + (4 + ln) * lineHeight;
             if ((ln % 2) == 0) {
                 g.setColor(Color.LIGHT_GRAY);
                 g.fillRect(usableX, y - lineHeight + 4, usableWidth, lineHeight);  // + 4 to keep leading part unfilled
                 g.setColor(Color.BLACK);
             }
-
-            String strNumber = "" + (team.getTeamNumber() + 1);
+            TeamMemberStrings tms = arTMS[abstractLineNumber];
+            if (tms == null) break;
+            
             x = usableX + usableWidth * (TL_NUMBER_BEG + TL_NUMBER_LEN) / TL_NBCAR;
-            if (abstractLineNumber % teamSize == 0) {
-                drawRightAlignedString(g, strNumber, x, y);
-            }
-
-            String strTeamName = team.getTeamName();
+            drawRightAlignedString(g, tms.strTeamNumber, x, y);                
+            
+            String strTeamName = tms.strTeamName;
             if (strTeamName.length() > TL_TEAMNAME_LEN) {
                 strTeamName = strTeamName.substring(0, TL_TEAMNAME_LEN);
             }
             x = usableX + usableWidth * TL_TEAMNAME_BEG / TL_NBCAR;
-            if (abstractLineNumber % teamSize == 0) {
-                g.drawString(strTeamName, x, y);
-            }
+            g.drawString(strTeamName, x, y);
 
-            int boardNumber = abstractLineNumber % teamSize;
-            String strBoard = "" + (boardNumber + 1);
+            String strBoardNumber = tms.strBoardNumber;
             x = usableX + usableWidth * (TL_BOARD_BEG + TL_BOARD_LEN) / TL_NBCAR;
-            drawRightAlignedString(g, strBoard, x, y);
+            drawRightAlignedString(g, strBoardNumber, x, y);
 
-            Player player = team.getTeamMember(Gotha.DEFAULT_ROUND_NUMBER, boardNumber);
-            if (player == null) {
-                continue;
-            }
-            String strName = player.getName();
-            String strFirstName = player.getFirstName();
-            if (strName.length() > 20) {
-                strName = strName.substring(0, 20);
-            }
-            String strNF = strName + " " + strFirstName;
-            if (strNF.length() > TL_NF_LEN) {
+            String strNF = tms.strPlayerName;
+            if (strNF.length() >  TL_NF_LEN) {
                 strNF = strNF.substring(0, TL_NF_LEN);
             }
             x = usableX + usableWidth * TL_NF_BEG / TL_NBCAR;
             g.drawString(strNF, x, y);
-
-            String strRating = "" + player.getRating();
-            x = usableX + usableWidth * (TL_RATING_BEG + TL_RATING_LEN) / TL_NBCAR;
-            drawRightAlignedString(g, strRating, x, y);
-
-            String strCountry = player.getCountry();
-            strCountry = Gotha.leftString(strCountry, 2);
+            
+            String strCountry = "" + tms.strCountry;
             x = usableX + usableWidth * TL_COUNTRY_BEG / TL_NBCAR;
             g.drawString(strCountry, x, y);
-
-            String strClub = player.getClub();
-            strClub = Gotha.leftString(strClub, 4);
+            
+            String strClub = "" + tms.strClub;
             x = usableX + usableWidth * TL_CLUB_BEG / TL_NBCAR;
             g.drawString(strClub, x, y);
 
+            String strRating = "" + tms.strRating;
+            x = usableX + usableWidth * (TL_RATING_BEG + TL_RATING_LEN) / TL_NBCAR;
+            drawRightAlignedString(g, strRating, x, y);
+            
+            String strMembership = tms.strMembership;
+            x = usableX + usableWidth * TL_MEMBER_BEG / TL_NBCAR;
+            Font fontCourier = new Font("Courier New", Font.BOLD, fontSize);
+            g.setFont(fontCourier);
+            g.drawString(strMembership, x, y);
+            g.setFont(font);    // back to default            
         }
 
         // Print Page Footer
@@ -1620,6 +1605,9 @@ public class TournamentPrinting implements Printable {
 
         x = usableX + usableWidth * TL_CLUB_BEG / TL_NBCAR;
         g.drawString("Club", x, y);
+        
+        x = usableX + usableWidth * TL_MEMBER_BEG / TL_NBCAR;
+        g.drawString("Member", x, y);
     }
 
     private void printGamesListHeaderLine(Graphics g, PageFormat pf, int pi) {

@@ -98,7 +98,6 @@ public class Team implements java.io.Serializable{
         for (int ir = 0; ir < teamMembers.length; ir++){
             System.arraycopy(teamMembers[ir], 0, newTeamMembers[ir], 0, copySize);
         }
-//        System.arraycopy(teamMembers, 0, newTeamMembers, 0, copySize);
         
         if (newTeamSize > copySize){
             for (int ir = 0; ir < teamMembers.length; ir++){
@@ -111,8 +110,7 @@ public class Team implements java.io.Serializable{
     }
 
     /**
-     * Starting from V3.28.04 where team members may be variable, meanRating becomes obsolete
-     * It is kept for compatibility purpose. And mean rating is computed from first round members
+     * Starting from V3.28.04 where team members may be variable, meanRating means mean rating at first round
      * @return 
      */
     public int meanRating(){
@@ -126,8 +124,7 @@ public class Team implements java.io.Serializable{
     }
 
        /**
-     * Starting from V3.28.04 where team members may be variable, medianRating becomes obsolete
-     * It is kept for compatibility purpose. And median rating is computed from first round members
+     * Starting from V3.28.04 where team members may be variable, medianRating means mean rating at first round
      * @return 
      */
 

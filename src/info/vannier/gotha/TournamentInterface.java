@@ -2,7 +2,8 @@ package info.vannier.gotha;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public interface TournamentInterface extends Remote{
     
@@ -96,6 +97,9 @@ public interface TournamentInterface extends Remote{
     public Team opponentTeam(Team team, int roundNumber) throws RemoteException;
     public int nbWX2Team(Team team, Team opponentTeam, int roundNumber) throws RemoteException;
 
+    public ArrayList<Player> playersList(Team team, int boardNumber) throws RemoteException;
+    public boolean[] membership(Player p, Team t, int boardNumber) throws RemoteException;
+    
     public int numberOfTeams() throws RemoteException;
     public ArrayList<Team> teamsList() throws RemoteException;
     public HashMap<String, Player> teamablePlayersHashMap(int roundNumber) throws RemoteException;

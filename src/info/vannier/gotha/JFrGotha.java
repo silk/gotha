@@ -4,20 +4,21 @@
  */
 package info.vannier.gotha;
 
-import java.rmi.*;
-
-import java.util.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.*;
+import java.nio.channels.FileChannel;
+import java.rmi.RemoteException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.prefs.Preferences;
 import javax.swing.*;
-import javax.swing.table.*;
 import javax.swing.filechooser.FileFilter;
-import java.io.*;
-import java.nio.channels.*;
-import java.text.*;
-import java.util.prefs.*;
+import javax.swing.table.*;
 
 /**
  *
@@ -49,6 +50,19 @@ public class JFrGotha extends javax.swing.JFrame {
     private static final int TEAM_ROUND0_RESULT_COL = 2;
     private static final int TEAM_CRIT0_COL = TEAM_ROUND0_RESULT_COL + Gotha.MAX_NUMBER_OF_ROUNDS;
     
+    // Teams Panel constants
+    protected static final int TM_NUMBER_OF_COLS = 8;
+    protected static final int TM_TEAM_NUMBER_COL = 0;
+    protected static final int TM_TEAM_NAME_COL = 1;
+    protected static final int TM_BOARD_NUMBER_COL = 2;
+    protected static final int TM_PL_NAME_COL = 3;
+    protected static final int TM_PL_COUNTRY_COL = 4;
+    protected static final int TM_PL_CLUB_COL = 5;
+    protected static final int TM_PL_RATING_COL = 6;
+    protected static final int TM_PL_ROUNDS_COL = 7;
+    
+
+    
     /** should stay between 0 and 9 */
     private static final int MAX_NUMBER_OF_RECENT_TOURNAMENTS = 4;
     private int displayedRoundNumber = 0;
@@ -62,8 +76,9 @@ public class JFrGotha extends javax.swing.JFrame {
     /**  current Tournament */
     private TournamentInterface tournament = null;
     private long lastDisplayedStandingsUpdateTime = 0;
-    private long lastDisplayedTeamStandingsUpdateTime = 0;
+    private long lastDisplayedTeamsStandingsUpdateTime = 0;
     private ControlPanelTableCellRenderer cpTableCellRenderer = new ControlPanelTableCellRenderer();
+    private TeamsPanelTableCellRenderer tpTableCellRenderer = new TeamsPanelTableCellRenderer();
 
     
     /**
@@ -198,9 +213,13 @@ public class JFrGotha extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txfSearchPlayer = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
-        pnlTeamStandings = new javax.swing.JPanel();
-        pnlIntTeamStandings = new javax.swing.JPanel();
-        lblTeamStandingsAfter = new javax.swing.JLabel();
+        pnlTeamsPanel = new javax.swing.JPanel();
+        pnlIntTeamsPanel = new javax.swing.JPanel();
+        scpTeamsPanel = new javax.swing.JScrollPane();
+        tblTeamsPanel = new javax.swing.JTable();
+        pnlTeamsStandings = new javax.swing.JPanel();
+        pnlIntTeamsStandings = new javax.swing.JPanel();
+        lblTeamsStandingsAfter = new javax.swing.JLabel();
         pnlTeamPS = new javax.swing.JPanel();
         rdbCurrentTeamPS = new javax.swing.JRadioButton();
         rdbTemporaryTeamPS = new javax.swing.JRadioButton();
@@ -216,8 +235,8 @@ public class JFrGotha extends javax.swing.JFrame {
         cbxTeamCrit5 = new javax.swing.JComboBox();
         jLabel18 = new javax.swing.JLabel();
         cbxTeamCrit6 = new javax.swing.JComboBox();
-        scpTeamStandings = new javax.swing.JScrollPane();
-        tblTeamStandings = new javax.swing.JTable();
+        scpTeamsStandings = new javax.swing.JScrollPane();
+        tblTeamsStandings = new javax.swing.JTable();
         lblTeamUpdateTime = new javax.swing.JLabel();
         spnTeamRoundNumber = new javax.swing.JSpinner();
         btnPrintTeamsStandings = new javax.swing.JButton();
@@ -240,6 +259,7 @@ public class JFrGotha extends javax.swing.JFrame {
         mniExportTou = new javax.swing.JMenuItem();
         mniExportAGA = new javax.swing.JMenuItem();
         mniExportHTML = new javax.swing.JMenuItem();
+        mniExportTeamsListHTML = new javax.swing.JMenuItem();
         mniExportTeamHTML = new javax.swing.JMenuItem();
         mniExportPlayersCSV = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JSeparator();
@@ -695,13 +715,52 @@ public class JFrGotha extends javax.swing.JFrame {
 
         tpnGotha.addTab("Standings", pnlStandings);
 
-        pnlTeamStandings.setLayout(null);
+        pnlTeamsPanel.setLayout(null);
 
-        pnlIntTeamStandings.setLayout(null);
+        pnlIntTeamsPanel.setLayout(null);
 
-        lblTeamStandingsAfter.setText("Standings after round");
-        pnlIntTeamStandings.add(lblTeamStandingsAfter);
-        lblTeamStandingsAfter.setBounds(10, 40, 140, 14);
+        scpTeamsPanel.setBorder(null);
+
+        tblTeamsPanel.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Nr", "Team name", "Board", "Player name", "Co", "Club", "Rating", "Rounds"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, true, true, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblTeamsPanel.setEnabled(false);
+        tblTeamsPanel.setRowSelectionAllowed(false);
+        scpTeamsPanel.setViewportView(tblTeamsPanel);
+
+        pnlIntTeamsPanel.add(scpTeamsPanel);
+        scpTeamsPanel.setBounds(180, 0, 480, 500);
+
+        pnlTeamsPanel.add(pnlIntTeamsPanel);
+        pnlIntTeamsPanel.setBounds(0, 0, 0, 0);
+
+        tpnGotha.addTab("Teams Panel", pnlTeamsPanel);
+
+        pnlTeamsStandings.setLayout(null);
+
+        pnlIntTeamsStandings.setLayout(null);
+
+        lblTeamsStandingsAfter.setText("Standings after round");
+        pnlIntTeamsStandings.add(lblTeamsStandingsAfter);
+        lblTeamsStandingsAfter.setBounds(10, 40, 140, 14);
 
         pnlTeamPS.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Team placement parameter set"));
         pnlTeamPS.setLayout(null);
@@ -822,11 +881,11 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlTeamPS.add(cbxTeamCrit6);
         cbxTeamCrit6.setBounds(60, 220, 120, 20);
 
-        pnlIntTeamStandings.add(pnlTeamPS);
+        pnlIntTeamsStandings.add(pnlTeamPS);
         pnlTeamPS.setBounds(0, 70, 190, 260);
 
-        tblTeamStandings.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        tblTeamStandings.setModel(new javax.swing.table.DefaultTableModel(
+        tblTeamsStandings.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        tblTeamsStandings.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
@@ -837,15 +896,15 @@ public class JFrGotha extends javax.swing.JFrame {
                 "Pl", "Name", "Rank", "R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10", "R11", "R12", "R13", "R14", "R15", "R16", "R17", "R18", "R19", "R20", "crit1", "crit2", "crit3", "crit4", "crit5", "crit6"
             }
         ));
-        tblTeamStandings.setEnabled(false);
-        tblTeamStandings.setRowSelectionAllowed(false);
-        scpTeamStandings.setViewportView(tblTeamStandings);
+        tblTeamsStandings.setEnabled(false);
+        tblTeamsStandings.setRowSelectionAllowed(false);
+        scpTeamsStandings.setViewportView(tblTeamsStandings);
 
-        pnlIntTeamStandings.add(scpTeamStandings);
-        scpTeamStandings.setBounds(190, 10, 600, 500);
+        pnlIntTeamsStandings.add(scpTeamsStandings);
+        scpTeamsStandings.setBounds(190, 10, 600, 500);
 
         lblTeamUpdateTime.setText("updated at : ");
-        pnlIntTeamStandings.add(lblTeamUpdateTime);
+        pnlIntTeamsStandings.add(lblTeamUpdateTime);
         lblTeamUpdateTime.setBounds(10, 360, 170, 14);
 
         spnTeamRoundNumber.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -853,7 +912,7 @@ public class JFrGotha extends javax.swing.JFrame {
                 spnTeamRoundNumberStateChanged(evt);
             }
         });
-        pnlIntTeamStandings.add(spnTeamRoundNumber);
+        pnlIntTeamsStandings.add(spnTeamRoundNumber);
         spnTeamRoundNumber.setBounds(150, 30, 40, 30);
 
         btnPrintTeamsStandings.setText("Print...");
@@ -862,16 +921,16 @@ public class JFrGotha extends javax.swing.JFrame {
                 btnPrintTeamsStandingsActionPerformed(evt);
             }
         });
-        pnlIntTeamStandings.add(btnPrintTeamsStandings);
+        pnlIntTeamsStandings.add(btnPrintTeamsStandings);
         btnPrintTeamsStandings.setBounds(0, 470, 190, 30);
 
-        pnlTeamStandings.add(pnlIntTeamStandings);
-        pnlIntTeamStandings.setBounds(0, 0, 790, 570);
+        pnlTeamsStandings.add(pnlIntTeamsStandings);
+        pnlIntTeamsStandings.setBounds(0, 0, 790, 570);
 
-        tpnGotha.addTab("Team standings", pnlTeamStandings);
+        tpnGotha.addTab("Teams Standings", pnlTeamsStandings);
 
         getContentPane().add(tpnGotha);
-        tpnGotha.setBounds(0, 0, 970, 640);
+        tpnGotha.setBounds(-10, 10, 970, 640);
 
         mnuMain.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
@@ -1010,6 +1069,15 @@ public class JFrGotha extends javax.swing.JFrame {
             }
         });
         mnuExport.add(mniExportHTML);
+
+        mniExportTeamsListHTML.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        mniExportTeamsListHTML.setText("Ready-To-Publish Teams list in HTML Format");
+        mniExportTeamsListHTML.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniExportTeamsListHTMLActionPerformed(evt);
+            }
+        });
+        mnuExport.add(mniExportTeamsListHTML);
 
         mniExportTeamHTML.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         mniExportTeamHTML.setText("Ready-To-Publish Team results in HTML format");
@@ -1521,7 +1589,7 @@ public class JFrGotha extends javax.swing.JFrame {
             tournament.setTournamentParameterSet(tps);
             tournament.setTeamTournamentParameterSet(ttps);
             this.lastDisplayedStandingsUpdateTime = 0;
-            this.lastDisplayedTeamStandingsUpdateTime = 0;
+            this.lastDisplayedTeamsStandingsUpdateTime = 0;
             this.tournamentChanged();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
@@ -1670,15 +1738,19 @@ public class JFrGotha extends javax.swing.JFrame {
         int wFC = lblFlowChart.getWidth();
         int yFlowCart = lblTournamentPicture.getY() + lblTournamentPicture.getHeight() + 10;
         lblFlowChart.setLocation((w - wFC) / 2, yFlowCart);
+
         this.pnlIntControlPanel.setBounds(0, 0, w - 10, h - 30);
         int wCP = scpControlPanel.getWidth();
-
         this.scpControlPanel.setLocation((w - wCP) / 2, 100);
+
+        this.pnlIntTeamsPanel.setBounds(0, 0, w - 10, h - 30);
+        int wTeamsP = scpTeamsPanel.getWidth();
+        this.scpTeamsPanel.setLocation((w - wTeamsP) / 2, 10);
 
         this.pnlIntStandings.setBounds(0, 0, w - 10, h - 30);
         this.scpStandings.setBounds(190, 10, w - 200, h - 100);
-        this.pnlIntTeamStandings.setBounds(0, 0, w - 10, h - 30);
-        this.scpTeamStandings.setBounds(190, 10, w - 200, h - 100);
+        this.pnlIntTeamsStandings.setBounds(0, 0, w - 10, h - 30);
+        this.scpTeamsStandings.setBounds(190, 10, w - 200, h - 100);
 
         updateTitle();
 
@@ -1706,6 +1778,7 @@ public class JFrGotha extends javax.swing.JFrame {
         try {
             initCriteriaAndStandingsComponents();
             initControlPanelComponents();
+            initTeamsPanelComponents();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1826,14 +1899,14 @@ public class JFrGotha extends javax.swing.JFrame {
         updateDisplayTeamCriteria();
         DefaultTableModel model = (DefaultTableModel) tblStandings.getModel();
         model.setColumnCount(ROUND0_RESULT_COL + Gotha.MAX_NUMBER_OF_ROUNDS + PlacementParameterSet.PLA_MAX_NUMBER_OF_CRITERIA);
-        model = (DefaultTableModel) tblTeamStandings.getModel();
+        model = (DefaultTableModel) tblTeamsStandings.getModel();
         model.setColumnCount(TEAM_ROUND0_RESULT_COL + Gotha.MAX_NUMBER_OF_ROUNDS + TeamPlacementParameterSet.TPL_MAX_NUMBER_OF_CRITERIA);
 
         // Set the renderer for tblStandings
         tblStandings.setDefaultRenderer(Object.class, new StandingsTableCellRenderer());
         updateStandingsComponents();
-        // Set the renderer for tblTeamStandings
-        tblTeamStandings.setDefaultRenderer(Object.class, new StandingsTableCellRenderer());
+        // Set the renderer for tblTeamsStandings
+        tblTeamsStandings.setDefaultRenderer(Object.class, new StandingsTableCellRenderer());
         updateTeamsStandingsComponents();
 
     }
@@ -1880,6 +1953,34 @@ public class JFrGotha extends javax.swing.JFrame {
         tblControlPanel.setDefaultRenderer(Object.class, this.cpTableCellRenderer);
 
         updateControlPanel();
+    }
+
+    private void initTeamsPanelComponents() throws RemoteException {
+        // Widths
+        TableColumnModel tcm = this.tblTeamsPanel.getColumnModel();
+        tcm.getColumn(TM_TEAM_NUMBER_COL ).setPreferredWidth(20);
+        tcm.getColumn(TM_TEAM_NAME_COL   ).setPreferredWidth(100);
+        tcm.getColumn(TM_BOARD_NUMBER_COL).setPreferredWidth(20);
+        tcm.getColumn(TM_PL_NAME_COL     ).setPreferredWidth(120);
+        tcm.getColumn(TM_PL_COUNTRY_COL  ).setPreferredWidth(30);
+        tcm.getColumn(TM_PL_CLUB_COL     ).setPreferredWidth(30);
+        tcm.getColumn(TM_PL_RATING_COL   ).setPreferredWidth(40);
+        tcm.getColumn(TM_PL_ROUNDS_COL   ).setPreferredWidth(120);
+ 
+        // Headers
+        JFrGotha.formatHeader(this.tblTeamsPanel, TM_TEAM_NUMBER_COL , "Nr", JLabel.RIGHT); 
+        JFrGotha.formatHeader(this.tblTeamsPanel, TM_TEAM_NAME_COL   , "Team name", JLabel.LEFT); 
+        JFrGotha.formatHeader(this.tblTeamsPanel, TM_BOARD_NUMBER_COL, "Board", JLabel.RIGHT); 
+        JFrGotha.formatHeader(this.tblTeamsPanel, TM_PL_NAME_COL     , "Player name", JLabel.LEFT); 
+        JFrGotha.formatHeader(this.tblTeamsPanel, TM_PL_COUNTRY_COL  , "Co", JLabel.CENTER); 
+        JFrGotha.formatHeader(this.tblTeamsPanel, TM_PL_CLUB_COL     , "Club", JLabel.CENTER); 
+        JFrGotha.formatHeader(this.tblTeamsPanel, TM_PL_RATING_COL   , "Rating", JLabel.CENTER); 
+        JFrGotha.formatHeader(this.tblTeamsPanel, TM_PL_ROUNDS_COL   , "Rounds", JLabel.LEFT); 
+        
+        // Set the renderer for tblControlPanel
+        tblTeamsPanel.setDefaultRenderer(Object.class, this.tpTableCellRenderer);
+
+        updateTeamsPanel();
     }
 
     private void updateDisplayCriteria() throws RemoteException {
@@ -2051,18 +2152,18 @@ public class JFrGotha extends javax.swing.JFrame {
     private void updateTeamsStandingsComponents() throws RemoteException {
         int numberOfDisplayedRounds = 9;
         if (tournament == null) {
-            this.pnlIntTeamStandings.setVisible(false);
+            this.pnlIntTeamsStandings.setVisible(false);
             return;
         }
         if (tournament.teamsList().isEmpty()){
-            this.pnlIntTeamStandings.setVisible(false);
+            this.pnlIntTeamsStandings.setVisible(false);
             return;
         }
 
-        if (this.tpnGotha.getSelectedComponent() != pnlTeamStandings) {
+        if (this.tpnGotha.getSelectedComponent() != pnlTeamsStandings) {
             return;
         }
-        this.pnlIntTeamStandings.setVisible(true);
+        this.pnlIntTeamsStandings.setVisible(true);
         int nbRounds = tournament.getTournamentParameterSet().getGeneralParameterSet().getNumberOfRounds();
         if (this.displayedTeamRoundNumber > nbRounds - 1) {
             displayedTeamRoundNumber = nbRounds - 1;
@@ -2091,16 +2192,16 @@ public class JFrGotha extends javax.swing.JFrame {
         displayedTeamPPS.setPlaCriteria(displayedTeamCriteria);
 
        
-        lastDisplayedTeamStandingsUpdateTime = tournament.getCurrentTournamentTime();
+        lastDisplayedTeamsStandingsUpdateTime = tournament.getCurrentTournamentTime();
         ScoredTeamsSet sts = tournament.getAnUpToDateScoredTeamsSet(displayedTeamPPS, displayedTeamRoundNumber);
         ArrayList<ScoredTeam> alOrderedScoredTeams = sts.getOrderedScoredTeamsList();
 
-        this.tblTeamStandings.clearSelection();
-        tblTeamStandings.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        this.tblTeamsStandings.clearSelection();
+        tblTeamsStandings.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-        DefaultTableColumnModel columnModel = (DefaultTableColumnModel) tblTeamStandings.getColumnModel();
+        DefaultTableColumnModel columnModel = (DefaultTableColumnModel) tblTeamsStandings.getColumnModel();
 
-        ((DefaultTableCellRenderer) tblTeamStandings.getTableHeader().getDefaultRenderer()).setHorizontalAlignment(SwingConstants.LEFT);
+        ((DefaultTableCellRenderer) tblTeamsStandings.getTableHeader().getDefaultRenderer()).setHorizontalAlignment(SwingConstants.LEFT);
 
         columnModel.getColumn(TEAM_PL_COL).setHeaderValue("PL.");
         columnModel.getColumn(TEAM_NAME_COL).setHeaderValue("Name");
@@ -2138,7 +2239,7 @@ public class JFrGotha extends javax.swing.JFrame {
             }
         }
 
-        DefaultTableModel model = (DefaultTableModel) tblTeamStandings.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblTeamsStandings.getModel();
         int nbTeams = alOrderedScoredTeams.size();
         model.setRowCount(nbTeams);
         for (int ist = 0; ist < nbTeams; ist++){
@@ -2160,7 +2261,7 @@ public class JFrGotha extends javax.swing.JFrame {
             }
         }
 
-        java.util.Date dh = new java.util.Date(lastDisplayedTeamStandingsUpdateTime);
+        java.util.Date dh = new java.util.Date(lastDisplayedTeamsStandingsUpdateTime);
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 
         String strTime = sdf.format(dh);
@@ -2284,6 +2385,87 @@ public class JFrGotha extends javax.swing.JFrame {
         if (nbPreliminary > 1) {
             lblWarningPRE.setText("Warning!" + nbPreliminary
                     + "players have a Preliminary registering status");
+        }
+    }
+
+    // TODO : UpdateTeamsPanel should use TeamMemberStrings (See TournamentPrinting or ExternalDocument.generateTeamsListHTMLFile 
+    private void updateTeamsPanel() throws RemoteException {
+        DefaultTableModel model = (DefaultTableModel) this.tblTeamsPanel.getModel();
+        while (model.getRowCount() > 0) {
+            model.removeRow(0);
+        }
+        
+        ArrayList<Team> alDisplayedTeams = tournament.teamsList();
+
+        int teamSize = 0;
+        try {
+            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        TeamComparator teamComparator = new TeamComparator(TeamComparator.TEAM_NUMBER_ORDER);
+        Collections.sort(alDisplayedTeams, teamComparator);
+
+
+        for (Team t : alDisplayedTeams) {
+            Object[] row = new Object[TM_NUMBER_OF_COLS];
+            row[TM_TEAM_NUMBER_COL] = "" + (t.getTeamNumber() + 1);
+            row[TM_TEAM_NAME_COL] = t.getTeamName();
+            row[TM_BOARD_NUMBER_COL] = "";
+            row[TM_PL_NAME_COL] = "";
+            row[TM_PL_COUNTRY_COL] = "";
+            row[TM_PL_CLUB_COL] = "";
+            row[TM_PL_RATING_COL] = "";
+            row[TM_PL_ROUNDS_COL] = "";
+            
+            model = (DefaultTableModel) this.tblTeamsPanel.getModel();
+            model.addRow(row);
+
+            for (int ib = 0; ib < teamSize; ib++){
+                ArrayList<Player> alP = tournament.playersList(t, ib);
+                if (alP.isEmpty()) alP.add(null);
+                for (Player p : alP){
+                    row = new Object[TM_NUMBER_OF_COLS];
+                    row[TM_TEAM_NUMBER_COL] = "";
+                    row[TM_TEAM_NAME_COL] = "";
+                    row[TM_BOARD_NUMBER_COL] = "" + (ib + 1);
+                    if (p == null){
+                        row[TM_PL_NAME_COL] = "";
+                        row[TM_PL_COUNTRY_COL] = "";
+                        row[TM_PL_CLUB_COL] = "";
+                        row[TM_PL_RATING_COL] = "";
+                    }
+                    else{
+                        row[TM_PL_NAME_COL] = p.getName() + " " + p.getFirstName();
+                        row[TM_PL_COUNTRY_COL] = p.getCountry();
+                        row[TM_PL_CLUB_COL] = p.getClub();
+                        row[TM_PL_RATING_COL] = p.getRating();
+                    }
+  
+                    if (p == null){
+                        row[TM_PL_ROUNDS_COL] = "";
+                    }
+                    else{
+                        int numberOfRounds = 0;
+                        try {
+                            numberOfRounds = tournament.getTournamentParameterSet().getGeneralParameterSet().getNumberOfRounds();
+                        } catch (RemoteException ex) {
+                            Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        boolean[] bM = tournament.membership(p, t, ib);
+                        String str = "";
+                        for (int r = 0; r < numberOfRounds; r++){
+                            str += bM[r] ? "+" : "-"; 
+                        }
+                        row[TM_PL_ROUNDS_COL] = str;
+                    }
+
+                    model = (DefaultTableModel) this.tblTeamsPanel.getModel();
+                    model.addRow(row);
+                }
+            }
+
         }
     }
 
@@ -2868,6 +3050,27 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     jfr.setVisible(true);
 }//GEN-LAST:event_mniMemoryActionPerformed
 
+    private void mniExportTeamsListHTMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniExportTeamsListHTMLActionPerformed
+        if (tournament == null) {
+            JOptionPane.showMessageDialog(this, "No currently open tournament", "Message", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        File f = this.chooseAFileAndPrepareHTMLExport();
+        if (f == null) {
+            return;
+        }
+        try {
+            // Do the job
+            ExternalDocument.generateTeamsListHTMLFile(tournament, f);
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_mniExportTeamsListHTMLActionPerformed
+
     private File chooseAFileAndPrepareHTMLExport(){
         File f = this.chooseAFileForExport(Gotha.exportHTMLDirectory, "html");
         if (f == null) {
@@ -3037,15 +3240,18 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
 
         updateTitle();
 
-        // If No Team, pnlTeamStandings is not enabled
-            // Replace 4 and 3 by something more elegant
-        if (tpnGotha.getTabCount() >= 4){
-            try{
-                if (tournament != null && tournament.teamsList().isEmpty())  this.tpnGotha.setEnabledAt(3, false);
-                if (tournament != null && !tournament.teamsList().isEmpty())  this.tpnGotha.setEnabledAt(3, true);
-            }catch (RemoteException ex) {
-                Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
+        int idxTP =  tpnGotha.indexOfTab("Teams Panel");
+        int idxTS =  tpnGotha.indexOfTab("Teams Standings");
+        if (idxTP > 0) this.tpnGotha.setEnabledAt(idxTP, false);
+        if (idxTS > 0) this.tpnGotha.setEnabledAt(idxTS, false);
+
+        try {
+            if (tournament != null && !tournament.teamsList().isEmpty()){
+                if (idxTP > 0) this.tpnGotha.setEnabledAt(idxTP, true);
+                if (idxTS > 0) this.tpnGotha.setEnabledAt(idxTS, true);
             }
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         if (this.tpnGotha.getSelectedComponent() == pnlStandings) {
@@ -3064,7 +3270,14 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                 Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        if (this.tpnGotha.getSelectedComponent() == this.pnlTeamStandings) {
+        if (this.tpnGotha.getSelectedComponent() == pnlTeamsPanel) {
+            try {
+                this.updateTeamsPanel();
+            } catch (RemoteException ex) {
+                Logger.getLogger(JFrGotha.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if (this.tpnGotha.getSelectedComponent() == this.pnlTeamsStandings) {
             try {
                 this.updateDisplayTeamCriteria();
                 this.updateTeamsStandingsComponents();
@@ -3228,8 +3441,8 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JPopupMenu.Separator jSeparator8;
     private javax.swing.JLabel lblFlowChart;
     private javax.swing.JLabel lblStandingsAfter;
-    private javax.swing.JLabel lblTeamStandingsAfter;
     private javax.swing.JLabel lblTeamUpdateTime;
+    private javax.swing.JLabel lblTeamsStandingsAfter;
     private javax.swing.JLabel lblTournamentPicture;
     private javax.swing.JLabel lblUpdateTime;
     private javax.swing.JLabel lblWarningPRE;
@@ -3242,6 +3455,7 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JMenuItem mniExportHTML;
     private javax.swing.JMenuItem mniExportPlayersCSV;
     private javax.swing.JMenuItem mniExportTeamHTML;
+    private javax.swing.JMenuItem mniExportTeamsListHTML;
     private javax.swing.JMenuItem mniExportTou;
     private javax.swing.JMenuItem mniGamesOptions;
     private javax.swing.JMenuItem mniHelpAbout;
@@ -3283,13 +3497,15 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JPanel pnlIdentification;
     private javax.swing.JPanel pnlIntControlPanel;
     private javax.swing.JPanel pnlIntStandings;
-    private javax.swing.JPanel pnlIntTeamStandings;
+    private javax.swing.JPanel pnlIntTeamsPanel;
+    private javax.swing.JPanel pnlIntTeamsStandings;
     private javax.swing.JPanel pnlObjectsToImport;
     private javax.swing.JPanel pnlPS;
     private javax.swing.JPanel pnlStandings;
     private javax.swing.JPanel pnlSystem;
     private javax.swing.JPanel pnlTeamPS;
-    private javax.swing.JPanel pnlTeamStandings;
+    private javax.swing.JPanel pnlTeamsPanel;
+    private javax.swing.JPanel pnlTeamsStandings;
     private javax.swing.JPanel pnlWelcome;
     private javax.swing.JRadioButton rdbCurrentPS;
     private javax.swing.JRadioButton rdbCurrentTeamPS;
@@ -3300,12 +3516,14 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JRadioButton rdbTemporaryTeamPS;
     private javax.swing.JScrollPane scpControlPanel;
     private javax.swing.JScrollPane scpStandings;
-    private javax.swing.JScrollPane scpTeamStandings;
+    private javax.swing.JScrollPane scpTeamsPanel;
+    private javax.swing.JScrollPane scpTeamsStandings;
     private javax.swing.JSpinner spnRoundNumber;
     private javax.swing.JSpinner spnTeamRoundNumber;
     private javax.swing.JTable tblControlPanel;
     private javax.swing.JTable tblStandings;
-    private javax.swing.JTable tblTeamStandings;
+    private javax.swing.JTable tblTeamsPanel;
+    private javax.swing.JTable tblTeamsStandings;
     private javax.swing.JTabbedPane tpnGotha;
     private javax.swing.JTextField txfBeginDate;
     private javax.swing.JTextField txfEndDate;
@@ -3396,6 +3614,39 @@ class ControlPanelTableCellRenderer extends JLabel implements TableCellRenderer 
         if (colIndex == 0){ //
             this.setHorizontalAlignment(JLabel.RIGHT);  
         }
+        return this;
+    }
+}
+
+class TeamsPanelTableCellRenderer extends JLabel implements TableCellRenderer {
+    // Assigned players will be in column 2; Entered results will be in column 3;
+    private Font defaultFont = this.getFont();
+    protected boolean[][] cpWarning = new boolean[Gotha.MAX_NUMBER_OF_ROUNDS][4];
+
+    @Override
+    public Component getTableCellRendererComponent(JTable table, Object value,
+            boolean isSelected, boolean hasFocus, int rowIndex, int colIndex) {
+        TableModel model = table.getModel();
+        setText("" + model.getValueAt(rowIndex, colIndex));
+        this.setHorizontalAlignment(JLabel.CENTER);
+        if (colIndex == JFrGotha.TM_TEAM_NUMBER_COL
+                || colIndex == JFrGotha.TM_BOARD_NUMBER_COL){ //
+            this.setHorizontalAlignment(JLabel.RIGHT);  
+        }
+        if (colIndex == JFrGotha.TM_TEAM_NAME_COL
+                || colIndex == JFrGotha.TM_PL_NAME_COL){ //
+            this.setHorizontalAlignment(JLabel.LEFT);  
+        }
+        if (colIndex == JFrGotha.TM_PL_ROUNDS_COL){ //
+             Font f = new Font("Courier New", Font.BOLD, 16);
+             setFont(f);
+        }
+        else{
+//          setFont(this.getFont().deriveFont(12.0F));
+            setFont(defaultFont);
+  
+        }
+
         return this;
     }
 }

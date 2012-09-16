@@ -40,8 +40,8 @@ public class TeamPlacementParameterSet implements java.io.Serializable{
         new PlacementCriterion(TPL_CRIT_BOARDWINS_3UB, "B3U", "BDW3U", "Board Wins. 3 Upper boards", 2),
         new PlacementCriterion(TPL_CRIT_BOARDWINS_2UB, "B2U", "BDW2U", "Board Wins. 2 Upper boards", 2),
         new PlacementCriterion(TPL_CRIT_BOARDWINS_1UB, "B1U", "BDW1U", "Board Wins. 1 Upper board", 2),
-        new PlacementCriterion(TPL_CRIT_MEAN_RATING, "MNR", "MNR", "Mean rating", 1),
-        new PlacementCriterion(TPL_CRIT_MEDIAN_RATING, "MDR", "MDR", "Median rating", 1),
+        new PlacementCriterion(TPL_CRIT_MEAN_RATING, "MNR", "MNR", "Mean rating at first round", 1),
+        new PlacementCriterion(TPL_CRIT_MEDIAN_RATING, "MDR", "MDR", "Median rating at first round", 1),
     };
 
             private int[] plaCriteria;

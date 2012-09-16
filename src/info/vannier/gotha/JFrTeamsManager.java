@@ -170,7 +170,14 @@ public class JFrTeamsManager extends javax.swing.JFrame {
                 }
                 int boardNumber = indexDest % teamSize;
                 try {
+                    // affect current round + all rounds with member = null
                     tournament.setTeamMember(team, processedRoundNumber, boardNumber, player);
+                    for (int r = 0; r < Gotha.MAX_NUMBER_OF_ROUNDS; r++){
+                        Player currentP = team.getTeamMember(r, boardNumber);
+                        if (currentP == null){
+                            tournament.setTeamMember(team, r, boardNumber, player);
+                        }
+                    }
                 } catch (RemoteException ex) {
                     Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -252,6 +259,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
     }
 
     private void updateComponents() {
+        this.pupTeams.setVisible(false);
         int teamSize = 0;
         try {
             teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
@@ -326,7 +334,6 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         TeamComparator teamComparator = new TeamComparator(teamsSortType);
         Collections.sort(alDisplayedTeams, teamComparator);
 
-
         for (Team t : alDisplayedTeams) {
             for (int iTM = 0; iTM < teamSize; iTM++){
                 Object[] row = new Object[TM_NUMBER_OF_COLS];
@@ -373,13 +380,18 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         mniRemoveAllTeams = new javax.swing.JMenuItem();
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
         mniUnteamOneMember = new javax.swing.JMenuItem();
+        mniUnteamOneMemberAllRounds = new javax.swing.JMenuItem();
         mniUnteamOneTeam = new javax.swing.JMenuItem();
+        mniUnteamOneTeamAllRounds = new javax.swing.JMenuItem();
         mniUnteamAllTeams = new javax.swing.JMenuItem();
+        mniUnteamAllTeamsAllRounds = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         mniRenameTeam = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         mniReorderMembersOfOneTeam = new javax.swing.JMenuItem();
+        mniReorderMembersOfOneTeamAllRouns = new javax.swing.JMenuItem();
         mniReorderPlayersOfAllTeams = new javax.swing.JMenuItem();
+        mniReorderPlayersOfAllTeamsAllRounds = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         mniRenumberTeams = new javax.swing.JMenuItem();
         mniChangeTeamNumber = new javax.swing.JMenuItem();
@@ -428,6 +440,13 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         });
         pupTeams.add(mniUnteamOneMember);
 
+        mniUnteamOneMemberAllRounds.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniUnteamOneMemberAllRoundsActionPerformed(evt);
+            }
+        });
+        pupTeams.add(mniUnteamOneMemberAllRounds);
+
         mniUnteamOneTeam.setText("Unteam one team");
         mniUnteamOneTeam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -436,6 +455,14 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         });
         pupTeams.add(mniUnteamOneTeam);
 
+        mniUnteamOneTeamAllRounds.setText("Unteam one team for all rounds");
+        mniUnteamOneTeamAllRounds.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniUnteamOneTeamAllRoundsActionPerformed(evt);
+            }
+        });
+        pupTeams.add(mniUnteamOneTeamAllRounds);
+
         mniUnteamAllTeams.setText("Unteam all teams");
         mniUnteamAllTeams.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -443,6 +470,14 @@ public class JFrTeamsManager extends javax.swing.JFrame {
             }
         });
         pupTeams.add(mniUnteamAllTeams);
+
+        mniUnteamAllTeamsAllRounds.setText("Unteam all teams for all rounds");
+        mniUnteamAllTeamsAllRounds.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniUnteamAllTeamsAllRoundsActionPerformed(evt);
+            }
+        });
+        pupTeams.add(mniUnteamAllTeamsAllRounds);
         pupTeams.add(jSeparator1);
 
         mniRenameTeam.setText("Rename one team");
@@ -462,6 +497,14 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         });
         pupTeams.add(mniReorderMembersOfOneTeam);
 
+        mniReorderMembersOfOneTeamAllRouns.setText("Reorder players of one team by rating for all rounds");
+        mniReorderMembersOfOneTeamAllRouns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniReorderMembersOfOneTeamAllRounsActionPerformed(evt);
+            }
+        });
+        pupTeams.add(mniReorderMembersOfOneTeamAllRouns);
+
         mniReorderPlayersOfAllTeams.setText("Reorder players of all teams by rating");
         mniReorderPlayersOfAllTeams.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -469,6 +512,14 @@ public class JFrTeamsManager extends javax.swing.JFrame {
             }
         });
         pupTeams.add(mniReorderPlayersOfAllTeams);
+
+        mniReorderPlayersOfAllTeamsAllRounds.setText("Reorder players of all teams by rating for all rounds");
+        mniReorderPlayersOfAllTeamsAllRounds.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniReorderPlayersOfAllTeamsAllRoundsActionPerformed(evt);
+            }
+        });
+        pupTeams.add(mniReorderPlayersOfAllTeamsAllRounds);
         pupTeams.add(jSeparator3);
 
         mniRenumberTeams.setText("Renumber teams by mean rating");
@@ -560,7 +611,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         scpTeamablePlayers.setViewportView(tblTeamablePlayers);
 
         pnlPlayers.add(scpTeamablePlayers);
-        scpTeamablePlayers.setBounds(10, 50, 240, 360);
+        scpTeamablePlayers.setBounds(10, 50, 240, 280);
 
         jLabel1.setText("teamable players");
         pnlPlayers.add(jLabel1);
@@ -721,34 +772,46 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         }
         int boardNumber = this.selectedBoard();
         this.mniRemoveAllTeams.setText("Remove all teams");
-        this.mniUnteamAllTeams.setText("Unteam all teams");
-        this.mniReorderPlayersOfAllTeams.setText("Reorder members of all teams");
+        this.mniUnteamAllTeams.setText("Unteam all teams for round " + (processedRoundNumber + 1));
+        this.mniUnteamAllTeamsAllRounds.setText("Unteam all teams for all rounds");
+        this.mniReorderPlayersOfAllTeams.setText("Reorder members of all teams for round " + (processedRoundNumber + 1));
+        this.mniReorderPlayersOfAllTeamsAllRounds.setText("Reorder members of all teams for all rounds");
         this.mniRenumberTeams.setText("Renumber teams");
         if (team == null){
             this.mniRemoveOneTeam.setEnabled(false);
             this.mniUnteamOneMember.setEnabled(false);
+            this.mniUnteamOneMemberAllRounds.setEnabled(false);
             this.mniUnteamOneTeam.setEnabled(false);
+            this.mniUnteamOneTeamAllRounds.setEnabled(false);
             this.mniRenameTeam.setEnabled(false);
             this.mniReorderMembersOfOneTeam.setEnabled(false);
             this.mniChangeTeamNumber.setEnabled(false);
             this.mniRemoveOneTeam.setText("Remove one team");
             this.mniUnteamOneMember.setText("Unteam one member");
+            this.mniUnteamOneMemberAllRounds.setText("Unteam one member for all rounds");
             this.mniUnteamOneTeam.setText("Unteam one team");
+            this.mniUnteamOneTeamAllRounds.setText("Unteam one team for all rounds");
             this.mniRenameTeam.setText("Rename one team");
             this.mniReorderMembersOfOneTeam.setText("Reorder members of one team");
+            this.mniReorderMembersOfOneTeam.setText("Reorder members of one team for all rounds");
             this.mniChangeTeamNumber.setText("Change number of one team");
          }
          else{
             this.mniRemoveOneTeam.setEnabled(true);
             this.mniUnteamOneMember.setEnabled(true);
+            this.mniUnteamOneMemberAllRounds.setEnabled(true);
             this.mniUnteamOneTeam.setEnabled(true);
+            this.mniUnteamOneTeamAllRounds.setEnabled(true);
             this.mniRenameTeam.setEnabled(true);
             this.mniReorderMembersOfOneTeam.setEnabled(true);
             this.mniRemoveOneTeam.setText("Remove " + team.getTeamName());
-            this.mniUnteamOneMember.setText("Unteam board " + (boardNumber + 1) + " of " + team.getTeamName());
-            this.mniUnteamOneTeam.setText("Unteam " + team.getTeamName());
+            this.mniUnteamOneMember.setText("Unteam board " + (boardNumber + 1) + " of " + team.getTeamName() + " for round " + (processedRoundNumber + 1));
+            this.mniUnteamOneMemberAllRounds.setText("Unteam board " + (boardNumber + 1) + " of " + team.getTeamName() + " for all rounds ");
+            this.mniUnteamOneTeam.setText("Unteam " + team.getTeamName() + " for round " + (processedRoundNumber + 1));
+            this.mniUnteamOneTeamAllRounds.setText("Unteam " + team.getTeamName() + " for all rounds");
             this.mniRenameTeam.setText("Rename " + team.getTeamName());
-            this.mniReorderMembersOfOneTeam.setText("Reorder members of " + team.getTeamName());
+            this.mniReorderMembersOfOneTeam.setText("Reorder members of " + team.getTeamName() + " for round " + (processedRoundNumber + 1));
+            this.mniReorderMembersOfOneTeam.setText("Reorder members of " + team.getTeamName() + " for all rounds");
             this.mniChangeTeamNumber.setText("Change number of " + team.getTeamName());
          }
         
@@ -856,7 +919,6 @@ public class JFrTeamsManager extends javax.swing.JFrame {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.tournamentChanged();
-
     }//GEN-LAST:event_mniReorderMembersOfOneTeamActionPerformed
 
     private void mniUnteamOneMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniUnteamOneMemberActionPerformed
@@ -920,24 +982,24 @@ public class JFrTeamsManager extends javax.swing.JFrame {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        if (nbTeams != 0 && nbGames != 0){
-            int response = JOptionPane.showConfirmDialog(this,
-                    "Modifying team size will remove " + nbGames + " games"
-                    + "\nUnpair ?",
-                    "Message",
-                    JOptionPane.WARNING_MESSAGE,
-                    JOptionPane.OK_CANCEL_OPTION);
-            if (response == JOptionPane.CANCEL_OPTION){
-                newTS = oldTS;
-            }
-            else{
-                try {
-                    tournament.removeAllGames();
-                } catch (RemoteException ex) {
-                    Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+//        if (nbTeams != 0 && nbGames != 0){
+//            int response = JOptionPane.showConfirmDialog(this,
+//                    "Modifying team size will remove " + nbGames + " games"
+//                    + "\nUnpair ?",
+//                    "Message",
+//                    JOptionPane.WARNING_MESSAGE,
+//                    JOptionPane.OK_CANCEL_OPTION);
+//            if (response == JOptionPane.CANCEL_OPTION){
+//                newTS = oldTS;
+//            }
+//            else{
+//                try {
+//                    tournament.removeAllGames();
+//                } catch (RemoteException ex) {
+//                    Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//        }
 
         try {
             tournament.setTeamSize(newTS);
@@ -1014,6 +1076,73 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         this.demandedDisplayedRoundNumberHasChanged(demandedRN);
     }//GEN-LAST:event_spnRoundNumberStateChanged
 
+    private void mniUnteamOneMemberAllRoundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniUnteamOneMemberAllRoundsActionPerformed
+        Team team = this.selectedTeam();
+        int bn = this.selectedBoard();
+
+        try {
+            for (int r = 0; r < Gotha.MAX_NUMBER_OF_ROUNDS; r++){
+                this.tournament.unteamTeamMember(team, r, bn);    
+            }
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.tournamentChanged();
+    }//GEN-LAST:event_mniUnteamOneMemberAllRoundsActionPerformed
+
+    private void mniUnteamOneTeamAllRoundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniUnteamOneTeamAllRoundsActionPerformed
+        pupTeams.setVisible(false);
+        Team team = this.selectedTeam();
+        try {
+            for(int r = 0; r < Gotha.MAX_NUMBER_OF_ROUNDS; r++){
+                this.tournament.unteamTeamMembers(team, r);
+            }
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.tournamentChanged();
+       // TODO add your handling code here:
+    }//GEN-LAST:event_mniUnteamOneTeamAllRoundsActionPerformed
+
+    private void mniUnteamAllTeamsAllRoundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniUnteamAllTeamsAllRoundsActionPerformed
+        pupTeams.setVisible(false);
+        try {
+            for (int r = 0; r < Gotha.MAX_NUMBER_OF_ROUNDS; r++){
+                 tournament.unteamAllTeams(r);     
+            }
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.tournamentChanged();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mniUnteamAllTeamsAllRoundsActionPerformed
+
+    private void mniReorderMembersOfOneTeamAllRounsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniReorderMembersOfOneTeamAllRounsActionPerformed
+        pupTeams.setVisible(false);
+        Team team = this.selectedTeam();
+        try {
+            for (int r= 0; r < Gotha.MAX_NUMBER_OF_ROUNDS; r++){
+                tournament.reorderTeamMembersByRating(team, r);
+            }
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.tournamentChanged();
+
+    }//GEN-LAST:event_mniReorderMembersOfOneTeamAllRounsActionPerformed
+
+    private void mniReorderPlayersOfAllTeamsAllRoundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniReorderPlayersOfAllTeamsAllRoundsActionPerformed
+        pupTeams.setVisible(false);
+        try {
+            for (int r = 0; r < Gotha.MAX_NUMBER_OF_ROUNDS; r++){
+                tournament.reorderTeamMembersByRating(r);
+            }
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.tournamentChanged();
+    }//GEN-LAST:event_mniReorderPlayersOfAllTeamsAllRoundsActionPerformed
+
     private void demandedDisplayedRoundNumberHasChanged(int demandedRN) {
         int numberOfRounds = 0;
         try {
@@ -1054,10 +1183,15 @@ public class JFrTeamsManager extends javax.swing.JFrame {
     private javax.swing.JMenuItem mniRenameTeam;
     private javax.swing.JMenuItem mniRenumberTeams;
     private javax.swing.JMenuItem mniReorderMembersOfOneTeam;
+    private javax.swing.JMenuItem mniReorderMembersOfOneTeamAllRouns;
     private javax.swing.JMenuItem mniReorderPlayersOfAllTeams;
+    private javax.swing.JMenuItem mniReorderPlayersOfAllTeamsAllRounds;
     private javax.swing.JMenuItem mniUnteamAllTeams;
+    private javax.swing.JMenuItem mniUnteamAllTeamsAllRounds;
     private javax.swing.JMenuItem mniUnteamOneMember;
+    private javax.swing.JMenuItem mniUnteamOneMemberAllRounds;
     private javax.swing.JMenuItem mniUnteamOneTeam;
+    private javax.swing.JMenuItem mniUnteamOneTeamAllRounds;
     private javax.swing.JPanel pnlPlayers;
     private javax.swing.JPanel pnlTeams;
     private javax.swing.JPopupMenu pupTeams;

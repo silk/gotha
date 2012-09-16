@@ -1501,6 +1501,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
         for (Team team : this.teamsList()) {
             team.modifyTeamSize(teamSize);
         }
+        this.setChangeSinceLastSave(true);
     }
 
     @Override
@@ -1619,13 +1620,14 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
         }
         teamToModify.setTeamName(newName);
         addTeam(team);
-
+        this.setChangeSinceLastSave(true);
     }
 
     @Override
     public void unteamTeamMember(Team team, int roundNumber, int boardNumber) throws RemoteException {
         Team teamToModify = hmTeams.get(team.getTeamName());
         teamToModify.setTeamMember(null, roundNumber, boardNumber);
+        this.setChangeSinceLastSave(true);
     }
 
     @Override
@@ -1661,6 +1663,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
         for (int bn = alPlayers.size(); bn < teamSize; bn++) {
             this.setTeamMember(team, roundNumber, bn, null);
         }
+        this.setChangeSinceLastSave(true);
     }
 
     @Override
@@ -1668,6 +1671,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
         for (Team team : hmTeams.values()) {
             this.reorderTeamMembersByRating(team, roundNumber);
         }
+        this.setChangeSinceLastSave(true);
     }
 
     @Override
@@ -1680,7 +1684,6 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
             t.setTeamNumber(tn);
         }
         this.setChangeSinceLastSave(true);
-
     }
 
     @Override
@@ -1746,6 +1749,33 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
         }
         return nbWX2;
 
+    }
+
+    /**
+     * returns players implied in a team at boardNumber board
+     * 
+     */
+    @Override
+    public ArrayList<Player> playersList(Team team, int boardNumber) throws RemoteException {
+        ArrayList<Player> alP = new ArrayList<Player>();
+        for (int r = 0; r < Gotha.MAX_NUMBER_OF_ROUNDS; r++){
+            Player p = team.getTeamMember(r, boardNumber);
+            if (p == null) continue;
+            if (!alP.contains(p)) alP.add(p);
+        }
+        return alP;
+    }
+    
+    @Override
+    public boolean[] membership(Player p, Team t, int boardNumber) throws RemoteException {
+        boolean[] bM = new boolean[Gotha.MAX_NUMBER_OF_ROUNDS];
+        for (int r = 0; r < Gotha.MAX_NUMBER_OF_ROUNDS; r++){
+            bM[r] = false;
+            if (p == null) continue;
+            if (t == null) continue;
+            if (p.hasSameKeyString(t.getTeamMember(r, boardNumber))) bM[r] = true;
+        }
+        return bM;
     }
 
     /**
