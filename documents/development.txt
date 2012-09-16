@@ -1,6 +1,7 @@
-OpenGothaV3.28.03
+OpenGothaV3.28.04
 **************
-03/09/2012
+16/09/2012
+New         Team members may vary for each round
 New         Save menu item always opens a dialog box where the user can confirm or modify the directory/filename 
             where the tournament should be saved
 New         Recent files list was fed by Open actions

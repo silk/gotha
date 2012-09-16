@@ -1,6 +1,15 @@
-OpenGothaV3.27.03
-**************************
-19/06/2012
+OpenGothaV3.28.04
+**************
+16/09/2012
+New         Team members may vary for each round
+New         Save menu item always opens a dialog box where the user can confirm or modify the directory/filename 
+            where the tournament should be saved
+New         Recent files list was fed by Open actions
+            It is now fed by Save actions as well
+
+OpenGothaV3.28
+**************
+12/08/2012
 New         Strasbourg scores (STS and SOSTS)
 
 OpenGothaV3.27
