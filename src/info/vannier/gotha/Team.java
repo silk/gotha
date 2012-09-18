@@ -79,18 +79,6 @@ public class Team implements java.io.Serializable{
     public void setTeamNumber(int teamNumber) {
         this.teamNumber = teamNumber;
     }
-
-//    public void modifyTeamSize(int newTeamSize){
-//        Player[] newTeamMembers = new Player[newTeamSize];
-//        int copySize = Math.min(newTeamSize, teamMembers.length);
-//        System.arraycopy(teamMembers, 0, newTeamMembers, 0, copySize);
-//        if (newTeamSize > copySize){
-//            for (int ip = copySize; ip < newTeamSize; ip++){
-//                newTeamMembers[ip] = null;
-//            }
-//        }
-//        teamMembers = newTeamMembers;
-//    }
     
     public void modifyTeamSize(int newTeamSize){
         Player[][] newTeamMembers = new Player[teamMembers.length][newTeamSize];
@@ -149,3 +137,14 @@ public class Team implements java.io.Serializable{
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+

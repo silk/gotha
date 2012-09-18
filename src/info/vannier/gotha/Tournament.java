@@ -1607,7 +1607,10 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     @Override
     public void setTeamMember(Team team, int roundNumber, int boardMember, Player player) throws RemoteException {
         Team teamToModify = hmTeams.get(team.getTeamName());
-        teamToModify.setTeamMember(player, roundNumber, boardMember);
+
+//        teamToModify.setTeamMember(player, roundNumber, boardMember);
+        Player p = this.homonymPlayerOf(player);
+        teamToModify.setTeamMember(p, roundNumber, boardMember);
         this.setChangeSinceLastSave(true);
     }
 
@@ -1801,11 +1804,6 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     @Override
     public HashMap<String, Player> teamablePlayersHashMap(int roundNumber) throws RemoteException {
         HashMap<String, Player> hmTeamablePlayers = new HashMap<String, Player>(hmPlayers);
-//        for (Player p : hmPlayers.values()) {
-//            if (p.getRegisteringStatus().compareTo("FIN") != 0){
-//                hmTeamablePlayers.remove(p.getKeyString());
-//            }
-//        }
         int teamSize = getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
         for (Team t : teamsList()) {
             for (int iTM = 0; iTM < teamSize; iTM++) {
@@ -1976,7 +1974,6 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
                 Logger.getLogger(Tournament.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-
     }
 
     @Override
