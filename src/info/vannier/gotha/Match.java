@@ -31,7 +31,7 @@ public class Match implements java.io.Serializable{
 
     public static Match buildMatch(int roundNumber, Team team1, Team team2, TournamentInterface tournament)throws RemoteException{
         Match match = new Match();
-        match.teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+        match.teamSize = tournament.getTeamSize();
         match.roundNumber = roundNumber;
         Player player0 = team1.getTeamMember(roundNumber, 0);
         if (tournament.getGame(roundNumber, player0).getWhitePlayer().hasSameKeyString(player0)){

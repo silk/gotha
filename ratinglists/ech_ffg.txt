@@ -1,4 +1,4 @@
-#Echelle au 16/09/2012
+#Echelle au 21/09/2012
 AAIJ René                  249 e -------   NL
 AAKERBLOM Charlie          303 e -------   SE
 ABADIA Mickaël           -1400 - 9728205 94MJ
@@ -299,7 +299,7 @@ AUDIGER Monique          -9999 - 0337500 37To
 AUDIN Maurice            -9999 - 0900108 94EP
 AUDIT Edouard                0 - 9125005 75OB
 AUDOUARD Achille         -1600 - 0700411 75Op
-AUDOUARD Emile           -1600 - 0270302 13Ma
+AUDOUARD Emile           -1535 L 0270302 13Ma
 AUDOUARD Jean            -9999 - 0700410 75Op
 AUDOUARD Pierre            300 - 9277001 13Ma
 AUDOUARD Simon           -1600 - 0270303 13Ma
@@ -1362,7 +1362,7 @@ BROCHE Dany               -600 - 8748700 76Ro
 BROCHE Kevin             -1000 - 9443002 76Ro
 BROCHERAY Thierry        -9999 - 1000141 92Bo
 BROCHERY Victor           -500 - 0800068 75Ju
-BROCHET Philippe          -400 - 8414001 13Ma
+BROCHET Philippe          -343 L 8414001 13Ma
 BROCHET Quentin          -1500 - ------- XXXX
 BROCHET Sylvain           -400 - 8930100 44Na
 BROCHIER Rémi            -9999 - 0610702 38Tr
@@ -1965,7 +1965,7 @@ CLAIRET Jeremy            -900 - 0700262 34Mo
 CLAMART Théo             -1700 - 1100314 92Le
 CLAMME Benjamin           -800 - 1000015 57Me
 CLAP Frédéric             -300 - 0173000 84Av
-CLARK Colin               -300 - 1000058   GB
+CLARK Colin               -287 L 1000058 13Ma
 CLARON Pascal            -1300 - 9714004 69Ly
 CLAUDE Catherine         -1600 - 0441009 14Ca
 CLAUDE Daniel             -400 - 9386001 67St
@@ -1976,7 +1976,7 @@ CLAUS Jérôme             -9999 - 9188721 67SE
 CLAVEL Olivier           -1500 - 9874705 84VJ
 CLAVERIE Benoît          -1500 - 9352008 44Na
 CLAVIER Benjamin         -1116 L 1000307 37To
-CLAVIER Christopher      -1100 X 1100018 18Bo
+CLAVIER Christopher      -1016 L 1100018 18Bo
 CLEMENT Daniel           -9999 - 9441004 14Ca
 CLEMENT Nathanael         -700 - 0900003 64Ba
 CLEMENT Sylvain           -500 - 0351403 87Li
@@ -2232,14 +2232,14 @@ COVOLO Thierry            -700 - 0800089 69Ly
 COXO Julien               -700 - 0700349 37To
 COZZOLINO Bruno           -800 - 0021001 75Pa
 CRAMER Guillaume          -400 - 1000100 75Pa
-CRASSAC Séraphine        -9999 - 1300002 13Ma
+CRASSAC Séraphine        -9999 L 1300002 13Ma
 CRAVERO Marie-Pierre     -9999 - 9725026 75Pa
 CREMADES Thibaud         -1600 - 0625049 75Pa
 CREN Lionel              -1300 - 0900347 95Ta
 CREPIN Xavier            -1300 - 9883502 57Me
 CREPON Benoît            -9999 - 9125044 75Pa
 CREPY Anatole            -9999 - 9677010 13Ma
-CREPY Christine          -1200 - 0077005 13Ma
+CREPY Christine          -1153 L 0077005 13Ma
 CREPY Flora              -9999 - 9677011 13Ma
 CREPY Grégoire           -1400 - 9677012 13Ma
 CREPY Pascal              -566 L 9193005 13Ma
@@ -2539,7 +2539,7 @@ DEGOIS Jean-Marie        -1400 - 9720004 35Re
 DEGORNET Florian         -1500 - 0624608 92Le
 DEGREMONT Cédric         -9999 - 0900413   NL
 DEGREVE Renaud            -900 - 0413010 38Gr
-DEGROUX Rémy             -1300 - 0613602 13Ma
+DEGROUX Rémy             -1264 L 0613602 13Ma
 DEGROUX Sylvain          -1800 - 0613600 38Vo
 DEGROUX Vincent          -1600 - 0613601 38Co
 DEHAENE Guillaume        -1400 - 0700354 92An
@@ -4710,7 +4710,7 @@ ISRAEL Nicolas           -9999 - 9425553 75OB
 ISSA Jean-Marc            -800 - 9825004 75Pa
 ISSARD Gilbert            -500 - 9125029 75Pa
 ISSENJOU Michel           -900 - 0077401 13Ma
-ISSERMANN Catherine       -796 L 9151501 13Ma
+ISSERMANN Catherine       -796 L 9151501 34Mo
 ISSERMANN Julian         -1300 - 9551502 34Mo
 ISTACE Clovis            -9999 - 9992041 08Ch
 ISTACE Quentin           -1500 - 9692001 08Ch
@@ -6560,7 +6560,7 @@ METZ William              -900 - 0320001 00L2
 METZGER Mathieu          -9999 - 9388728 67SE
 METZMEYER Jean           -9999 - 9888724 67SE
 MEUDRE Quentin            -800 - 0900136 25Be
-MEULEMAN Pâris           -1200 - 1200332 06Pe
+MEULEMAN Pâris           -1150 L 1200332 06Pe
 MEUNIER Adrien           -1800 - 1100157 95Ka
 MEUNIER Bénédicte        -1300 - 9321002 92An
 MEUNIER Christophe       -1900 - 0327811 78Mg
@@ -8412,7 +8412,7 @@ RUSSO Pierpaolo          -1300 - 0800282 67SE
 RUSSO Roberto            -1500 - 0488730 67SE
 RUTGERS_VDLOEFF Arnoud     368 e -------   NL
 RUTSCHLE Yves            -1316 L 0652029 31To
-RUYSSEN-BROCHET Quentin  -1300 - 0414004 13Ma
+RUYSSEN-BROCHET Quentin  -1286 L 0414004 13Ma
 Ruzicka Martin            -112 e -------   DE
 RYCKELYNCK Christophe    -1500 - 0325006 75Pa
 SAADOUDI Mehdi            -200 - 1000270 90Be
@@ -9720,7 +9720,7 @@ WALRAET Matthieu          -180 L 9925006 75Op
 WALTREGNY Fabrice        -1100 - 0850001 78Me
 WALZBERG Julien          -1700 - 1000385 91PO
 WANDEL William              34 e -------   NL
-WANDEROILD Fanny         -1500 - 1200331 06Pe
+WANDEROILD Fanny         -1450 L 1200331 06Pe
 WANG Feng_Jun             -500 - 0700329 75Pa
 WANG Gang                 -200 - 9878501 30Ni
 WANG Geng                 -700 - 9938001 86Po

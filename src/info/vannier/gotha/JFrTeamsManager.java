@@ -164,7 +164,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
                 // What board Number ?
                 int teamSize = 1;
                 try {
-                    teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+                    teamSize = tournament.getTeamSize();
                 } catch (RemoteException ex) {
                     Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -206,7 +206,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
     private Team findTeamFromIndexInTeamsTable (int index){
         int teamSize = 1;
         try {
-            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            teamSize = tournament.getTeamSize();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -262,7 +262,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         this.pupTeams.setVisible(false);
         int teamSize = 0;
         try {
-            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            teamSize = tournament.getTeamSize();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -326,12 +326,12 @@ public class JFrTeamsManager extends javax.swing.JFrame {
 
         int teamSize = 0;
         try {
-            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            teamSize = tournament.getTeamSize();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        TeamComparator teamComparator = new TeamComparator(teamsSortType);
+        TeamComparator teamComparator = new TeamComparator(teamsSortType, teamSize);
         Collections.sort(alDisplayedTeams, teamComparator);
 
         for (Team t : alDisplayedTeams) {
@@ -389,7 +389,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         mniRenameTeam = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         mniReorderMembersOfOneTeam = new javax.swing.JMenuItem();
-        mniReorderMembersOfOneTeamAllRouns = new javax.swing.JMenuItem();
+        mniReorderMembersOfOneTeamAllRounds = new javax.swing.JMenuItem();
         mniReorderPlayersOfAllTeams = new javax.swing.JMenuItem();
         mniReorderPlayersOfAllTeamsAllRounds = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
@@ -497,13 +497,13 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         });
         pupTeams.add(mniReorderMembersOfOneTeam);
 
-        mniReorderMembersOfOneTeamAllRouns.setText("Reorder players of one team by rating for all rounds");
-        mniReorderMembersOfOneTeamAllRouns.addActionListener(new java.awt.event.ActionListener() {
+        mniReorderMembersOfOneTeamAllRounds.setText("Reorder players of one team by rating for all rounds");
+        mniReorderMembersOfOneTeamAllRounds.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniReorderMembersOfOneTeamAllRounsActionPerformed(evt);
+                mniReorderMembersOfOneTeamAllRoundsActionPerformed(evt);
             }
         });
-        pupTeams.add(mniReorderMembersOfOneTeamAllRouns);
+        pupTeams.add(mniReorderMembersOfOneTeamAllRounds);
 
         mniReorderPlayersOfAllTeams.setText("Reorder players of all teams by rating");
         mniReorderPlayersOfAllTeams.addActionListener(new java.awt.event.ActionListener() {
@@ -522,7 +522,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         pupTeams.add(mniReorderPlayersOfAllTeamsAllRounds);
         pupTeams.add(jSeparator3);
 
-        mniRenumberTeams.setText("Renumber teams by mean rating");
+        mniRenumberTeams.setText("Renumber teams according to mean rating");
         mniRenumberTeams.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mniRenumberTeamsActionPerformed(evt);
@@ -743,13 +743,13 @@ public class JFrTeamsManager extends javax.swing.JFrame {
     private void btnCreateNewTeamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateNewTeamActionPerformed
         int teamSize = 0;
         try {
-            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            teamSize = tournament.getTeamSize();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         String strTeamName = JOptionPane.showInputDialog(this, "Give a name to the team", "New Team");
-        Team team = new Team(strTeamName, teamSize);
+        Team team = new Team(strTeamName);
         try {
             tournament.addTeam(team);
         } catch (RemoteException ex) {
@@ -774,9 +774,9 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         this.mniRemoveAllTeams.setText("Remove all teams");
         this.mniUnteamAllTeams.setText("Unteam all teams for round " + (processedRoundNumber + 1));
         this.mniUnteamAllTeamsAllRounds.setText("Unteam all teams for all rounds");
-        this.mniReorderPlayersOfAllTeams.setText("Reorder members of all teams for round " + (processedRoundNumber + 1));
-        this.mniReorderPlayersOfAllTeamsAllRounds.setText("Reorder members of all teams for all rounds");
-        this.mniRenumberTeams.setText("Renumber teams");
+        this.mniReorderPlayersOfAllTeams.setText("Reorder members of all teams by rating for round " + (processedRoundNumber + 1));
+        this.mniReorderPlayersOfAllTeamsAllRounds.setText("Reorder members of all teams by rating for all rounds");
+        this.mniRenumberTeams.setText("Renumber teams according to mean rating");
         if (team == null){
             this.mniRemoveOneTeam.setEnabled(false);
             this.mniUnteamOneMember.setEnabled(false);
@@ -792,8 +792,8 @@ public class JFrTeamsManager extends javax.swing.JFrame {
             this.mniUnteamOneTeam.setText("Unteam one team");
             this.mniUnteamOneTeamAllRounds.setText("Unteam one team for all rounds");
             this.mniRenameTeam.setText("Rename one team");
-            this.mniReorderMembersOfOneTeam.setText("Reorder members of one team");
-            this.mniReorderMembersOfOneTeam.setText("Reorder members of one team for all rounds");
+            this.mniReorderMembersOfOneTeam.setText("Reorder members of one team by rating");
+            this.mniReorderMembersOfOneTeamAllRounds.setText("Reorder members of one team by rating for all rounds");
             this.mniChangeTeamNumber.setText("Change number of one team");
          }
          else{
@@ -810,8 +810,8 @@ public class JFrTeamsManager extends javax.swing.JFrame {
             this.mniUnteamOneTeam.setText("Unteam " + team.getTeamName() + " for round " + (processedRoundNumber + 1));
             this.mniUnteamOneTeamAllRounds.setText("Unteam " + team.getTeamName() + " for all rounds");
             this.mniRenameTeam.setText("Rename " + team.getTeamName());
-            this.mniReorderMembersOfOneTeam.setText("Reorder members of " + team.getTeamName() + " for round " + (processedRoundNumber + 1));
-            this.mniReorderMembersOfOneTeam.setText("Reorder members of " + team.getTeamName() + " for all rounds");
+            this.mniReorderMembersOfOneTeam.setText("Reorder members of " + team.getTeamName() + " by rating for round " + (processedRoundNumber + 1));
+            this.mniReorderMembersOfOneTeamAllRounds.setText("Reorder members of " + team.getTeamName() + " by rating for all rounds");
             this.mniChangeTeamNumber.setText("Change number of " + team.getTeamName());
          }
         
@@ -828,7 +828,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         Team selectedTeam = null;
         int teamSize = 1;
         try {
-            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            teamSize = tournament.getTeamSize();
             int row = tblTeams.getSelectedRow();
             if (row < 0) return null;
             row = (row /teamSize) * teamSize;
@@ -964,7 +964,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         }
         int oldTS = newTS;
         try {
-            oldTS = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            oldTS = tournament.getTeamSize();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1117,7 +1117,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mniUnteamAllTeamsAllRoundsActionPerformed
 
-    private void mniReorderMembersOfOneTeamAllRounsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniReorderMembersOfOneTeamAllRounsActionPerformed
+    private void mniReorderMembersOfOneTeamAllRoundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniReorderMembersOfOneTeamAllRoundsActionPerformed
         pupTeams.setVisible(false);
         Team team = this.selectedTeam();
         try {
@@ -1129,7 +1129,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
         }
         this.tournamentChanged();
 
-    }//GEN-LAST:event_mniReorderMembersOfOneTeamAllRounsActionPerformed
+    }//GEN-LAST:event_mniReorderMembersOfOneTeamAllRoundsActionPerformed
 
     private void mniReorderPlayersOfAllTeamsAllRoundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniReorderPlayersOfAllTeamsAllRoundsActionPerformed
         pupTeams.setVisible(false);
@@ -1183,7 +1183,7 @@ public class JFrTeamsManager extends javax.swing.JFrame {
     private javax.swing.JMenuItem mniRenameTeam;
     private javax.swing.JMenuItem mniRenumberTeams;
     private javax.swing.JMenuItem mniReorderMembersOfOneTeam;
-    private javax.swing.JMenuItem mniReorderMembersOfOneTeamAllRouns;
+    private javax.swing.JMenuItem mniReorderMembersOfOneTeamAllRounds;
     private javax.swing.JMenuItem mniReorderPlayersOfAllTeams;
     private javax.swing.JMenuItem mniReorderPlayersOfAllTeamsAllRounds;
     private javax.swing.JMenuItem mniUnteamAllTeams;

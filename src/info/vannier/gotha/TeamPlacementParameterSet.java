@@ -24,7 +24,6 @@ public class TeamPlacementParameterSet implements java.io.Serializable{
     final static int TPL_CRIT_BOARDWINS_1UB = 101;  
 
     final static int TPL_CRIT_MEAN_RATING = 201;
-    final static int TPL_CRIT_MEDIAN_RATING = 202;
 
     final static PlacementCriterion[] allPlacementCriteria = {
         new PlacementCriterion(TPL_CRIT_NUL, "NULL", "NULL", "No tie break", 1),
@@ -41,7 +40,6 @@ public class TeamPlacementParameterSet implements java.io.Serializable{
         new PlacementCriterion(TPL_CRIT_BOARDWINS_2UB, "B2U", "BDW2U", "Board Wins. 2 Upper boards", 2),
         new PlacementCriterion(TPL_CRIT_BOARDWINS_1UB, "B1U", "BDW1U", "Board Wins. 1 Upper board", 2),
         new PlacementCriterion(TPL_CRIT_MEAN_RATING, "MNR", "MNR", "Mean rating at first round", 1),
-        new PlacementCriterion(TPL_CRIT_MEDIAN_RATING, "MDR", "MDR", "Median rating at first round", 1),
     };
 
             private int[] plaCriteria;

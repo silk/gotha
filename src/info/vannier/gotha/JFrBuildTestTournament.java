@@ -503,7 +503,7 @@ public class JFrBuildTestTournament extends javax.swing.JFrame{
         }
         
         for (int iTeam = 0; iTeam < alPlayers.size() / teamSize; iTeam++){
-            Team team = new Team(iTeam, "Equipe" + (iTeam + 1), teamSize);
+            Team team = new Team(iTeam, "Equipe" + (iTeam + 1));
             for (int iBoard = 0; iBoard < teamSize; iBoard++){
                 Player p = alPlayers.get(iTeam * teamSize + iBoard);
                 for (int ir = 0; ir < Gotha.MAX_NUMBER_OF_ROUNDS; ir++){

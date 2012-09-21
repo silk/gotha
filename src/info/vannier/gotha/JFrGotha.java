@@ -2394,17 +2394,18 @@ public class JFrGotha extends javax.swing.JFrame {
         while (model.getRowCount() > 0) {
             model.removeRow(0);
         }
+        if (tournament == null) return;
         
         ArrayList<Team> alDisplayedTeams = tournament.teamsList();
 
         int teamSize = 0;
         try {
-            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            teamSize = tournament.getTeamSize();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsManager.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        TeamComparator teamComparator = new TeamComparator(TeamComparator.TEAM_NUMBER_ORDER);
+        TeamComparator teamComparator = new TeamComparator(TeamComparator.TEAM_NUMBER_ORDER, teamSize);
         Collections.sort(alDisplayedTeams, teamComparator);
 
 

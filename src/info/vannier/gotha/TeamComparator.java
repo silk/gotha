@@ -18,9 +18,11 @@ public class TeamComparator implements Comparator<Team>, Serializable{
     public final static int TOTAL_RATING_ORDER = 11;
 
     int teamOrderType = TeamComparator.NO_ORDER;
-
-    public TeamComparator(int teamOrderType){
+    int nbMembers = Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM;
+    
+    public TeamComparator(int teamOrderType, int nbMembers){
         this.teamOrderType = teamOrderType;
+        this.nbMembers = nbMembers;
     }
 
     @Override
@@ -31,8 +33,10 @@ public class TeamComparator implements Comparator<Team>, Serializable{
                 else if (t1.getTeamNumber() > t2.getTeamNumber()) return 1;
                 else return 0;  // Should not happen
             case TOTAL_RATING_ORDER :
-                if (t1.meanRating() < t2.meanRating()) return 1;
-                else if (t1.meanRating() > t2.meanRating()) return -1;
+                int m1 = t1.meanRating(nbMembers);
+                int m2 = t2.meanRating(nbMembers);
+                if (m1 < m2) return 1;
+                else if (m1 > m2) return -1;
                 else if (t1.getTeamNumber() < t2.getTeamNumber()) return -1;
                 else return 0;  
             default :

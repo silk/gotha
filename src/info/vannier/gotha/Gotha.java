@@ -41,9 +41,9 @@ public class Gotha {
     //
     
     static Locale locale = Locale.getDefault();
-    static final long GOTHA_VERSION = 328L;
-    static final long GOTHA_MINOR_VERSION = 5L;
-    static final java.util.Date GOTHA_RELEASE_DATE = (new GregorianCalendar(2012, Calendar.SEPTEMBER, 18)).getTime();
+    static final long GOTHA_VERSION = 329L;
+    static final long GOTHA_MINOR_VERSION = 0L;
+    static final java.util.Date GOTHA_RELEASE_DATE = (new GregorianCalendar(2012, Calendar.SEPTEMBER, 21)).getTime();
     // Data version for serialization
     static final long GOTHA_DATA_VERSION = 201L;
     // Should definitely stay below or equal to 32, due to internal limits in costValue() method

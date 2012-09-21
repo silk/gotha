@@ -1486,8 +1486,13 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     }
 
     @Override
+    public int getTeamSize() throws RemoteException {
+        return getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+    }
+    
+    @Override
     public void setTeamSize(int teamSize) throws RemoteException {
-        int oldTS = this.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+        int oldTS = this.getTeamSize();
         if (teamSize == oldTS) {
             return;
         }
@@ -1498,9 +1503,6 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
             return;
         }
         this.getTeamTournamentParameterSet().getTeamGeneralParameterSet().setTeamSize(teamSize);
-        for (Team team : this.teamsList()) {
-            team.modifyTeamSize(teamSize);
-        }
         this.setChangeSinceLastSave(true);
     }
 
@@ -1635,7 +1637,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
 
     @Override
     public void unteamTeamMembers(Team team, int roundNumber) throws RemoteException {
-        int teamSize = this.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+        int teamSize = this.getTeamSize();
         for (int bn = 0; bn < teamSize; bn++) {
             this.unteamTeamMember(team, roundNumber, bn);
         }
@@ -1651,7 +1653,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     @Override
     public void reorderTeamMembersByRating(Team team, int roundNumber) throws RemoteException {
         ArrayList<Player> alPlayers = new ArrayList<Player>();
-        int teamSize = this.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+        int teamSize = this.getTeamSize();
         for (int iTM = 0; iTM < teamSize; iTM++) {
             Player p = team.getTeamMember(roundNumber, iTM);
             if (p != null) {
@@ -1680,7 +1682,8 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     @Override
     public void renumberTeamsByTotalRating() throws RemoteException {
         ArrayList<Team> alTeams = teamsList();
-        TeamComparator teamComparator = new TeamComparator(TeamComparator.TOTAL_RATING_ORDER);
+        int teamSize = getTeamSize();
+        TeamComparator teamComparator = new TeamComparator(TeamComparator.TOTAL_RATING_ORDER, teamSize);
         Collections.sort(alTeams, teamComparator);
         for (int tn = 0; tn < alTeams.size(); tn++) {
             Team t = alTeams.get(tn);
@@ -1692,7 +1695,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     @Override
     public boolean isTeamComplete(Team team, int roundNumber) throws RemoteException {
         Team t = hmTeams.get(team.getTeamName());
-        int teamSize = this.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+        int teamSize = this.getTeamSize();
         for (int ib = 0; ib < teamSize; ib++) {
             if (t.getTeamMember(roundNumber, ib) == null) {
                 return false;
@@ -1804,7 +1807,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
     @Override
     public HashMap<String, Player> teamablePlayersHashMap(int roundNumber) throws RemoteException {
         HashMap<String, Player> hmTeamablePlayers = new HashMap<String, Player>(hmPlayers);
-        int teamSize = getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+        int teamSize = getTeamSize();
         for (Team t : teamsList()) {
             for (int iTM = 0; iTM < teamSize; iTM++) {
                 Player p = t.getTeamMember(roundNumber, iTM);
@@ -1897,7 +1900,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
 
     @Override
     public void pairTeams(Team team0, Team team1, int roundNumber) throws RemoteException {
-        int teamSize = getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+        int teamSize = getTeamSize();
         // Color ?
         Player pt0 = team0.getTeamMember(roundNumber, 0);
         Player pt1 = team1.getTeamMember(roundNumber, 0);

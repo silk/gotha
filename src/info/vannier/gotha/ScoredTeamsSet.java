@@ -131,12 +131,12 @@ public class ScoredTeamsSet implements java.io.Serializable{
     private void updateOrderedScoredTeamsList() throws RemoteException{
         ArrayList<Team> alTeams = tournament.teamsList();
         int nbTeams = alTeams.size();
-        int teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+        int teamSize = tournament.getTeamSize();
 
         int[][] tabCritValues = new int[nbTeams][TeamPlacementParameterSet.TPL_MAX_NUMBER_OF_CRITERIA];
 
         // 1 - Order teams by team number
-        TeamComparator teamComparator = new TeamComparator(TeamComparator.TEAM_NUMBER_ORDER);
+        TeamComparator teamComparator = new TeamComparator(TeamComparator.TEAM_NUMBER_ORDER, teamSize);
         Collections.sort(alTeams, teamComparator);
 
         // 2- fill tabWX2byTB, tabCumWX2UBByTB, tabTeamPoints, tabSOST
@@ -207,8 +207,7 @@ public class ScoredTeamsSet implements java.io.Serializable{
                     case TeamPlacementParameterSet.TPL_CRIT_BOARDWINS_3UB : val = tabCumWX2UBByTB[it][2]; break;
                     case TeamPlacementParameterSet.TPL_CRIT_BOARDWINS_2UB : val = tabCumWX2UBByTB[it][1]; break;
                     case TeamPlacementParameterSet.TPL_CRIT_BOARDWINS_1UB : val = tabCumWX2UBByTB[it][0]; break;
-                    case TeamPlacementParameterSet.TPL_CRIT_MEAN_RATING :   val = t.meanRating(); break;
-                    case TeamPlacementParameterSet.TPL_CRIT_MEDIAN_RATING : val = t.medianRating(); break;
+                    case TeamPlacementParameterSet.TPL_CRIT_MEAN_RATING :   val = t.meanRating(tournament.getTeamSize()); break;
                     default: val = 0;
                 }
                 tabCritValues[it][ic] = val;

@@ -88,12 +88,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniReorderMembersOfOneTeamActionPerformed"/>
           </Events>
         </MenuItem>
-        <MenuItem class="javax.swing.JMenuItem" name="mniReorderMembersOfOneTeamAllRouns">
+        <MenuItem class="javax.swing.JMenuItem" name="mniReorderMembersOfOneTeamAllRounds">
           <Properties>
             <Property name="text" type="java.lang.String" value="Reorder players of one team by rating for all rounds"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniReorderMembersOfOneTeamAllRounsActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniReorderMembersOfOneTeamAllRoundsActionPerformed"/>
           </Events>
         </MenuItem>
         <MenuItem class="javax.swing.JMenuItem" name="mniReorderPlayersOfAllTeams">
@@ -116,7 +116,7 @@
         </Component>
         <MenuItem class="javax.swing.JMenuItem" name="mniRenumberTeams">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Renumber teams by mean rating"/>
+            <Property name="text" type="java.lang.String" value="Renumber teams according to mean rating"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniRenumberTeamsActionPerformed"/>

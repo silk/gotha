@@ -78,6 +78,7 @@ public interface TournamentInterface extends Remote{
     
     public int presumablyCurrentRoundNumber() throws RemoteException;
 
+    public int getTeamSize() throws RemoteException;
     public void setTeamSize(int teamSize) throws RemoteException;
     public boolean addTeam(Team t) throws RemoteException;
     public boolean removeTeam(Team t)  throws RemoteException;

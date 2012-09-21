@@ -233,7 +233,7 @@ public class TournamentPrinting implements Printable {
                 }
                 break;
             case TournamentPrinting.TYPE_TEAMSLIST:
-                int teamsSortType = printSubType;
+//                int teamsSortType = printSubType;
                 try {
 //                    alTeamsToPrint = new ArrayList<Team>(tournament.teamsList());
                     arTMS = TeamMemberStrings.buildTeamMemberStrings(tournament);

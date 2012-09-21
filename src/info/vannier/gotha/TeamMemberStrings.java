@@ -28,10 +28,10 @@ public class TeamMemberStrings {
                 [Gotha.MAX_NUMBER_OF_TEAMS * (Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM * Gotha.MAX_NUMBER_OF_ROUNDS +1)];
         
         ArrayList<Team> alTeams = tournament.teamsList();
-        int teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+        int teamSize = tournament.getTeamSize();
         int numberOfRounds = tournament.getTournamentParameterSet().getGeneralParameterSet().getNumberOfRounds();
 
-        TeamComparator teamComparator = new TeamComparator(TeamComparator.TEAM_NUMBER_ORDER);
+        TeamComparator teamComparator = new TeamComparator(TeamComparator.TEAM_NUMBER_ORDER, teamSize);
         Collections.sort(alTeams, teamComparator);
         
         int numTS = 0; 

@@ -103,9 +103,6 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
         btnQuit = new javax.swing.JButton();
         spnRoundNumber = new javax.swing.JSpinner();
         btnHelp = new javax.swing.JButton();
-        pnlCoherence = new javax.swing.JPanel();
-        jTextArea1 = new javax.swing.JTextArea();
-        btnRemoveIncoherentGames = new javax.swing.JButton();
 
         mniRenumberTables.setText("Renumber all tables by Team score");
         mniRenumberTables.addActionListener(new java.awt.event.ActionListener() {
@@ -220,10 +217,10 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
         scpPairableTeams.setViewportView(tblPairableTeams);
 
         pnlTeams.add(scpPairableTeams);
-        scpPairableTeams.setBounds(10, 40, 260, 300);
+        scpPairableTeams.setBounds(10, 40, 260, 400);
 
         pnlInternal.add(pnlTeams);
-        pnlTeams.setBounds(0, 40, 280, 350);
+        pnlTeams.setBounds(0, 40, 280, 450);
 
         pnlMatches.setBorder(javax.swing.BorderFactory.createTitledBorder("Matches"));
         pnlMatches.setLayout(null);
@@ -311,30 +308,6 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
         pnlInternal.add(btnHelp);
         btnHelp.setBounds(280, 460, 110, 30);
 
-        pnlCoherence.setBorder(javax.swing.BorderFactory.createTitledBorder("Team coherence"));
-        pnlCoherence.setLayout(null);
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 11));
-        jTextArea1.setForeground(new java.awt.Color(255, 0, 0));
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Incoherence detected. Members of a team\nhave not been paired with members of \nan unique other team.");
-        jTextArea1.setWrapStyleWord(true);
-        pnlCoherence.add(jTextArea1);
-        jTextArea1.setBounds(10, 20, 260, 60);
-
-        btnRemoveIncoherentGames.setText("Remove incoherent games");
-        btnRemoveIncoherentGames.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemoveIncoherentGamesActionPerformed(evt);
-            }
-        });
-        pnlCoherence.add(btnRemoveIncoherentGames);
-        btnRemoveIncoherentGames.setBounds(10, 90, 250, 23);
-
-        pnlInternal.add(pnlCoherence);
-        pnlCoherence.setBounds(0, 400, 280, 120);
-
         getContentPane().add(pnlInternal);
         pnlInternal.setBounds(0, 0, 770, 520);
 
@@ -401,7 +374,7 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
     private void btnUnpairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnpairActionPerformed
         int teamSize = Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM;
         try {
-            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            teamSize = tournament.getTeamSize();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsPairing.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -409,6 +382,13 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
         ArrayList<Match> alMatchesToRemove = selectedMatchesList();
 
         int nbMatchesToRemove = alMatchesToRemove.size();
+        if (nbMatchesToRemove == 0) try {
+            alMatchesToRemove = tournament.matchesList(processedRoundNumber);
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrTeamsPairing.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        nbMatchesToRemove = alMatchesToRemove.size();
+        
         if (nbMatchesToRemove > 1) {
             int response = JOptionPane.showConfirmDialog(this,
                     "Gotha will unpair " + nbMatchesToRemove + " matches, including "
@@ -556,7 +536,7 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
 
         int teamSize = Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM;
         try {
-            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            teamSize = tournament.getTeamSize();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsPairing.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -614,7 +594,7 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
         this.pupMatches.setVisible(false);
         int teamSize = Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM;
         try {
-            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            teamSize = tournament.getTeamSize();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsPairing.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -684,7 +664,7 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
 
         int teamSize = Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM;
         try {
-            teamSize = tournament.getTeamTournamentParameterSet().getTeamGeneralParameterSet().getTeamSize();
+            teamSize = tournament.getTeamSize();
         } catch (RemoteException ex) {
             Logger.getLogger(JFrTeamsPairing.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -733,35 +713,6 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
 
         this.tournamentChanged();
     }//GEN-LAST:event_mniChangeTableNumbersActionPerformed
-
-    private void btnRemoveIncoherentGamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveIncoherentGamesActionPerformed
-        ArrayList<Game> alIncohGames = null;
-        try {
-            alIncohGames = tournament.incoherentTeamGames();
-        } catch (RemoteException ex) {
-            Logger.getLogger(JFrTeamsPairing.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        int nbIncohGames = alIncohGames.size();
-        int response = JOptionPane.showConfirmDialog(this,
-                "" + nbIncohGames + " games will be removed.",
-                "Message",
-                JOptionPane.WARNING_MESSAGE,
-                JOptionPane.OK_CANCEL_OPTION);
-        if (response == JOptionPane.OK_OPTION) {
-            for(Game g : alIncohGames){
-                try {
-                    tournament.removeGame(g);
-                } catch (TournamentException ex) {
-                    Logger.getLogger(JFrTeamsPairing.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (RemoteException ex) {
-                    Logger.getLogger(JFrTeamsPairing.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
-
-        this.tournamentChanged();
-
-    }//GEN-LAST:event_btnRemoveIncoherentGamesActionPerformed
 
     private void changeColor(Player p1, Player p2) {
         Game g = null;
@@ -876,23 +827,6 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
     }
 
     private void updateComponents() {
-        ArrayList<Game> alIncohGames = null;
-        try {
-            // What about team coherence ?
-            alIncohGames = tournament.incoherentTeamGames();
-        } catch (RemoteException ex) {
-            Logger.getLogger(JFrTeamsPairing.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        if(alIncohGames.isEmpty()){
-            this.pnlCoherence.setVisible(false);
-            this.btnPair.setEnabled(true);
-        }
-        else{
-            this.pnlCoherence.setVisible(true);
-            this.btnPair.setEnabled(false);
-        }
-
-
         DefaultTableModel pairableTeamsModel = (DefaultTableModel) tblPairableTeams.getModel();
         DefaultTableModel matchesModel = (DefaultTableModel) tblMatches.getModel();
         while (pairableTeamsModel.getRowCount() > 0) {
@@ -933,8 +867,13 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
                 }
             }
         }
-
-        TeamComparator teamComparator = new TeamComparator(TeamComparator.TEAM_NUMBER_ORDER);
+        int teamSize = Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM;
+        try {
+            teamSize = tournament.getTeamSize();
+        } catch (RemoteException ex) {
+            Logger.getLogger(JFrTeamsPairing.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        TeamComparator teamComparator = new TeamComparator(TeamComparator.TEAM_NUMBER_ORDER, teamSize);
         Collections.sort(alPairableTeams, teamComparator);
 
         this.txfNbPairableTeams.setText("" + alPairableTeams.size());
@@ -1000,7 +939,6 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
     private javax.swing.JButton btnPair;
     private javax.swing.JButton btnPrint;
     private javax.swing.JButton btnQuit;
-    private javax.swing.JButton btnRemoveIncoherentGames;
     private javax.swing.JButton btnUnpair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
@@ -1009,12 +947,10 @@ public class JFrTeamsPairing extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator5;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JMenuItem mniCancel;
     private javax.swing.JMenuItem mniChangeTableNumbers;
     private javax.swing.JMenuItem mniExchangeColours;
     private javax.swing.JMenuItem mniRenumberTables;
-    private javax.swing.JPanel pnlCoherence;
     private javax.swing.JPanel pnlInternal;
     private javax.swing.JPanel pnlMatches;
     private javax.swing.JPanel pnlTeams;

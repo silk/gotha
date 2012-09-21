@@ -907,7 +907,7 @@ public class ExternalDocument {
             String strTeamName = extractNodeValue(nnmTeam, "teamName", "Unnamed team");
             int teamNumber = new Integer(strTeamNumber).intValue() - 1;
             String teamName = strTeamName;
-            Team t = new Team(teamNumber, teamName, Gotha.MAX_NUMBER_OF_MEMBERS_BY_TEAM);
+            Team t = new Team(teamNumber, teamName);
 
             NodeList nlElements = nTeam.getChildNodes();
             for (int iel = 0; iel < nlElements.getLength(); iel++) {
