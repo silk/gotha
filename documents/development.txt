@@ -1,3 +1,9 @@
+OpenGothaV3.29.01
+*****************
+26/10/2012
+New         Swisscat system is selectable from the "Create a new tournament" dialog box
+New         Number of categories limit is set to 9 instead of 5
+
 OpenGothaV3.29
 **************
 21/09/2012
