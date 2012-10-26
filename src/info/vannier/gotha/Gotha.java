@@ -42,8 +42,8 @@ public class Gotha {
     
     static Locale locale = Locale.getDefault();
     static final long GOTHA_VERSION = 329L;
-    static final long GOTHA_MINOR_VERSION = 0L;
-    static final java.util.Date GOTHA_RELEASE_DATE = (new GregorianCalendar(2012, Calendar.SEPTEMBER, 21)).getTime();
+    static final long GOTHA_MINOR_VERSION = 1L;
+    static final java.util.Date GOTHA_RELEASE_DATE = (new GregorianCalendar(2012, Calendar.OCTOBER, 26)).getTime();
     // Data version for serialization
     static final long GOTHA_DATA_VERSION = 201L;
     // Should definitely stay below or equal to 32, due to internal limits in costValue() method
@@ -53,7 +53,7 @@ public class Gotha {
     // Should definitely stay below 9999, due to printing issues
     static final int MAX_NUMBER_OF_PLAYERS = 1200;
     // Should definitely stay below 10, due to complexity issues in costValue function    
-    static final int MAX_NUMBER_OF_CATEGORIES = 5;
+    static final int MAX_NUMBER_OF_CATEGORIES = 9;
     static final int MAX_RANK = 8;      // =  9D
     static final int MIN_RANK = -30;    // = 30K
     static final int MAX_NUMBER_OF_TABLES = MAX_NUMBER_OF_PLAYERS / 2;

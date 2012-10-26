@@ -264,6 +264,11 @@ public class JFrTournamentOptions extends javax.swing.JFrame{
         rdbSwissCat.setToolTipText("Because of possible games with a big rank difference, this system is not usually recommended");
         rdbSwissCat.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         rdbSwissCat.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        rdbSwissCat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbSwissCatActionPerformed(evt);
+            }
+        });
         dlgChangeSystem.getContentPane().add(rdbSwissCat);
         rdbSwissCat.setBounds(180, 170, 170, 13);
 
@@ -349,7 +354,7 @@ public class JFrTournamentOptions extends javax.swing.JFrame{
             }
         });
         pnlCategories.add(btnAdjustCategoryLimits);
-        btnAdjustCategoryLimits.setBounds(10, 60, 180, 30);
+        btnAdjustCategoryLimits.setBounds(10, 60, 170, 30);
 
         txfNumberOfCategories.setText("1");
         txfNumberOfCategories.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -358,10 +363,10 @@ public class JFrTournamentOptions extends javax.swing.JFrame{
             }
         });
         pnlCategories.add(txfNumberOfCategories);
-        txfNumberOfCategories.setBounds(170, 30, 20, 20);
+        txfNumberOfCategories.setBounds(160, 30, 20, 20);
 
         pnlGen.add(pnlCategories);
-        pnlCategories.setBounds(590, 40, 190, 300);
+        pnlCategories.setBounds(560, 40, 200, 300);
 
         pnlIdentification.setBorder(javax.swing.BorderFactory.createTitledBorder("Identification"));
         pnlIdentification.setLayout(null);
@@ -501,7 +506,7 @@ public class JFrTournamentOptions extends javax.swing.JFrame{
         txfMMFloor.setBounds(150, 50, 30, 20);
 
         pnlGen.add(pnlMacMahon);
-        pnlMacMahon.setBounds(300, 90, 280, 90);
+        pnlMacMahon.setBounds(300, 90, 250, 90);
 
         pnlSpecialResults.setBorder(javax.swing.BorderFactory.createTitledBorder("Special Results"));
         pnlSpecialResults.setLayout(null);
@@ -696,7 +701,7 @@ public class JFrTournamentOptions extends javax.swing.JFrame{
             }
         });
         pnlGen.add(btnChangeSystem);
-        btnChangeSystem.setBounds(300, 50, 280, 30);
+        btnChangeSystem.setBounds(300, 50, 250, 30);
 
         btnHelpGeneral.setIcon(new javax.swing.ImageIcon(getClass().getResource("/info/vannier/gotha/gothalogo16.jpg"))); // NOI18N
         btnHelpGeneral.setText("help");
@@ -2566,6 +2571,10 @@ public class JFrTournamentOptions extends javax.swing.JFrame{
 
     }//GEN-LAST:event_ckbRoundDownFocusLost
 
+    private void rdbSwissCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbSwissCatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdbSwissCatActionPerformed
+
     private void updHdBase(){
         TournamentParameterSet tps;
         try {
@@ -2750,21 +2759,40 @@ public class JFrTournamentOptions extends javax.swing.JFrame{
                 }
             }
             
+            // Dimensions for pnlCategories and its components
+            int tpgcPnlWidth = 220;
+            int tpgcPnlHeadHeight = 120;
+            int tpgcPnlBottomHeight = 30;
+            
+            int tpgcLblLeft = 30;
+            int tpgcLblTop = tpgcPnlHeadHeight;
+            int tpgcLblHeight = 20;
+            int tpgcLblWidth = 80;
+            
+            int tpgcTxfLeft = tpgcLblLeft + tpgcLblWidth + 10;
+            int tpgcTxfWidth = 30;
+
+            int tpgcNbPLeft = tpgcTxfLeft + tpgcTxfWidth + 10;
+            int tpgcNbPWidth = 30;
+                  
             tabLblCat = new JLabel[nbCat];
             tabTxfLowerLimitOfCat = new JTextField[nbCat];
             tabLblNbPlayersOfCat = new JLabel[nbCat];
-            pnlCategories.setSize(230, 110 + 20 * nbCat + 30);
+//            pnlCategories.setSize(230, 110 + 20 * nbCat + 30);
+            pnlCategories.setSize(tpgcPnlWidth, tpgcPnlHeadHeight + tpgcLblHeight * nbCat + tpgcPnlBottomHeight);
             for (int c = 0; c < nbCat; c++){
                 // Category c Labels
                 tabLblCat[c] = new JLabel("Category" + (c + 1));
-                tabLblCat[c].setBounds(30, 120 + 20 * c, 80, 20);
+//                tabLblCat[c].setBounds(30, 120 + 20 * c, 80, 20);
+                tabLblCat[c].setBounds(tpgcLblLeft, tpgcPnlHeadHeight + tpgcLblHeight * c, tpgcLblWidth, tpgcLblHeight);
                 pnlCategories.add(tabLblCat[c]);
                 tabLblCat[c].updateUI();
                 // Lower limits Text fields
                 int niv = (c < nbCat -1) ? gps.getLowerCategoryLimits()[c] : -30;
                 String strNiv = Player.convertIntToKD(niv);
                 tabTxfLowerLimitOfCat[c] = new JTextField(strNiv);
-                tabTxfLowerLimitOfCat[c].setBounds(120, 120 + 20 * c, 30, 20);
+//                tabTxfLowerLimitOfCat[c].setBounds(120, 120 + 20 * c, 30, 20);
+                tabTxfLowerLimitOfCat[c].setBounds(tpgcTxfLeft, tpgcPnlHeadHeight + tpgcLblHeight * c, tpgcTxfWidth, tpgcLblHeight);
                 pnlCategories.add(tabTxfLowerLimitOfCat[c]);
                 tabTxfLowerLimitOfCat[c].updateUI();
                 if (c < nbCat -1){
@@ -2781,7 +2809,8 @@ public class JFrTournamentOptions extends javax.swing.JFrame{
                 int nbPl = tournament.numberOfPlayersStrongerOrEqualTo(niv);
                 if (c > 0) nbPl -= tournament.numberOfPlayersStrongerOrEqualTo(gps.getLowerCategoryLimits()[c-1]);
                 tabLblNbPlayersOfCat[c] = new JLabel("" + nbPl);
-                tabLblNbPlayersOfCat[c].setBounds(160, 120 + 20 * c, 30, 20);
+//                tabLblNbPlayersOfCat[c].setBounds(160, 120 + 20 * c, 30, 20);
+                tabLblNbPlayersOfCat[c].setBounds(tpgcNbPLeft, tpgcPnlHeadHeight + tpgcLblHeight * c, tpgcNbPWidth, tpgcLblHeight);
                 pnlCategories.add(tabLblNbPlayersOfCat[c]); 
                 tabLblNbPlayersOfCat[c].updateUI();
             }          

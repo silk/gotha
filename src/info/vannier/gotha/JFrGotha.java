@@ -156,6 +156,7 @@ public class JFrGotha extends javax.swing.JFrame {
         rdbSwissCat = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
         txfNumberOfRounds = new javax.swing.JTextField();
+        lblRecommended = new javax.swing.JLabel();
         pnlIdentification = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         txfShortName = new javax.swing.JTextField();
@@ -303,7 +304,6 @@ public class JFrGotha extends javax.swing.JFrame {
 
         grpPS.add(rdbMacMahon);
         rdbMacMahon.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        rdbMacMahon.setSelected(true);
         rdbMacMahon.setText("Mac-Mahon");
         rdbMacMahon.setToolTipText("Players will be paired according to their rank! The winner will be the strongest");
         rdbMacMahon.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
@@ -325,7 +325,6 @@ public class JFrGotha extends javax.swing.JFrame {
         rdbSwissCat.setText("Swiss with categories");
         rdbSwissCat.setToolTipText("Because of possible games with a big rank difference, this system is not usually recommended");
         rdbSwissCat.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
-        rdbSwissCat.setEnabled(false);
         rdbSwissCat.setMargin(new java.awt.Insets(0, 0, 0, 0));
         pnlSystem.add(rdbSwissCat);
         rdbSwissCat.setBounds(20, 90, 170, 13);
@@ -339,8 +338,13 @@ public class JFrGotha extends javax.swing.JFrame {
         pnlSystem.add(txfNumberOfRounds);
         txfNumberOfRounds.setBounds(160, 140, 30, 20);
 
+        lblRecommended.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        lblRecommended.setText("(recommended for ancilliary standings only)");
+        pnlSystem.add(lblRecommended);
+        lblRecommended.setBounds(50, 100, 250, 13);
+
         dlgNew.getContentPane().add(pnlSystem);
-        pnlSystem.setBounds(300, 10, 220, 220);
+        pnlSystem.setBounds(410, 10, 270, 220);
 
         pnlIdentification.setBorder(javax.swing.BorderFactory.createTitledBorder("Identification"));
         pnlIdentification.setLayout(null);
@@ -387,7 +391,7 @@ public class JFrGotha extends javax.swing.JFrame {
         txfEndDate.setBounds(90, 180, 110, 20);
 
         dlgNew.getContentPane().add(pnlIdentification);
-        pnlIdentification.setBounds(10, 10, 280, 220);
+        pnlIdentification.setBounds(120, 10, 280, 220);
 
         btnDlgNewOK.setText("OK");
         btnDlgNewOK.addActionListener(new java.awt.event.ActionListener() {
@@ -396,7 +400,7 @@ public class JFrGotha extends javax.swing.JFrame {
             }
         });
         dlgNew.getContentPane().add(btnDlgNewOK);
-        btnDlgNewOK.setBounds(140, 260, 220, 30);
+        btnDlgNewOK.setBounds(250, 260, 290, 30);
 
         btnDlgNewCancel.setText("Cancel");
         btnDlgNewCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -405,7 +409,7 @@ public class JFrGotha extends javax.swing.JFrame {
             }
         });
         dlgNew.getContentPane().add(btnDlgNewCancel);
-        btnDlgNewCancel.setBounds(380, 260, 130, 30);
+        btnDlgNewCancel.setBounds(550, 260, 130, 30);
 
         btnHelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/info/vannier/gotha/gothalogo16.jpg"))); // NOI18N
         btnHelp.setText("help");
@@ -415,7 +419,7 @@ public class JFrGotha extends javax.swing.JFrame {
             }
         });
         dlgNew.getContentPane().add(btnHelp);
-        btnHelp.setBounds(10, 260, 110, 30);
+        btnHelp.setBounds(120, 260, 110, 30);
 
         dlgImportXML.getContentPane().setLayout(null);
 
@@ -1625,7 +1629,7 @@ public class JFrGotha extends javax.swing.JFrame {
         if (!saveCurrentTournamentIfNecessary()) {
             return;
         }
-        int w = JFrGotha.SMALL_FRAME_WIDTH;
+        int w = JFrGotha.MEDIUM_FRAME_WIDTH;
         int h = JFrGotha.SMALL_FRAME_HEIGHT;
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         dlgNew.setBounds((dim.width - w) / 2, (dim.height - h) / 2, w, h);
@@ -3441,6 +3445,7 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JPopupMenu.Separator jSeparator7;
     private javax.swing.JPopupMenu.Separator jSeparator8;
     private javax.swing.JLabel lblFlowChart;
+    private javax.swing.JLabel lblRecommended;
     private javax.swing.JLabel lblStandingsAfter;
     private javax.swing.JLabel lblTeamUpdateTime;
     private javax.swing.JLabel lblTeamsStandingsAfter;
