@@ -2267,7 +2267,7 @@ public class Tournament extends UnicastRemoteObject implements TournamentInterfa
                         rMin2 = 1;
                     }
                     for (int rr = 0; rr <= r; rr++) {
-                        if (rMin2 == rMin) {
+                        if (rr == rMin) {
                             continue;
                         }
                         if (oswX2[rr] < oswX2[rMin2]) {
